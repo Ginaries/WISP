@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwhvxylru7526"]
+
+[ext_resource type="Script" uid="uid://dh6ideadnjmog" path="res://Script/Player/player.gd" id="1_3hf3a"]
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_jgkq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xg4qi"]
+radius = 64.49806
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_476xl"]
+radius = 60.074955
+
+[sub_resource type="Animation" id="Animation_jgkq1"]
+resource_name = "fall"
+
+[sub_resource type="Animation" id="Animation_3hf3a"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_xg4qi"]
+resource_name = "jump"
+
+[sub_resource type="Animation" id="Animation_476xl"]
+resource_name = "run"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yxkvg"]
+_data = {
+&"fall": SubResource("Animation_jgkq1"),
+&"idle": SubResource("Animation_3hf3a"),
+&"jump": SubResource("Animation_xg4qi"),
+&"run": SubResource("Animation_476xl")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3hf3a"]
+radius = 65.03076
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hf3a"]
+size = Vector2(153, 137)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_3hf3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xg4qi")
+
+[node name="RecibirDaño" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecibirDaño"]
+shape = SubResource("CircleShape2D_476xl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jgkq1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yxkvg")
+}
+
+[node name="AgarrarMonedas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgarrarMonedas"]
+shape = SubResource("CircleShape2D_3hf3a")
+
+[node name="DetectarHoguera" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarHoguera"]
+position = Vector2(0.5, -2.5)
+shape = SubResource("RectangleShape2D_3hf3a")
+
+[connection signal="body_entered" from="RecibirDaño" to="." method="_on_recibir_daño_body_entered"]
+[connection signal="body_entered" from="AgarrarMonedas" to="." method="_on_agarrar_monedas_body_entered"]
+[connection signal="area_entered" from="DetectarHoguera" to="." method="_on_detectar_hoguera_area_entered"]

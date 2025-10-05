@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://sob6wrvfjwxt"]
+
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="1_51v54"]
+[ext_resource type="Script" uid="uid://buw00ar53g7k2" path="res://Scena/Player/proyectil del player/proyectil.gd" id="1_erjwk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_erjwk"]
+radius = 13.0
+
+[node name="proyectil" type="Area2D" groups=["Proyectiles"]]
+script = ExtResource("1_erjwk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.21176471, 0.24313726, 1, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_51v54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_erjwk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

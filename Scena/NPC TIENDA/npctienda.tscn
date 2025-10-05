@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://slvsp1pafyfq"]
+
+[ext_resource type="Script" uid="uid://bi5gbehbt1331" path="res://Script/TIENDANPC/npctienda.gd" id="1_f43v6"]
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_mc13x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7joa"]
+size = Vector2(132, 127)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwhq2"]
+radius = 60.40695
+
+[node name="NPCTIENDA" type="Area2D"]
+script = ExtResource("1_f43v6")
+
+[node name="DetectarJugador" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarJugador"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_y7joa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0.2784314, 1)
+texture = ExtResource("2_mc13x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rwhq2")
+
+[connection signal="body_entered" from="DetectarJugador" to="." method="_on_detectar_jugador_body_entered"]
+[connection signal="body_exited" from="DetectarJugador" to="." method="_on_detectar_jugador_body_exited"]
