@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://gobt7cps4w31"]
 
 [ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_wsl4j"]
-[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_w3mkx"]
+[ext_resource type="Texture2D" uid="uid://cmvfc2lkkc3rw" path="res://Assets - WISP/animación avispa-enemigo/fotograma0000.png" id="2_wsl4j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
 radius = 74.00676
@@ -17,9 +17,10 @@ velocidad_caminar = 50.0
 shape = SubResource("CircleShape2D_6pwgp")
 disabled = true
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 0.36078432, 0, 1)
-texture = ExtResource("2_w3mkx")
+texture = ExtResource("2_wsl4j")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

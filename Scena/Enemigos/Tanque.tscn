@@ -1,0 +1,94 @@
+[gd_scene load_steps=18 format=3 uid="uid://dkyo6kdmxj6j0"]
+
+[ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_ghd4o"]
+[ext_resource type="Texture2D" uid="uid://ce6r0l44yb0dj" path="res://Assets - WISP/animación tanque-enemigo/fotograma0000.png" id="2_4lx21"]
+[ext_resource type="Texture2D" uid="uid://b4ob4qh67k3rl" path="res://Assets - WISP/animación tanque-enemigo/fotograma0001.png" id="3_rpjuq"]
+[ext_resource type="Texture2D" uid="uid://d1unv1pl7nknq" path="res://Assets - WISP/animación tanque-enemigo/fotograma0002.png" id="4_2y2qr"]
+[ext_resource type="Texture2D" uid="uid://da37gyw5hi1wc" path="res://Assets - WISP/animación tanque-enemigo/fotograma0003.png" id="5_iscjb"]
+[ext_resource type="Texture2D" uid="uid://cawjwbm3kwot6" path="res://Assets - WISP/animación tanque-enemigo/fotograma0004.png" id="6_rjtc5"]
+[ext_resource type="Texture2D" uid="uid://dcyk6jsmphxsp" path="res://Assets - WISP/animación tanque-enemigo/fotograma0005.png" id="7_ym6cg"]
+[ext_resource type="Texture2D" uid="uid://uwpsmeyps11m" path="res://Assets - WISP/animación tanque-enemigo/fotograma0006.png" id="8_2xay1"]
+[ext_resource type="Texture2D" uid="uid://uabqmkd3nh25" path="res://Assets - WISP/animación tanque-enemigo/fotograma0007.png" id="9_vfquq"]
+[ext_resource type="Texture2D" uid="uid://dwn3e30f7urtm" path="res://Assets - WISP/animación tanque-enemigo/fotograma0008.png" id="10_ijnjn"]
+[ext_resource type="Texture2D" uid="uid://bpsxpawqph2hc" path="res://Assets - WISP/animación tanque-enemigo/fotograma0009.png" id="11_fix7b"]
+[ext_resource type="Texture2D" uid="uid://cw1uj4kwxtxxb" path="res://Assets - WISP/animación tanque-enemigo/fotograma0010.png" id="12_s7ram"]
+[ext_resource type="Texture2D" uid="uid://skuuvtxrkobv" path="res://Assets - WISP/animación tanque-enemigo/fotograma0011.png" id="13_26815"]
+[ext_resource type="Texture2D" uid="uid://cevb0jl0et53s" path="res://Assets - WISP/animación tanque-enemigo/fotograma0012.png" id="14_pqy02"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
+radius = 74.00676
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tofot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4lx21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rpjuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2y2qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iscjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rjtc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ym6cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2xay1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vfquq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ijnjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fix7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s7ram")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_26815")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pqy02")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
+size = Vector2(194, 204)
+
+[node name="Avispa" type="CharacterBody2D" groups=["Enemigo"]]
+script = ExtResource("1_ghd4o")
+velocidad_caminar = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6pwgp")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(36, 0)
+sprite_frames = SubResource("SpriteFrames_tofot")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="recibirproyectil" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
+position = Vector2(11, -39)
+shape = SubResource("RectangleShape2D_wsl4j")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]

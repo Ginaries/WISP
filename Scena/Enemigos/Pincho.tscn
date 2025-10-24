@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://kn7lu5j6d3d1"]
+
+[ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_e1xni"]
+[ext_resource type="Texture2D" uid="uid://dtqxwfsabii3c" path="res://Assets - WISP/animación pincho-enemigo/fotograma0000.png" id="2_uh0ek"]
+[ext_resource type="Texture2D" uid="uid://bpcmo187e4a34" path="res://Assets - WISP/animación pincho-enemigo/fotograma0001.png" id="3_kjrck"]
+[ext_resource type="Texture2D" uid="uid://830egjsnnvxh" path="res://Assets - WISP/animación pincho-enemigo/fotograma0002.png" id="4_d3xt3"]
+[ext_resource type="Texture2D" uid="uid://roaf4batyym1" path="res://Assets - WISP/animación pincho-enemigo/fotograma0003.png" id="5_bua6f"]
+[ext_resource type="Texture2D" uid="uid://l8mqsb40kao7" path="res://Assets - WISP/animación pincho-enemigo/fotograma0004.png" id="6_e1xni"]
+[ext_resource type="Texture2D" uid="uid://dvp8wjma4c0bm" path="res://Assets - WISP/animación pincho-enemigo/fotograma0005.png" id="7_klipe"]
+[ext_resource type="Texture2D" uid="uid://dfdnmj17re45m" path="res://Assets - WISP/animación pincho-enemigo/fotograma0006.png" id="8_nfveq"]
+[ext_resource type="Texture2D" uid="uid://b8kbs8ooij3h2" path="res://Assets - WISP/animación pincho-enemigo/fotograma0007.png" id="9_tmx3a"]
+[ext_resource type="Texture2D" uid="uid://b1p2yoworsjqc" path="res://Assets - WISP/animación pincho-enemigo/fotograma0008.png" id="10_qrjl2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
+radius = 74.00676
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1r1y7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uh0ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kjrck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d3xt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bua6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e1xni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_klipe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nfveq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tmx3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qrjl2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yukhv"]
+radius = 56.0357
+
+[node name="Avispa" type="CharacterBody2D" groups=["Enemigo"]]
+script = ExtResource("1_e1xni")
+velocidad_caminar = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6pwgp")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -6)
+sprite_frames = SubResource("SpriteFrames_1r1y7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="recibirproyectil" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_yukhv")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]

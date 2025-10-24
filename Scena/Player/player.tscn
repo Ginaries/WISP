@@ -1,13 +1,48 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwhvxylru7526"]
+[gd_scene load_steps=19 format=3 uid="uid://dwhvxylru7526"]
 
 [ext_resource type="Script" uid="uid://dh6ideadnjmog" path="res://Script/Player/player.gd" id="1_3hf3a"]
-[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_jgkq1"]
+[ext_resource type="Texture2D" uid="uid://cdcx300fj0oxp" path="res://Assets - WISP/animación caminar wisp/wisp animat0002.png" id="2_scdhq"]
+[ext_resource type="Texture2D" uid="uid://cenq855omi8ut" path="res://Assets - WISP/animación caminar wisp/wisp animat0003.png" id="3_c10fm"]
+[ext_resource type="Texture2D" uid="uid://c4mmhtsr7s4cj" path="res://Assets - WISP/animación caminar wisp/wisp animat0004.png" id="4_kkur1"]
+[ext_resource type="Texture2D" uid="uid://ckjy3cwhqu4rl" path="res://Assets - WISP/animación caminar wisp/wisp animat0005.png" id="5_n8hiv"]
+[ext_resource type="Texture2D" uid="uid://dta12e8xmuhww" path="res://Assets - WISP/animación caminar wisp/wisp animat0006.png" id="6_2bm2x"]
+[ext_resource type="Texture2D" uid="uid://bqyhkpb6r7tqb" path="res://Assets - WISP/animación caminar wisp/wisp animat0008.png" id="7_xvr67"]
+[ext_resource type="Texture2D" uid="uid://cy5xyx180t1ns" path="res://Assets - WISP/animación caminar wisp/wisp animat0007.png" id="8_bxgl8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xg4qi"]
 radius = 64.49806
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_476xl"]
 radius = 60.074955
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0shn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_scdhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c10fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kkur1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n8hiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2bm2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xvr67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bxgl8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_jgkq1"]
 resource_name = "fall"
@@ -46,8 +81,10 @@ shape = SubResource("CircleShape2D_xg4qi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecibirDaño"]
 shape = SubResource("CircleShape2D_476xl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_jgkq1")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u0shn")
+frame = 1
+frame_progress = 0.36196595
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

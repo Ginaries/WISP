@@ -1,26 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://biyhpci4na4t4"]
+[gd_scene load_steps=10 format=3 uid="uid://biyhpci4na4t4"]
 
 [ext_resource type="Script" uid="uid://r7vjhpubmktd" path="res://Script/Hogera/Hogera.gd" id="1_qql07"]
-[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_yhqr8"]
+[ext_resource type="Texture2D" uid="uid://c01mlerf5t14h" path="res://Assets - WISP/animación brasero/brasero apagado.png" id="2_4fpnu"]
+[ext_resource type="Texture2D" uid="uid://d2wbhjugv8f6c" path="res://Assets - WISP/animación brasero/fotograma0001.png" id="3_1mwkd"]
+[ext_resource type="Texture2D" uid="uid://cqqqrj7qaiyhs" path="res://Assets - WISP/animación brasero/fotograma0002.png" id="4_d1hhy"]
+[ext_resource type="Texture2D" uid="uid://dxsx6u07tjar" path="res://Assets - WISP/animación brasero/fotograma0003.png" id="5_vibqq"]
+[ext_resource type="Texture2D" uid="uid://qie5kj1sdyyb" path="res://Assets - WISP/animación brasero/fotograma0004.png" id="6_bdnqn"]
+[ext_resource type="Texture2D" uid="uid://c6lc5tb8dvurr" path="res://Assets - WISP/animación brasero/fotograma0005.png" id="7_b8hr5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvu8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1mwkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d1hhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vibqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bdnqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b8hr5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xe0l"]
-size = Vector2(36, 20)
+size = Vector2(37, 33)
 
 [node name="Hoguera" type="Area2D" groups=["Hoguera"]]
 script = ExtResource("1_qql07")
 
-[node name="Fuego" type="Sprite2D" parent="."]
+[node name="Baseapagado" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(0, -9)
 scale = Vector2(0.2734375, 0.1328125)
-texture = ExtResource("2_yhqr8")
+texture = ExtResource("2_4fpnu")
 
-[node name="Base" type="Sprite2D" parent="."]
-position = Vector2(-5.9604645e-07, 4.75)
-scale = Vector2(0.28125, 0.08203126)
-texture = ExtResource("2_yhqr8")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(0.13225, 0.1)
+sprite_frames = SubResource("SpriteFrames_yvu8p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 8.5)
 shape = SubResource("RectangleShape2D_2xe0l")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
