@@ -11,6 +11,7 @@ const PROYECTIL = preload("res://Scena/Player/proyectil del player/proyectil.tsc
 @export var daño_disparo: int = 10
 @export var salud: int = 100
 @export var tamaño_jugador: float = 1.0  # escala base del sprite
+
 # --- Coyote Time ---
 @export var tiempo_coyote: float = 0.30
 var tiempo_desde_suelo: float = 0.0
@@ -19,19 +20,19 @@ var tiempo_desde_suelo: float = 0.0
 var damage_cooldown: bool = false
 
 # --- Referencias ---
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 # --- Estados ---
 var CrearCheckpoint = false
-var PuedeComprar=false
+var PuedeComprar = false
 var dir: int = 0
 var ultima_posicion_segura: Vector2
 @export var distancia_max_caida: float = 100
 var respawn_position: Vector2 = Vector2(0, 0)
 
-#---GuardarHoguera---
-var HogueraActual:Area2D
+# --- Guardar Hoguera ---
+var HogueraActual: Area2D
+
 
 func _ready() -> void:
 	# Cargar estadísticas del jugador desde la global
@@ -40,7 +41,10 @@ func _ready() -> void:
 	salud = EstadisticasDelPlayer.salud
 	velocidad = EstadisticasDelPlayer.velocidad
 	tamaño_jugador = EstadisticasDelPlayer.tamaño_jugador
-	print("🎮 Estadísticas cargadas desde la global.")
+
+	# Iniciar animación en idle
+	if not animated_sprite_2d.is_playing():
+		animated_sprite_2d.play("idle")
 
 
 func _physics_process(delta: float) -> void:
@@ -73,22 +77,14 @@ func _physics_process(delta: float) -> void:
 		tiempo_desde_suelo = tiempo_coyote
 
 	move_and_slide()
-
 	# --- Mirar hacia donde se mueve ---
 	if dir != 0:
-		sprite_2d.scale.x = dir * tamaño_jugador  # escala con tamaño dinámico
+		animated_sprite_2d.flip_h = dir < 0
+		scale.x = tamaño_jugador  # mantiene el tamaño sin invertir el nodo entero
 
-	# --- Animaciones ---
-	if is_on_floor():
-		if dir == 0:
-			animation_player.play("idle")
-		else:
-			animation_player.play("run")
-	else:
-		if velocity.y < 0:
-			animation_player.play("jump")
-		else:
-			animation_player.play("fall")
+
+	# --- Actualizar animaciones ---
+	_actualizar_animacion()
 
 	# --- Reinicio si cae demasiado ---
 	if global_position.y - ultima_posicion_segura.y > distancia_max_caida:
@@ -99,8 +95,28 @@ func _physics_process(delta: float) -> void:
 func _reset_player() -> void:
 	position = respawn_position
 	velocity = Vector2.ZERO
-	animation_player.play("idle")
-	sprite_2d.scale = Vector2(tamaño_jugador, tamaño_jugador)
+	animated_sprite_2d.play("idle")
+
+
+# --- Control de animaciones ---
+func _actualizar_animacion() -> void:
+	var anim_actual = animated_sprite_2d.animation
+
+	if is_on_floor():
+		if dir == 0:
+			if anim_actual != "idle":
+				animated_sprite_2d.play("idle")
+		else:
+			if anim_actual != "walk":
+				animated_sprite_2d.play("walk")
+	else:
+		# Si está en el aire, decidir entre salto o caída
+		if velocity.y < 0:
+			if anim_actual != "jump":
+				animated_sprite_2d.play("jump")
+		else:
+			if anim_actual != "fall":
+				animated_sprite_2d.play("fall")
 
 
 # --- Colisión con enemigo ---
@@ -126,8 +142,9 @@ func EncenderFuego():
 	if Input.is_action_just_pressed("Interactuar") and CrearCheckpoint:
 		respawn_position = global_position
 		print("🔥 Checkpoint guardado en: ", respawn_position)
-		if HogueraActual!=null:
+		if HogueraActual != null:
 			HogueraActual.EncenderFuego()
+
 
 # --- Ataque ---
 func AtaqueDisparo():
@@ -136,14 +153,14 @@ func AtaqueDisparo():
 		bala.global_position = global_position
 		get_parent().add_child(bala)
 
-		var direccion = Vector2(sign(sprite_2d.scale.x), 0)
+		var direccion = Vector2(sign(scale.x), 0)
 		if bala.has_method("disparar"):
 			bala.disparar(direccion * fuerza_disparo, daño_disparo)
 
 
 # --- DEPURACIÓN DE ESTADÍSTICAS ---
 func DepuracionEstadisticas():
-	if PuedeComprar==true:
+	if PuedeComprar:
 		if Input.is_action_just_pressed("ui_f1"):
 			fuerza_salto -= 50
 			print("Altura de salto aumentada -> ", -fuerza_salto)
@@ -158,8 +175,10 @@ func DepuracionEstadisticas():
 			print("Velocidad del jugador -> ", velocidad)
 		if Input.is_action_just_pressed("ui_f5"):
 			tamaño_jugador += 0.1
-			sprite_2d.scale = Vector2(tamaño_jugador * sign(sprite_2d.scale.x), tamaño_jugador)
+			scale = Vector2(tamaño_jugador * sign(scale.x), tamaño_jugador)
 			print("Tamaño del jugador -> ", tamaño_jugador)
+
+
 # --- GUARDADO MANUAL ---
 func GuardarPartida():
 	EstadisticasDelPlayer.fuerza_salto = fuerza_salto
@@ -168,6 +187,7 @@ func GuardarPartida():
 	EstadisticasDelPlayer.velocidad = velocidad
 	EstadisticasDelPlayer.tamaño_jugador = tamaño_jugador	
 	EstadisticasDelPlayer.guardar_datos()
+
 
 func _input(event):
 	if event.is_action_pressed("1"):
@@ -179,10 +199,10 @@ func _input(event):
 
 func _on_agarrar_monedas_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Moneda"):
-		EstadisticasDelPlayer.monedasPremium+=1
+		EstadisticasDelPlayer.monedasPremium += 1
 		body.queue_free()
 
 
 func _on_detectar_hoguera_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Hoguera"):
-		HogueraActual=area
+		HogueraActual = area

@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwhvxylru7526"]
+[gd_scene load_steps=15 format=3 uid="uid://dwhvxylru7526"]
 
 [ext_resource type="Script" uid="uid://dh6ideadnjmog" path="res://Script/Player/player.gd" id="1_3hf3a"]
+[ext_resource type="Texture2D" uid="uid://dlp8qemipm6lt" path="res://Assets - WISP/WISP.png" id="2_c10fm"]
 [ext_resource type="Texture2D" uid="uid://cdcx300fj0oxp" path="res://Assets - WISP/animación caminar wisp/wisp animat0002.png" id="2_scdhq"]
 [ext_resource type="Texture2D" uid="uid://cenq855omi8ut" path="res://Assets - WISP/animación caminar wisp/wisp animat0003.png" id="3_c10fm"]
 [ext_resource type="Texture2D" uid="uid://c4mmhtsr7s4cj" path="res://Assets - WISP/animación caminar wisp/wisp animat0004.png" id="4_kkur1"]
@@ -9,14 +10,40 @@
 [ext_resource type="Texture2D" uid="uid://bqyhkpb6r7tqb" path="res://Assets - WISP/animación caminar wisp/wisp animat0008.png" id="7_xvr67"]
 [ext_resource type="Texture2D" uid="uid://cy5xyx180t1ns" path="res://Assets - WISP/animación caminar wisp/wisp animat0007.png" id="8_bxgl8"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xg4qi"]
-radius = 64.49806
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_scdhq"]
+radius = 68.0
+height = 386.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_476xl"]
-radius = 60.074955
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c10fm"]
+radius = 44.0
+height = 376.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0shn"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c10fm")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c10fm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c10fm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_scdhq")
@@ -40,66 +67,42 @@ animations = [{
 "texture": ExtResource("8_bxgl8")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_jgkq1"]
-resource_name = "fall"
-
-[sub_resource type="Animation" id="Animation_3hf3a"]
-resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_xg4qi"]
-resource_name = "jump"
-
-[sub_resource type="Animation" id="Animation_476xl"]
-resource_name = "run"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yxkvg"]
-_data = {
-&"fall": SubResource("Animation_jgkq1"),
-&"idle": SubResource("Animation_3hf3a"),
-&"jump": SubResource("Animation_xg4qi"),
-&"run": SubResource("Animation_476xl")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3hf3a"]
-radius = 65.03076
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kkur1"]
+radius = 77.0
+height = 368.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hf3a"]
-size = Vector2(153, 137)
+size = Vector2(319.62872, 388.20898)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(0.59756833, 0.50475806)
 script = ExtResource("1_3hf3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xg4qi")
+shape = SubResource("CapsuleShape2D_scdhq")
 
 [node name="RecibirDaño" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecibirDaño"]
-shape = SubResource("CircleShape2D_476xl")
+shape = SubResource("CapsuleShape2D_c10fm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u0shn")
-frame = 1
-frame_progress = 0.36196595
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_yxkvg")
-}
+animation = &"walk"
 
 [node name="AgarrarMonedas" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AgarrarMonedas"]
-shape = SubResource("CircleShape2D_3hf3a")
+shape = SubResource("CapsuleShape2D_kkur1")
 
 [node name="DetectarHoguera" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarHoguera"]
-position = Vector2(0.5, -2.5)
+position = Vector2(-0.83672917, 5.895512)
 shape = SubResource("RectangleShape2D_3hf3a")
 
 [connection signal="body_entered" from="RecibirDaño" to="." method="_on_recibir_daño_body_entered"]

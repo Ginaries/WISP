@@ -27,7 +27,15 @@ animations = [{
 "texture": ExtResource("7_b8hr5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Encendido",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4fpnu")
+}],
+"loop": true,
+"name": &"apagado",
 "speed": 5.0
 }]
 
@@ -37,16 +45,11 @@ size = Vector2(37, 33)
 [node name="Hoguera" type="Area2D" groups=["Hoguera"]]
 script = ExtResource("1_qql07")
 
-[node name="Baseapagado" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0, -9)
-scale = Vector2(0.2734375, 0.1328125)
-texture = ExtResource("2_4fpnu")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 3)
 scale = Vector2(0.13225, 0.1)
 sprite_frames = SubResource("SpriteFrames_yvu8p")
+animation = &"Encendido"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 8.5)
