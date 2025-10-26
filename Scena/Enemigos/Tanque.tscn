@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://dkyo6kdmxj6j0"]
+[gd_scene load_steps=17 format=3 uid="uid://dkyo6kdmxj6j0"]
 
-[ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_ghd4o"]
+[ext_resource type="Script" uid="uid://b8q1jmc3cd6bg" path="res://Script/Enemigo/tanque.gd" id="1_4lx21"]
 [ext_resource type="Texture2D" uid="uid://ce6r0l44yb0dj" path="res://Assets - WISP/animación tanque-enemigo/fotograma0000.png" id="2_4lx21"]
 [ext_resource type="Texture2D" uid="uid://b4ob4qh67k3rl" path="res://Assets - WISP/animación tanque-enemigo/fotograma0001.png" id="3_rpjuq"]
 [ext_resource type="Texture2D" uid="uid://d1unv1pl7nknq" path="res://Assets - WISP/animación tanque-enemigo/fotograma0002.png" id="4_2y2qr"]
@@ -13,17 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://bpsxpawqph2hc" path="res://Assets - WISP/animación tanque-enemigo/fotograma0009.png" id="11_fix7b"]
 [ext_resource type="Texture2D" uid="uid://cw1uj4kwxtxxb" path="res://Assets - WISP/animación tanque-enemigo/fotograma0010.png" id="12_s7ram"]
 [ext_resource type="Texture2D" uid="uid://skuuvtxrkobv" path="res://Assets - WISP/animación tanque-enemigo/fotograma0011.png" id="13_26815"]
-[ext_resource type="Texture2D" uid="uid://cevb0jl0et53s" path="res://Assets - WISP/animación tanque-enemigo/fotograma0012.png" id="14_pqy02"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
-radius = 74.00676
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qp0dg"]
+radius = 60.0
+height = 234.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tofot"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_4lx21")
-}, {
 "duration": 1.0,
 "texture": ExtResource("3_rpjuq")
 }, {
@@ -58,30 +55,48 @@ animations = [{
 "texture": ExtResource("13_26815")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_pqy02")
+"texture": ExtResource("2_4lx21")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2xay1")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"saltar",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
 size = Vector2(194, 204)
 
-[node name="Avispa" type="CharacterBody2D" groups=["Enemigo"]]
-script = ExtResource("1_ghd4o")
-velocidad_caminar = 50.0
+[node name="Tanque" type="CharacterBody2D" groups=["Enemigo"]]
+scale = Vector2(0.7756584, 0.7778042)
+script = ExtResource("1_4lx21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_6pwgp")
-disabled = true
+position = Vector2(5, -28)
+shape = SubResource("CapsuleShape2D_qp0dg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(36, 0)
 sprite_frames = SubResource("SpriteFrames_tofot")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [node name="recibirproyectil" type="Area2D" parent="."]

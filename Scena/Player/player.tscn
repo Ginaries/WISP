@@ -79,7 +79,7 @@ height = 368.0
 size = Vector2(319.62872, 388.20898)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-scale = Vector2(0.59756833, 0.50475806)
+scale = Vector2(0.3572011, 0.309105)
 script = ExtResource("1_3hf3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

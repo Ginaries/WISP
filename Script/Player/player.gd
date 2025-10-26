@@ -80,7 +80,6 @@ func _physics_process(delta: float) -> void:
 	# --- Mirar hacia donde se mueve ---
 	if dir != 0:
 		animated_sprite_2d.flip_h = dir < 0
-		scale.x = tamaño_jugador  # mantiene el tamaño sin invertir el nodo entero
 
 
 	# --- Actualizar animaciones ---
