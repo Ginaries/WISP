@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://biavoa6u660m2"]
+
+[ext_resource type="Script" uid="uid://cfc51on21axpy" path="res://Script/Menú/menu.gd" id="1_vrh8i"]
+[ext_resource type="Texture2D" uid="uid://ifdu3oypjmp7" path="res://Assets - WISP/WISP LOGO.png" id="2_j1ygr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxeux"]
+bg_color = Color(0.1845386, 0.265197, 0.5172555, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0j6c"]
+bg_color = Color(0.12907943, 0.1934008, 0.39070004, 1)
+
+[node name="Menú" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vrh8i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 750.0
+offset_bottom = 1279.0
+color = Color(0.49311334, 0.69137657, 0.8533953, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.827
+offset_top = 80.0
+offset_right = 284.82715
+offset_bottom = 456.0
+grow_horizontal = 2
+texture = ExtResource("2_j1ygr")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -40.0
+offset_right = 237.0
+offset_bottom = 428.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="Jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 4
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+text = "Jugar"
+expand_icon = true
+
+[node name="Tienda" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+text = "Tienda"
+expand_icon = true
+
+[node name="Controles" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+text = "Controles"
+expand_icon = true
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+text = "Salir"
+expand_icon = true
