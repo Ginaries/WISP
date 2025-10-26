@@ -1,13 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://biavoa6u660m2"]
+[gd_scene load_steps=4 format=3 uid="uid://biavoa6u660m2"]
 
 [ext_resource type="Script" uid="uid://cfc51on21axpy" path="res://Script/Menú/menu.gd" id="1_vrh8i"]
 [ext_resource type="Texture2D" uid="uid://ifdu3oypjmp7" path="res://Assets - WISP/WISP LOGO.png" id="2_j1ygr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxeux"]
-bg_color = Color(0.1845386, 0.265197, 0.5172555, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0j6c"]
-bg_color = Color(0.12907943, 0.1934008, 0.39070004, 1)
+[ext_resource type="Texture2D" uid="uid://jlef248t8djy" path="res://UI/UI basic/ButtonsText/ButtonText_Blue_OnOffBackground.png" id="3_uxeux"]
 
 [node name="Menú" type="Control"]
 layout_mode = 3
@@ -45,47 +40,94 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -237.0
-offset_top = -40.0
-offset_right = 237.0
-offset_bottom = 428.0
+offset_left = -166.0
+offset_top = -90.0
+offset_right = 166.0
+offset_bottom = 464.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
-[node name="Jugar" type="Button" parent="VBoxContainer"]
+[node name="Jugar" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/h_separation = 4
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+texture_normal = ExtResource("3_uxeux")
+
+[node name="Label" type="Label" parent="VBoxContainer/Jugar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -41.5
+offset_right = 75.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Jugar"
-expand_icon = true
 
-[node name="Tienda" type="Button" parent="VBoxContainer"]
+[node name="Tienda" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+texture_normal = ExtResource("3_uxeux")
+
+[node name="Label" type="Label" parent="VBoxContainer/Tienda"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -41.5
+offset_right = 98.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Tienda"
-expand_icon = true
 
-[node name="Controles" type="Button" parent="VBoxContainer"]
+[node name="Controles" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+texture_normal = ExtResource("3_uxeux")
+
+[node name="Label" type="Label" parent="VBoxContainer/Controles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -41.5
+offset_right = 142.5
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Controles"
-expand_icon = true
 
-[node name="Salir" type="Button" parent="VBoxContainer"]
+[node name="Salir" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_uxeux")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_x0j6c")
+texture_normal = ExtResource("3_uxeux")
+
+[node name="Label" type="Label" parent="VBoxContainer/Salir"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -41.5
+offset_right = 63.5
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Salir"
-expand_icon = true
