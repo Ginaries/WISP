@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bw4vf5kr3bhna" path="res://Assets - WISP/Plataformas/bloquecentro.png" id="5_pcnwh"]
 [ext_resource type="Texture2D" uid="uid://cxa2b5u2yjk6c" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png" id="6_pcnwh"]
 [ext_resource type="Texture2D" uid="uid://cwog516qf6ri8" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png" id="7_axdhj"]
-[ext_resource type="Texture2D" uid="uid://dlp8qemipm6lt" path="res://Assets - WISP/WISP.png" id="11_ofh2s"]
+[ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="11_ofh2s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axdhj"]
 texture = ExtResource("1_a7a2h")
@@ -363,32 +363,37 @@ tile_map_data = PackedByteArray("AAAQAE4ABgAAAAAAAAAQAE8ABgAAAAEAAAARAE4ABgABAAA
 tile_set = SubResource("TileSet_k4skk")
 
 [node name="Guía del fondo" type="ParallaxBackground" parent="."]
+scroll_limit_begin = Vector2(750, 1280)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Guía del fondo"]
+motion_mirroring = Vector2(720, 1280)
 
 [node name="Fondonegro" type="Sprite2D" parent="Guía del fondo/ParallaxLayer"]
 position = Vector2(375, 641)
 texture = ExtResource("4_45k15")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Guía del fondo"]
+motion_mirroring = Vector2(720, 1280)
 
 [node name="Capa3" type="Sprite2D" parent="Guía del fondo/ParallaxLayer2"]
 position = Vector2(376, 640)
 texture = ExtResource("5_ofh2s")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Guía del fondo"]
+motion_scale = Vector2(0, 0)
 
 [node name="Capa2" type="Sprite2D" parent="Guía del fondo/ParallaxLayer3"]
 position = Vector2(376, 642)
 texture = ExtResource("6_pcnwh")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Guía del fondo"]
+motion_scale = Vector2(0, 0)
 
 [node name="Capa1" type="Sprite2D" parent="Guía del fondo/ParallaxLayer4"]
 position = Vector2(375, 641)
 texture = ExtResource("7_axdhj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(120.00003, 46.00003)
-scale = Vector2(0.13999997, 0.13999997)
-texture = ExtResource("11_ofh2s")
+[node name="Player" parent="." instance=ExtResource("11_ofh2s")]
+position = Vector2(67.99999, 42)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

@@ -86,8 +86,8 @@ func _physics_process(delta: float) -> void:
 	_actualizar_animacion()
 
 	# --- Reinicio si cae demasiado ---
-	if global_position.y - ultima_posicion_segura.y > distancia_max_caida:
-		_reset_player()
+	#if global_position.y - ultima_posicion_segura.y > distancia_max_caida:
+	#	_reset_player()
 
 
 # --- Reinicio de jugador ---
