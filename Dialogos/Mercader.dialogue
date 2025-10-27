@@ -1,0 +1,35 @@
+~ AlIngresar
+Mercader: ¡Oh cariño, has vuelto!. ¿Ves algo que te interese?. => DuranteElIntercambio
+
+~ AlRetirarse
+Mercader: Me recuerdas mucho a tu madre… irónico.
+Wisp: ¿Mi madre? Hace mucho que no la veo.
+Mercader: Si, ¿qué opinas tú?
+- SI
+	Mercader: ¿Ves? No soy la única que lo piensa.
+- No
+	Mercader: Hm, que mal. Deberías prestarle más atención a los detalles.
+
+~ AlFinalizarTutorial
+
+Mercader: ¡Oh!... ¡Por aquí! ¡Qué cosas más interesantes tienes! ¡Acércate!
+Wisp se acerca hacia la mercader.
+Mercader: Vaya... parece que no sabes qué hacer con eso, ¿me equivoco?
+Wisp: Uhm... No realmente. ¿Quién eres?
+Mercader: ¡Ah! Eso no es importante, pequeñín... Veo que tu gran corazón te ha traído hasta aquí.
+Mercader: Entre tú y yo, no creo que sepa muy bien lo que ha pasado. ¿No es cierto?
+Jugador: ¿Me hablas a mí?
+Mercader: Sí, a ti. Esto servirá más para ti que para nuestro foquito.
+Wisp: ¿Quién ha dicho eso?... En fin, ¿qué ibas a decirme?
+Mercader: Creo que podemos hacer un trueque, si es que me entiendes...
+Mercader: Verás, esas cosas que te sueltan esos enemigos no te servirán de nada. ¿Por qué no me los das y a cambio te entregaré algo que te hará más fuerte?
+
+~ DuranteElIntercambio
+Wisp: ¿Y de qué sirven estas cosas?... Mhm, creo que me ha engañado.
+Mercader: Pues verás, eso que acabas de conseguir puede darte muchas ventajas por aquí. Sólo tráemelos y yo te ayudaré a conseguir tu objetivo.
+Wisp: ¿Okay? Pero, ¿cuál es mi objetivo?
+Mercader: Ah no no, eso te tocará descubrirlo a ti. No podemos spoilear a quien nos está mirando, cariño. Sí, hablo de ti.
+Mercader: Recuerda, estas estadísticas te potenciarán por el resto de tu aventura. Te veré pronto...
+
+
+

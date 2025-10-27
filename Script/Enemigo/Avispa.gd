@@ -1,7 +1,6 @@
 extends Enemigo
 
 
-
 # Tiempo de espera antes de atacar
 @export var tiempo_preparacion: float = 1.0
 #Estados
@@ -52,7 +51,7 @@ func Golpe_de_aguijon() -> void:
 	velocity = Vector2.ZERO
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta:float) -> void:
 	if Player == null:
 		return
 	if esta_atacando==true:
@@ -67,7 +66,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 
-	# 👇 Pasale delta en Godot 4
 	move_and_slide()
 
 func _on_timer_timeout() -> void:

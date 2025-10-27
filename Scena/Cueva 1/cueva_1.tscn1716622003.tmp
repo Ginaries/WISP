@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://do4keaitsag4e"]
+
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="1_d51ac"]
+[ext_resource type="Script" uid="uid://7m2l1nlycr17" path="res://Script/Cueva 1/cueva_1.gd" id="1_e0k3o"]
+[ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="2_5mdkg"]
+[ext_resource type="PackedScene" uid="uid://gobt7cps4w31" path="res://Scena/Enemigos/avispa.tscn" id="3_5mdkg"]
+[ext_resource type="PackedScene" uid="uid://biyhpci4na4t4" path="res://Scena/Hoguera/hoguera.tscn" id="5_p0lk8"]
+[ext_resource type="PackedScene" uid="uid://slvsp1pafyfq" path="res://Scena/NPC TIENDA/npctienda.tscn" id="6_3f7qu"]
+[ext_resource type="PackedScene" uid="uid://dkyo6kdmxj6j0" path="res://Scena/Enemigos/Tanque.tscn" id="7_h85dh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0k3o"]
+size = Vector2(1441.5, 67)
+
+[node name="Cueva 1" type="Node2D"]
+script = ExtResource("1_e0k3o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-166, 70)
+
+[node name="w" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(470, 769)
+shape = SubResource("RectangleShape2D_e0k3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(466, 774)
+scale = Vector2(11.8046875, 0.6328125)
+texture = ExtResource("1_d51ac")
+
+[node name="Player" parent="." instance=ExtResource("2_5mdkg")]
+position = Vector2(94, 635)
+distancia_max_caida = 2000.0
+
+[node name="Avispa" parent="." instance=ExtResource("3_5mdkg")]
+visible = false
+position = Vector2(658, 236)
+tiempo_preparacion = null
+velocidad_dash = null
+duracion_dash = null
+vida = null
+"daño" = null
+drop = null
+velocidad_volar = 200.0
+rango_detec = 1200.0
+es_volador = null
+
+[node name="Hogera" parent="." instance=ExtResource("5_p0lk8")]
+position = Vector2(333, 726)
+
+[node name="NPCTIENDA" parent="." instance=ExtResource("6_3f7qu")]
+position = Vector2(425, 654)
+
+[node name="Tanque" parent="." instance=ExtResource("7_h85dh")]
+position = Vector2(328, 636)
+scale = Vector2(0.79384446, 0.82482535)
+tiempo_preparacion_golpe = 1.5
+empuje_golpe = 600.0
+duracion_golpe = 0.4
+reduccion_danio_escudo = 0.5
+duracion_escudo = 2.0
+gravedad = 900.0
+vida = 10
+"daño" = 1
+drop = {}
+velocidad_caminar = 100.0
+velocidad_volar = 150.0
+rango_detec = 300.0
+es_volador = false
