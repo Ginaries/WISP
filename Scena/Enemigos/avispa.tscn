@@ -1,10 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://gobt7cps4w31"]
+[gd_scene load_steps=7 format=3 uid="uid://gobt7cps4w31"]
 
 [ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_wsl4j"]
+[ext_resource type="Texture2D" uid="uid://dxsra20wohwwm" path="res://Assets - WISP/animación avispa-enemigo/fotograma0001.png" id="2_w3mkx"]
 [ext_resource type="Texture2D" uid="uid://cmvfc2lkkc3rw" path="res://Assets - WISP/animación avispa-enemigo/fotograma0000.png" id="2_wsl4j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
 radius = 74.00676
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6pwgp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w3mkx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
 size = Vector2(129, 125)
@@ -18,6 +30,8 @@ shape = SubResource("CircleShape2D_6pwgp")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6pwgp")
+frame_progress = 0.16257493
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wsl4j")

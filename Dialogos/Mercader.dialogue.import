@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://mj6b5r8sf8k1"
+path="res://.godot/imported/Mercader.dialogue-6b9bf2c6c043058c0b3b84a7abca1b07.tres"
+
+[deps]
+
+source_file="res://Dialogos/Mercader.dialogue"
+dest_files=["res://.godot/imported/Mercader.dialogue-6b9bf2c6c043058c0b3b84a7abca1b07.tres"]
+
+[params]
+
+defaults=true
