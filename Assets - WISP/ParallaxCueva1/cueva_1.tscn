@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://do4keaitsag4e"]
+
+[ext_resource type="Script" uid="uid://7m2l1nlycr17" path="res://Script/Cueva 1/cueva_1.gd" id="1_426a6"]
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_vcv3q"]
+[ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="3_mi1ql"]
+[ext_resource type="PackedScene" uid="uid://gobt7cps4w31" path="res://Scena/Enemigos/avispa.tscn" id="4_xtmku"]
+[ext_resource type="PackedScene" uid="uid://biyhpci4na4t4" path="res://Scena/Enemigos/Hoguera/hoguera.tscn" id="5_xxwsb"]
+[ext_resource type="PackedScene" uid="uid://slvsp1pafyfq" path="res://Scena/NPC TIENDA/npctienda.tscn" id="6_n1vx8"]
+[ext_resource type="Texture2D" uid="uid://dkx7p65bbp4lo" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa4fondo.png" id="7_scu0u"]
+[ext_resource type="Texture2D" uid="uid://hxarurl6sv54" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa3.png" id="8_fqoic"]
+[ext_resource type="Texture2D" uid="uid://cxa2b5u2yjk6c" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png" id="9_pds0d"]
+[ext_resource type="Texture2D" uid="uid://cwog516qf6ri8" path="res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png" id="10_b05we"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0k3o"]
+size = Vector2(1441.5, 67)
+
+[node name="Cueva 1" type="Node2D"]
+script = ExtResource("1_426a6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-752, 6)
+
+[node name="w" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(470, 769)
+shape = SubResource("RectangleShape2D_e0k3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(466, 774)
+scale = Vector2(11.8046875, 0.6328125)
+texture = ExtResource("2_vcv3q")
+
+[node name="Player" parent="." instance=ExtResource("3_mi1ql")]
+position = Vector2(94, 635)
+distancia_max_caida = 2000.0
+
+[node name="Avispa" parent="." instance=ExtResource("4_xtmku")]
+position = Vector2(658, 236)
+velocidad_volar = 200.0
+rango_detec = 1200.0
+
+[node name="Hogera" parent="." instance=ExtResource("5_xxwsb")]
+position = Vector2(333, 726)
+
+[node name="NPCTIENDA" parent="." instance=ExtResource("6_n1vx8")]
+position = Vector2(425, 654)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Fondonegro" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(375, 641)
+texture = ExtResource("7_scu0u")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Capa3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(376, 640)
+texture = ExtResource("8_fqoic")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Capa2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(376, 642)
+texture = ExtResource("9_pds0d")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Capa1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(376, 640)
+texture = ExtResource("10_b05we")
