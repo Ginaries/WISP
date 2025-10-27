@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dey0sa8wlj58w"
-path="res://.godot/imported/plataforma1.png-14b1491be537f0fe6dd55ba6f9d76aa2.ctex"
+uid="uid://bw4vf5kr3bhna"
+path="res://.godot/imported/bloquecentro.png-0a0068a3743ff38788a473021e5d015f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets - WISP/plataforma1.png"
-dest_files=["res://.godot/imported/plataforma1.png-14b1491be537f0fe6dd55ba6f9d76aa2.ctex"]
+source_file="res://Assets - WISP/Plataformas/bloquecentro.png"
+dest_files=["res://.godot/imported/bloquecentro.png-0a0068a3743ff38788a473021e5d015f.ctex"]
 
 [params]
 

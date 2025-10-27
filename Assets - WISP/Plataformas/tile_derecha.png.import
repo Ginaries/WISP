@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2rtx5ah5d3o1"
-path="res://.godot/imported/Intentoplataforma.png-1e859c307f354de333b10f354183b260.ctex"
+uid="uid://hw0ohg6l7va3"
+path="res://.godot/imported/tile_derecha.png-d00e4fe5df949ccb675dfb6e26f6fbb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets - WISP/Intentoplataforma.png"
-dest_files=["res://.godot/imported/Intentoplataforma.png-1e859c307f354de333b10f354183b260.ctex"]
+source_file="res://Assets - WISP/Plataformas/tile_derecha.png"
+dest_files=["res://.godot/imported/tile_derecha.png-d00e4fe5df949ccb675dfb6e26f6fbb2.ctex"]
 
 [params]
 
