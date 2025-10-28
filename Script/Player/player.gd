@@ -5,7 +5,7 @@ const PROYECTIL = preload("res://Scena/Player/proyectil del player/proyectil.tsc
 
 # --- Variables principales ---
 @export var velocidad: float = 300.0
-@export var fuerza_salto: float = -600.0
+@export var fuerza_salto: float = -200
 @export var gravedad: float = 1200.0
 @export var fuerza_disparo: float = 600.0
 @export var daño_disparo: int = 10

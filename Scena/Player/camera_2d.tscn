@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://breu0a4y5swo1"]
+
+[ext_resource type="Script" uid="uid://cbu2nfdeshjyq" path="res://Script/Player/camera_2d.gd" id="1_c41ku"]
+
+[node name="Camera2D" type="Camera2D" node_paths=PackedStringArray("player")]
+scale = Vector2(0.12483217, 0.11262057)
+position_smoothing_enabled = true
+script = ExtResource("1_c41ku")
+player = NodePath("")

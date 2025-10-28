@@ -1,7 +1,7 @@
 extends Node
 
 # --- Estadísticas base del jugador ---
-var fuerza_salto: float = -600.0
+var fuerza_salto: float = -200
 var daño_disparo: int = 10
 var salud: int = 100
 var velocidad: float = 300.0
