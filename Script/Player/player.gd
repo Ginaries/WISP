@@ -152,9 +152,16 @@ func AtaqueDisparo():
 		bala.global_position = global_position
 		get_parent().add_child(bala)
 
-		var direccion = Vector2(sign(scale.x), 0)
+		# Si el jugador no se está moviendo, dispara hacia donde está mirando
+		var direccion_disparo = Vector2.RIGHT
+		if dir != 0:
+			direccion_disparo = Vector2(dir, 0)
+		elif animated_sprite_2d.flip_h:
+			direccion_disparo = Vector2.LEFT
+
 		if bala.has_method("disparar"):
-			bala.disparar(direccion * fuerza_disparo, daño_disparo)
+			bala.disparar(direccion_disparo * fuerza_disparo, daño_disparo)
+
 
 
 # --- DEPURACIÓN DE ESTADÍSTICAS ---
