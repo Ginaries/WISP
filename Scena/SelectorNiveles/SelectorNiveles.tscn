@@ -1,16 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://defyktj6uyj5a"]
+[gd_scene load_steps=6 format=3 uid="uid://defyktj6uyj5a"]
 
 [ext_resource type="Script" uid="uid://cbkr8kcho4qwe" path="res://Scena/SelectorNiveles/selector_niveles.gd" id="1_8fa41"]
-[ext_resource type="Texture2D" uid="uid://c31ecqmdsd0a0" path="res://UI/BotonesNumero/1.png" id="1_r75su"]
-[ext_resource type="Texture2D" uid="uid://bnh3xvepl68i6" path="res://UI/BotonesNumero/1bloqueado.png" id="2_8fa41"]
-[ext_resource type="Texture2D" uid="uid://by6qbtseahk7j" path="res://UI/BotonesNumero/2.png" id="3_8wwpv"]
-[ext_resource type="Texture2D" uid="uid://bmgtpj8wulxog" path="res://UI/BotonesNumero/2bloqueado.png" id="4_3jtnj"]
-[ext_resource type="Texture2D" uid="uid://c3u0kr3lfatag" path="res://UI/BotonesNumero/3.png" id="5_hmmkk"]
-[ext_resource type="Texture2D" uid="uid://6oq61ju7nb1i" path="res://UI/BotonesNumero/3bloqueado.png" id="6_e8i1e"]
-[ext_resource type="Texture2D" uid="uid://bu8w51vdejjdr" path="res://UI/BotonesNumero/4.png" id="7_plnlw"]
-[ext_resource type="Texture2D" uid="uid://tiv0bbnjfxtw" path="res://UI/BotonesNumero/4bloqueado.png" id="8_amyw4"]
-[ext_resource type="Texture2D" uid="uid://bbnchg2fia27y" path="res://UI/BotonesNumero/5.png" id="9_sw0xo"]
-[ext_resource type="Texture2D" uid="uid://7puahcw83fmr" path="res://UI/BotonesNumero/5bloqueado.png" id="10_v54ly"]
+[ext_resource type="Texture2D" uid="uid://bnyy8ksg0qgek" path="res://Assets - WISP/InterfacesPNG/Selector de niveles 2.png" id="2_xsy1t"]
+[ext_resource type="Texture2D" uid="uid://tkj3xptio5jt" path="res://Assets - WISP/InterfacesPNG/Selector de niveles REFERENCIA.png" id="3_4j44d"]
+[ext_resource type="Texture2D" uid="uid://d2wbhjugv8f6c" path="res://Assets - WISP/animación brasero/fotograma0001.png" id="4_8gnld"]
+[ext_resource type="Texture2D" uid="uid://c01mlerf5t14h" path="res://Assets - WISP/animación brasero/brasero apagado.png" id="5_7je45"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,72 +15,164 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8fa41")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Fondo" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 750.0
 offset_bottom = 1279.0
-color = Color(0.49311334, 0.69137657, 0.8533953, 1)
+texture = ExtResource("2_xsy1t")
 metadata/_edit_lock_ = true
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="FondoGuía" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 750.0
+offset_bottom = 1279.0
+texture = ExtResource("3_4j44d")
+metadata/_edit_lock_ = true
+
+[node name="nivel1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 279.0
+offset_right = 351.0
+offset_bottom = 517.0
+texture_normal = ExtResource("4_8gnld")
+texture_disabled = ExtResource("5_7je45")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="nivel1"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.683
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -315.0
-offset_top = -207.5
-offset_right = 315.0
-offset_bottom = 207.5
+anchor_bottom = 0.683
+offset_left = -21.0
+offset_top = -23.554
+offset_right = 19.0
+offset_bottom = 23.446
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 15
-theme_override_constants/v_separation = 15
-columns = 3
+theme_override_font_sizes/font_size = 34
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Nivel1" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("1_r75su")
-texture_disabled = ExtResource("2_8fa41")
+[node name="nivel2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 477.0
+offset_right = 477.0
+offset_bottom = 715.0
+texture_normal = ExtResource("4_8gnld")
+texture_disabled = ExtResource("5_7je45")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Nivel2" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_8wwpv")
-texture_disabled = ExtResource("4_3jtnj")
-
-[node name="Nivel3" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("5_hmmkk")
-texture_disabled = ExtResource("6_e8i1e")
-
-[node name="GridContainer2" type="GridContainer" parent="."]
+[node name="Label" type="Label" parent="nivel2"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.683
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -202.0
-offset_top = 10.0
-offset_right = 202.0
-offset_bottom = 210.0
+anchor_bottom = 0.683
+offset_left = -21.0
+offset_top = -23.554
+offset_right = 19.0
+offset_bottom = 23.446
 grow_horizontal = 2
 grow_vertical = 2
-columns = 2
+theme_override_font_sizes/font_size = 34
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Nivel4" type="TextureButton" parent="GridContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("7_plnlw")
-texture_disabled = ExtResource("8_amyw4")
+[node name="nivel3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 642.0
+offset_right = 228.0
+offset_bottom = 880.0
+texture_normal = ExtResource("4_8gnld")
+texture_disabled = ExtResource("5_7je45")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Nivel5" type="TextureButton" parent="GridContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("9_sw0xo")
-texture_disabled = ExtResource("10_v54ly")
+[node name="Label" type="Label" parent="nivel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.683
+anchor_right = 0.5
+anchor_bottom = 0.683
+offset_left = -21.0
+offset_top = -23.554
+offset_right = 19.0
+offset_bottom = 23.446
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="pressed" from="GridContainer/Nivel1" to="." method="_on_nivel_1_pressed"]
-[connection signal="pressed" from="GridContainer/Nivel2" to="." method="_on_nivel_2_pressed"]
-[connection signal="pressed" from="GridContainer/Nivel3" to="." method="_on_nivel_3_pressed"]
-[connection signal="pressed" from="GridContainer2/Nivel4" to="." method="_on_nivel_4_pressed"]
-[connection signal="pressed" from="GridContainer2/Nivel5" to="." method="_on_nivel_5_pressed"]
+[node name="nivel4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 746.0
+offset_right = 686.0
+offset_bottom = 984.0
+texture_normal = ExtResource("4_8gnld")
+texture_disabled = ExtResource("5_7je45")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="nivel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.683
+anchor_right = 0.5
+anchor_bottom = 0.683
+offset_left = -21.0
+offset_top = -23.554
+offset_right = 19.0
+offset_bottom = 23.446
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nivel5" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 1020.0
+offset_right = 540.0
+offset_bottom = 1258.0
+texture_normal = ExtResource("4_8gnld")
+texture_disabled = ExtResource("5_7je45")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="nivel5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.683
+anchor_right = 0.5
+anchor_bottom = 0.683
+offset_left = -21.0
+offset_top = -23.554
+offset_right = 19.0
+offset_bottom = 23.446
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
