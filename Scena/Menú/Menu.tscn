@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfc51on21axpy" path="res://Script/Menú/menu.gd" id="1_vrh8i"]
 [ext_resource type="Texture2D" uid="uid://ifdu3oypjmp7" path="res://Assets - WISP/WISP LOGO.png" id="2_j1ygr"]
-[ext_resource type="VideoStream" uid="uid://bkrb5k10k4g6m" path="res://Assets - WISP/Videos/Interfaces/Main-Menu-Wisp.ogv" id="2_x0j6c"]
+[ext_resource type="VideoStream" uid="uid://1kvm2khs1uol" path="res://Assets - WISP/Videos/Interfaces/Main-Menu-Wisp-_1_.ogv" id="2_x0j6c"]
 [ext_resource type="Texture2D" uid="uid://jlef248t8djy" path="res://UI/UI basic/ButtonsText/ButtonText_Blue_OnOffBackground.png" id="3_uxeux"]
 
 [node name="Menú" type="Control"]
