@@ -1,0 +1,90 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3wuhix82p17x"]
+
+[ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
+[ext_resource type="Texture2D" uid="uid://d1852b122p5dg" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Inferior Tienda.png" id="2_burph"]
+[ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="2_ply4r"]
+[ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="3_54xjq"]
+[ext_resource type="Texture2D" uid="uid://ydds68hj07sl" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Cartel Tienda.png" id="3_burph"]
+[ext_resource type="Texture2D" uid="uid://cw485ntamh7k4" path="res://Assets - WISP/Mercader Idle/fotograma0002.png" id="4_u712o"]
+[ext_resource type="Texture2D" uid="uid://cihwu68yiejrf" path="res://Assets - WISP/Mercader Idle/fotograma0003.png" id="5_40sue"]
+[ext_resource type="Texture2D" uid="uid://b08n6orwntmu5" path="res://Assets - WISP/Mercader Idle/fotograma0004.png" id="6_23pqi"]
+[ext_resource type="Texture2D" uid="uid://bvs2x3a3dq5t4" path="res://Assets - WISP/Mercader Idle/fotograma0005.png" id="7_kk1gy"]
+[ext_resource type="Texture2D" uid="uid://bmln73w8fc068" path="res://Assets - WISP/Mercader Idle/fotograma0006.png" id="8_l7vqu"]
+[ext_resource type="Texture2D" uid="uid://xrymi3aqqog3" path="res://Assets - WISP/Mercader Idle/fotograma0007.png" id="9_qc27r"]
+[ext_resource type="Texture2D" uid="uid://celt6cdhonmy4" path="res://Assets - WISP/Mercader Idle/fotograma0008.png" id="10_pf383"]
+[ext_resource type="Texture2D" uid="uid://bser6e646b5pt" path="res://Assets - WISP/Mercader Idle/fotograma0009.png" id="11_xuerk"]
+[ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="12_g7upr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ply4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_54xjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u712o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_40sue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_23pqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kk1gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l7vqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qc27r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pf383")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xuerk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_g7upr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TiendaPremium" type="Node2D"]
+
+[node name="Parte Superior Tienda" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bwim8")
+
+[node name="Mercader" type="AnimatedSprite2D" parent="."]
+position = Vector2(466, 296)
+scale = Vector2(1.2660002, 1.2660002)
+sprite_frames = SubResource("SpriteFrames_j65uq")
+animation = &"Idle"
+
+[node name="Parte Inferior Tienda" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_burph")
+
+[node name="CartelTienda" type="TextureRect" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 179.0
+offset_right = 628.0
+offset_bottom = 679.0
+grow_vertical = 2
+texture = ExtResource("3_burph")

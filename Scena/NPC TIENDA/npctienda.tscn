@@ -1,10 +1,67 @@
-[gd_scene load_steps=5 format=3 uid="uid://slvsp1pafyfq"]
+[gd_scene load_steps=17 format=3 uid="uid://slvsp1pafyfq"]
 
 [ext_resource type="Script" uid="uid://bi5gbehbt1331" path="res://Script/TIENDANPC/npctienda.gd" id="1_f43v6"]
 [ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="2_mc13x"]
+[ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="2_wsc4s"]
+[ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="3_0pqjc"]
+[ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="4_y10o2"]
+[ext_resource type="Texture2D" uid="uid://cw485ntamh7k4" path="res://Assets - WISP/Mercader Idle/fotograma0002.png" id="5_sannx"]
+[ext_resource type="Texture2D" uid="uid://cihwu68yiejrf" path="res://Assets - WISP/Mercader Idle/fotograma0003.png" id="6_2e7xj"]
+[ext_resource type="Texture2D" uid="uid://b08n6orwntmu5" path="res://Assets - WISP/Mercader Idle/fotograma0004.png" id="7_joqbe"]
+[ext_resource type="Texture2D" uid="uid://bvs2x3a3dq5t4" path="res://Assets - WISP/Mercader Idle/fotograma0005.png" id="8_mlx51"]
+[ext_resource type="Texture2D" uid="uid://bmln73w8fc068" path="res://Assets - WISP/Mercader Idle/fotograma0006.png" id="9_03qo4"]
+[ext_resource type="Texture2D" uid="uid://xrymi3aqqog3" path="res://Assets - WISP/Mercader Idle/fotograma0007.png" id="10_6x56x"]
+[ext_resource type="Texture2D" uid="uid://celt6cdhonmy4" path="res://Assets - WISP/Mercader Idle/fotograma0008.png" id="11_c44g0"]
+[ext_resource type="Texture2D" uid="uid://bser6e646b5pt" path="res://Assets - WISP/Mercader Idle/fotograma0009.png" id="12_w58vm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7joa"]
 size = Vector2(132, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yrog7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wsc4s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0pqjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y10o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sannx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2e7xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_joqbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mlx51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_03qo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6x56x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c44g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w58vm")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rwhq2"]
 radius = 60.40695
@@ -18,8 +75,14 @@ script = ExtResource("1_f43v6")
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_y7joa")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(0.29050002, 0.29050002)
+sprite_frames = SubResource("SpriteFrames_yrog7")
+animation = &"new_animation"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 1, 0.2784314, 1)
+visible = false
 texture = ExtResource("2_mc13x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

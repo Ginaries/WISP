@@ -1,0 +1,10 @@
+AnimatedSprite2D
+TextureRect
+Label
+Node2D
+TextureButton
+VideoStreamPlayer
+Sprite2D
+TileMapLayer
+ParallaxLayer
+ParallaxBackground

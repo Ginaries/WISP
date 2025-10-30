@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bp6eq2i6qqh0r"]
 
 [ext_resource type="Script" uid="uid://d1aw5ciykd58g" path="res://Script/Moneda/moneda_premium.gd" id="1_7bbxv"]
-[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="1_fvkh5"]
+[ext_resource type="Texture2D" uid="uid://c2n1x0gawulj5" path="res://Assets - WISP/orbe.png" id="2_7bbxv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7bbxv"]
 radius = 19.026299
@@ -13,14 +13,16 @@ radius = 19.104973
 script = ExtResource("1_7bbxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.9524457, 0.9524458, 3.85046e-06, 1)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_fvkh5")
+scale = Vector2(0.605, 0.605)
+texture = ExtResource("2_7bbxv")
 
 [node name="Area2D" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_7bbxv")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lxox5")
+metadata/_edit_lock_ = true
