@@ -1,16 +1,16 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1761795007
+::res://::1761856663
 icon.svg::CompressedTexture2D::7908112866470741870::1761255827::1761255966::1::::<><><>0<>0<>d5aa73e9d735d544a78b720344fe4c3f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1761604892
 ::res://addons/dialogue_manager/::1761604892
 constants.gd::GDScript::4240262336831424009::1761604892::0::1::::DMConstants<>RefCounted<><>0<>0<><>::
-dialogue_label.gd::GDScript::480611383085669467::1761604892::0::1::::DialogueLabel<>RichTextLabel<><>0<>1<><>::
+dialogue_label.gd::GDScript::480611383085669467::1761604892::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_label.tscn::PackedScene::5518490004210093266::1761604892::0::1::::<><><>0<>0<><>::uid://g32um0mltv5d::::res://addons/dialogue_manager/dialogue_label.gd
 dialogue_line.gd::GDScript::1208905219044177333::1761604892::0::1::::DialogueLine<>RefCounted<><>0<>0<><>::
 dialogue_manager.gd::GDScript::6774079045493014679::1761604892::0::1::::<>Node<><>0<>0<><>::
-dialogue_resource.gd::GDScript::7268423792262407282::1761604892::0::1::::DialogueResource<>Resource<><>0<>1<><>::
+dialogue_resource.gd::GDScript::7268423792262407282::1761604892::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_response.gd::GDScript::5668140482552713515::1761604892::0::1::::DialogueResponse<>RefCounted<><>0<>0<><>::
-dialogue_responses_menu.gd::GDScript::2520211531407682507::1761604892::0::1::::DialogueResponsesMenu<>Container<><>0<>0<><>::
+dialogue_responses_menu.gd::GDScript::2520211531407682507::1761604892::0::1::::DialogueResponsesMenu<>Container<>res://addons/dialogue_manager/assets/responses_menu.svg<>0<>0<><>::
 editor_translation_parser_plugin.gd::GDScript::6952218891186463517::1761604892::0::1::::DMTranslationParserPlugin<>EditorTranslationParserPlugin<><>0<>0<><>::
 export_plugin.gd::GDScript::1265275163198105838::1761604892::0::1::::DMExportPlugin<>EditorExportPlugin<><>0<>0<><>::
 import_plugin.gd::GDScript::7696928728755687928::1761604892::0::1::::DMImportPlugin<>EditorImportPlugin<><>0<>1<><>::
@@ -77,7 +77,7 @@ dialogue_cache.gd::GDScript::9130733358047983146::1761604892::0::1::::DMCache<>N
 ::res://addons/dialogue_manager/views/::1761604893
 main_view.gd::GDScript::5365867961863611872::1761604893::0::1::::<>Control<><>0<>1<><>::
 main_view.tscn::PackedScene::4884668666408697448::1761604893::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
-::res://Assets - WISP/::1761796602
+::res://Assets - WISP/::1761796603
 mercader_wisp.png::CompressedTexture2D::4692655023941970338::1761794808::1761794809::1::::<><><>0<>0<>10d4e48b09e7793b2195a6ca386bdccf<>res://.godot/imported/mercader_wisp.png-54b7f177450d2d87e3704b54531ae07e.ctex::
 orbe.png::CompressedTexture2D::6696398093870372860::1761796602::1761796603::1::::<><><>0<>0<>0164bd33fdc88c72e42805c257e47e48<>res://.godot/imported/orbe.png-58866dc85456dfb9027ec97deb48620f.ctex::
 papa wisp.png::CompressedTexture2D::8911110083398152223::1761256047::1761256081::1::::<><><>0<>0<>83400ba4d5f318ee55a3300cc30239a4<>res://.godot/imported/papa wisp.png-fff137ee1724fe969a936ac275949047.ctex::
@@ -139,9 +139,10 @@ fotograma0009.png::CompressedTexture2D::3477835450311880452::1761256047::1761256
 fotograma0010.png::CompressedTexture2D::6371901700685229619::1761256047::1761256081::1::::<><><>0<>0<>732d84d33cb522138657056e8912752a<>res://.godot/imported/fotograma0010.png-4cc99a59cec23d481be662d9ada00888.ctex::
 fotograma0011.png::CompressedTexture2D::1285294152168386543::1761256047::1761256081::1::::<><><>0<>0<>b946c1a33836229ea335e2d02a8ef728<>res://.godot/imported/fotograma0011.png-32918c58a23d1e4faad9e04b11135fe5.ctex::
 fotograma0012.png::CompressedTexture2D::5097054527458989050::1761256047::1761256081::1::::<><><>0<>0<>5522f69e3a9014ec808862e3a6711577<>res://.godot/imported/fotograma0012.png-ec4ab26677459daa3564230c06cd244b.ctex::
-::res://Assets - WISP/InterfacesPNG/::1761795007
+::res://Assets - WISP/InterfacesPNG/::1761797511
 Selector de niveles 2.png::CompressedTexture2D::3349937409456851194::1761626311::1761626311::1::::<><><>0<>0<>fa483d48a8963e6285e0751e8b5b6609<>res://.godot/imported/Selector de niveles 2.png-243a0c953ed172836866094ecab75033.ctex::
 Selector de niveles REFERENCIA.png::CompressedTexture2D::1354829493911116877::1761626311::1761626311::1::::<><><>0<>0<>7b794b8a864360cdc0fa46873e8f66fb<>res://.godot/imported/Selector de niveles REFERENCIA.png-c0f73e7a6387dcbf33d9bdca55c6450f.ctex::
+::res://Assets - WISP/InterfacesPNG/CartelesFinalNivel/::1761797567
 ::res://Assets - WISP/InterfacesPNG/TiendaPremium/::1761795013
 Cartel Tienda.png::CompressedTexture2D::1690941355377039463::1761795012::1761795013::1::::<><><>0<>0<>5553d8b2f94412eb0f22789fa034485d<>res://.godot/imported/Cartel Tienda.png-3e09556225f1efe87f01c6382491f85f.ctex::
 Parte Inferior Tienda.png::CompressedTexture2D::9054166271722270700::1761794303::1761795007::1::::<><><>0<>0<>b621bae56ead086b9b1c0c96841e08d1<>res://.godot/imported/Parte Inferior Tienda.png-2bc78c9cdd3cbeb4e9b745a0ea99bd75.ctex::
@@ -190,8 +191,8 @@ Tanque.tscn::PackedScene::7911601481511109311::1761619403::0::1::::<><><>0<>0<><
 hoguera.tscn::PackedScene::2997928423492902919::1761616615::0::1::::<><><>0<>0<><>::uid://r7vjhpubmktd::::res://Script/Hogera/Hogera.gd<>uid://c01mlerf5t14h::::res://Assets - WISP/animación brasero/brasero apagado.png<>uid://d2wbhjugv8f6c::::res://Assets - WISP/animación brasero/fotograma0001.png<>uid://cqqqrj7qaiyhs::::res://Assets - WISP/animación brasero/fotograma0002.png<>uid://dxsx6u07tjar::::res://Assets - WISP/animación brasero/fotograma0003.png<>uid://qie5kj1sdyyb::::res://Assets - WISP/animación brasero/fotograma0004.png<>uid://c6lc5tb8dvurr::::res://Assets - WISP/animación brasero/fotograma0005.png
 ::res://Scena/Menú/::1761713267
 Menu.tscn::PackedScene::2949231539600443967::1761713267::0::1::::<><><>0<>0<><>::uid://cfc51on21axpy::::res://Script/Menú/menu.gd<>uid://ifdu3oypjmp7::::res://Assets - WISP/WISP LOGO.png<>uid://1kvm2khs1uol::::res://Assets - WISP/Videos/Interfaces/Main-Menu-Wisp-_1_.ogv<>uid://jlef248t8djy::::res://UI/UI basic/ButtonsText/ButtonText_Blue_OnOffBackground.png
-::res://Scena/Moneda/::1761255827
-moneda_premium.tscn::PackedScene::3503521921232390623::1761255827::0::1::::<><><>0<>0<><>::uid://d1aw5ciykd58g::::res://Script/Moneda/moneda_premium.gd<>uid://dkw0p03h3igwk::::res://icon.svg
+::res://Scena/Moneda/::1761796661
+moneda_premium.tscn::PackedScene::3503521921232390623::1761796661::0::1::::<><><>0<>0<><>::uid://d1aw5ciykd58g::::res://Script/Moneda/moneda_premium.gd<>uid://c2n1x0gawulj5::::res://Assets - WISP/orbe.png
 ::res://Scena/NPC TIENDA/::1761794920
 npctienda.tscn::PackedScene::1287415370614547106::1761794920::0::1::::<><><>0<>0<><>::uid://bi5gbehbt1331::::res://Script/TIENDANPC/npctienda.gd<>uid://dkw0p03h3igwk::::res://icon.svg<>uid://b74flwdcvgxre::::res://Assets - WISP/mercader_wisp.png<>uid://b814ea3322b24::::res://Assets - WISP/Mercader Idle/fotograma0000.png<>uid://cg1a68gbvmq0x::::res://Assets - WISP/Mercader Idle/fotograma0001.png<>uid://cw485ntamh7k4::::res://Assets - WISP/Mercader Idle/fotograma0002.png<>uid://cihwu68yiejrf::::res://Assets - WISP/Mercader Idle/fotograma0003.png<>uid://b08n6orwntmu5::::res://Assets - WISP/Mercader Idle/fotograma0004.png<>uid://bvs2x3a3dq5t4::::res://Assets - WISP/Mercader Idle/fotograma0005.png<>uid://bmln73w8fc068::::res://Assets - WISP/Mercader Idle/fotograma0006.png<>uid://xrymi3aqqog3::::res://Assets - WISP/Mercader Idle/fotograma0007.png<>uid://celt6cdhonmy4::::res://Assets - WISP/Mercader Idle/fotograma0008.png<>uid://bser6e646b5pt::::res://Assets - WISP/Mercader Idle/fotograma0009.png
 ::res://Scena/Player/::1761611069
@@ -200,13 +201,13 @@ player.tscn::PackedScene::8719184663856016717::1761604892::0::1::::<><><>0<>0<><
 ::res://Scena/Player/proyectil del player/::1761615357
 proyectil.gd::GDScript::3837176464372276191::1761255827::0::1::::<>Area2D<><>0<>0<><>::
 proyectil.tscn::PackedScene::1292417733381821809::1761615357::0::1::::<><><>0<>0<><>::uid://buw00ar53g7k2::::res://Scena/Player/proyectil del player/proyectil.gd<>uid://cnb3v4icrybc3::::res://Assets - WISP/Plataformas/proyectil.png
-::res://Scena/SelectorNiveles/::1761627407
-SelectorNiveles.tscn::PackedScene::7451815393450247744::1761627407::0::1::::<><><>0<>0<><>::uid://cbkr8kcho4qwe::::res://Scena/SelectorNiveles/selector_niveles.gd<>uid://bnyy8ksg0qgek::::res://Assets - WISP/InterfacesPNG/Selector de niveles 2.png<>uid://tkj3xptio5jt::::res://Assets - WISP/InterfacesPNG/Selector de niveles REFERENCIA.png<>uid://d2wbhjugv8f6c::::res://Assets - WISP/animación brasero/fotograma0001.png<>uid://c01mlerf5t14h::::res://Assets - WISP/animación brasero/brasero apagado.png
+::res://Scena/SelectorNiveles/::1761796928
+SelectorNiveles.tscn::PackedScene::7451815393450247744::1761796928::0::1::::<><><>0<>0<><>::uid://cbkr8kcho4qwe::::res://Scena/SelectorNiveles/selector_niveles.gd<>uid://bnyy8ksg0qgek::::res://Assets - WISP/InterfacesPNG/Selector de niveles 2.png<>uid://tkj3xptio5jt::::res://Assets - WISP/InterfacesPNG/Selector de niveles REFERENCIA.png<>uid://d2wbhjugv8f6c::::res://Assets - WISP/animación brasero/fotograma0001.png<>uid://c01mlerf5t14h::::res://Assets - WISP/animación brasero/brasero apagado.png
 selector_niveles.gd::GDScript::4864765637301749720::1761627407::0::1::::<>Control<><>0<>0<><>::
 ::res://Scena/TiendaPremium/::1761796259
 TiendaPremium.tscn::PackedScene::4398351913813359943::1761796259::0::1::::<><><>0<>0<><>::uid://g3377wu3cefc::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png<>uid://d1852b122p5dg::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Inferior Tienda.png<>uid://b814ea3322b24::::res://Assets - WISP/Mercader Idle/fotograma0000.png<>uid://cg1a68gbvmq0x::::res://Assets - WISP/Mercader Idle/fotograma0001.png<>uid://ydds68hj07sl::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Cartel Tienda.png<>uid://cw485ntamh7k4::::res://Assets - WISP/Mercader Idle/fotograma0002.png<>uid://cihwu68yiejrf::::res://Assets - WISP/Mercader Idle/fotograma0003.png<>uid://b08n6orwntmu5::::res://Assets - WISP/Mercader Idle/fotograma0004.png<>uid://bvs2x3a3dq5t4::::res://Assets - WISP/Mercader Idle/fotograma0005.png<>uid://bmln73w8fc068::::res://Assets - WISP/Mercader Idle/fotograma0006.png<>uid://xrymi3aqqog3::::res://Assets - WISP/Mercader Idle/fotograma0007.png<>uid://celt6cdhonmy4::::res://Assets - WISP/Mercader Idle/fotograma0008.png<>uid://bser6e646b5pt::::res://Assets - WISP/Mercader Idle/fotograma0009.png<>uid://b74flwdcvgxre::::res://Assets - WISP/mercader_wisp.png
-::res://Scena/TilesSet/::1761712999
-TilesSet.tscn::PackedScene::5544274493956370895::1761712999::0::1::::<><><>0<>0<><>::uid://hw0ohg6l7va3::::res://Assets - WISP/Plataformas/tile_derecha.png<>uid://d2rtx5ah5d3o1::::res://Assets - WISP/Plataformas/Intentoplataforma.png<>uid://dtfukocnnrld6::::res://Assets - WISP/Plataformas/tile_izquierda.png<>uid://bpgy60ksu37vf::::res://Assets - WISP/Plataformas/plataforma.png<>uid://dje420kwr4f30::::res://Assets - WISP/Plataformas/tile_centro.png<>uid://dkx7p65bbp4lo::::res://Assets - WISP/ParallaxCueva1/Cueva1capa4fondo.png<>uid://hxarurl6sv54::::res://Assets - WISP/ParallaxCueva1/Cueva1capa3.png<>uid://bw4vf5kr3bhna::::res://Assets - WISP/Plataformas/bloquecentro.png<>uid://cxa2b5u2yjk6c::::res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png<>uid://cwog516qf6ri8::::res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png<>uid://dwhvxylru7526::::res://Scena/Player/player.tscn<>uid://breu0a4y5swo1::::res://Scena/Player/camera_2d.tscn<>uid://biyhpci4na4t4::::res://Scena/Enemigos/Hoguera/hoguera.tscn<>uid://dkyo6kdmxj6j0::::res://Scena/Enemigos/Tanque.tscn<>uid://gobt7cps4w31::::res://Scena/Enemigos/avispa.tscn
+::res://Scena/TilesSet/::1761841997
+TilesSet.tscn::PackedScene::5544274493956370895::1761841997::0::1::::<><><>0<>0<><>::uid://hw0ohg6l7va3::::res://Assets - WISP/Plataformas/tile_derecha.png<>uid://d2rtx5ah5d3o1::::res://Assets - WISP/Plataformas/Intentoplataforma.png<>uid://dtfukocnnrld6::::res://Assets - WISP/Plataformas/tile_izquierda.png<>uid://bpgy60ksu37vf::::res://Assets - WISP/Plataformas/plataforma.png<>uid://dje420kwr4f30::::res://Assets - WISP/Plataformas/tile_centro.png<>uid://dkx7p65bbp4lo::::res://Assets - WISP/ParallaxCueva1/Cueva1capa4fondo.png<>uid://hxarurl6sv54::::res://Assets - WISP/ParallaxCueva1/Cueva1capa3.png<>uid://bw4vf5kr3bhna::::res://Assets - WISP/Plataformas/bloquecentro.png<>uid://cxa2b5u2yjk6c::::res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png<>uid://cwog516qf6ri8::::res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png<>uid://dwhvxylru7526::::res://Scena/Player/player.tscn<>uid://breu0a4y5swo1::::res://Scena/Player/camera_2d.tscn<>uid://biyhpci4na4t4::::res://Scena/Enemigos/Hoguera/hoguera.tscn<>uid://dkyo6kdmxj6j0::::res://Scena/Enemigos/Tanque.tscn<>uid://gobt7cps4w31::::res://Scena/Enemigos/avispa.tscn
 ::res://Script/::1761610999
 ::res://Script/ControldeEscenarios/::1761610999
 escenarios.gd::GDScript::2386335375357526907::1761610999::0::1::::<>Node<><>0<>0<><>::
