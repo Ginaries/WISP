@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=3 uid="uid://bo2qgconev4kd"]
+
+[ext_resource type="Script" uid="uid://cfo5et35nj68a" path="res://Scena/CuevaMercader/cueva_mercader.gd" id="1_0bknn"]
+[ext_resource type="Texture2D" uid="uid://bo7vtusrx3cg0" path="res://Assets - WISP/CUEVAMERCADER/Tienda Juego.png" id="1_lf2vp"]
+[ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="2_0bknn"]
+[ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="3_cpk2m"]
+[ext_resource type="Texture2D" uid="uid://cw485ntamh7k4" path="res://Assets - WISP/Mercader Idle/fotograma0002.png" id="4_mcjpl"]
+[ext_resource type="Texture2D" uid="uid://cihwu68yiejrf" path="res://Assets - WISP/Mercader Idle/fotograma0003.png" id="5_s4jss"]
+[ext_resource type="Texture2D" uid="uid://b08n6orwntmu5" path="res://Assets - WISP/Mercader Idle/fotograma0004.png" id="6_a3f75"]
+[ext_resource type="Texture2D" uid="uid://bvs2x3a3dq5t4" path="res://Assets - WISP/Mercader Idle/fotograma0005.png" id="7_bm46f"]
+[ext_resource type="Texture2D" uid="uid://bmln73w8fc068" path="res://Assets - WISP/Mercader Idle/fotograma0006.png" id="8_l7eju"]
+[ext_resource type="Texture2D" uid="uid://xrymi3aqqog3" path="res://Assets - WISP/Mercader Idle/fotograma0007.png" id="9_f7rs4"]
+[ext_resource type="Texture2D" uid="uid://celt6cdhonmy4" path="res://Assets - WISP/Mercader Idle/fotograma0008.png" id="10_n5kmr"]
+[ext_resource type="Texture2D" uid="uid://bser6e646b5pt" path="res://Assets - WISP/Mercader Idle/fotograma0009.png" id="11_1kerq"]
+[ext_resource type="Texture2D" uid="uid://dvgfvrw00wtiv" path="res://Assets - WISP/CUEVAMERCADER/Mostrador Tienda Juego.png" id="12_1euyu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tm5a"]
+size = Vector2(747, 487)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwytn"]
+size = Vector2(139, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bm1nd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0bknn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cpk2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mcjpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s4jss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a3f75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bm46f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l7eju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f7rs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n5kmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1kerq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n5kmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f7rs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l7eju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bm46f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a3f75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s4jss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mcjpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cpk2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0bknn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CuevaMercader" type="Node2D"]
+script = ExtResource("1_0bknn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(376, 641)
+texture = ExtResource("1_lf2vp")
+
+[node name="CambioDeCamara" type="Area2D" parent="."]
+position = Vector2(-32, 406)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CambioDeCamara"]
+position = Vector2(406.5, -11.5)
+shape = SubResource("RectangleShape2D_7tm5a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(506, 405.00006)
+scale = Vector2(1, 0.6361555)
+polygon = PackedVector2Array(-501.99997, -397.7016, 239.99997, -399.27356, 247.99997, 374.12225, -505.99997, 369.40643, -506.00006, 706.2759, 245.99997, 729.3813, 263.99997, 729.3813, 267.99997, -576.9031, -509.00006, -569.7241)
+
+[node name="InteraccionInterna" type="Area2D" parent="."]
+position = Vector2(129, 574)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteraccionInterna"]
+position = Vector2(83, 3)
+shape = SubResource("RectangleShape2D_dwytn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(451, 510)
+scale = Vector2(0.48399997, 0.53400004)
+sprite_frames = SubResource("SpriteFrames_bm1nd")
+animation = &"idle"
+autoplay = "idle"
+frame = 18
+frame_progress = 0.5208703
+
+[node name="Frente" type="Sprite2D" parent="."]
+position = Vector2(492, 593)
+texture = ExtResource("12_1euyu")

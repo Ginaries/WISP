@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://ck8xnj4oeoh5h"]
+[gd_scene load_steps=24 format=4 uid="uid://ck8xnj4oeoh5h"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_a7a2h"]
 [ext_resource type="Texture2D" uid="uid://d2rtx5ah5d3o1" path="res://Assets - WISP/Plataformas/Intentoplataforma.png" id="1_tcrrc"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://biyhpci4na4t4" path="res://Scena/Enemigos/Hoguera/hoguera.tscn" id="13_axdhj"]
 [ext_resource type="PackedScene" uid="uid://dkyo6kdmxj6j0" path="res://Scena/Enemigos/Tanque.tscn" id="14_68xka"]
 [ext_resource type="PackedScene" uid="uid://gobt7cps4w31" path="res://Scena/Enemigos/avispa.tscn" id="15_7tm5a"]
+[ext_resource type="PackedScene" uid="uid://bo2qgconev4kd" path="res://Scena/CuevaMercader/cueva_mercader.tscn" id="16_agavg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axdhj"]
 texture = ExtResource("1_a7a2h")
@@ -466,6 +467,10 @@ texture = ExtResource("7_axdhj")
 position = Vector2(375, 631)
 player = NodePath("../Player")
 
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(859, 497)
+zoom = Vector2(3.48, 3.48)
+
 [node name="Player" parent="." instance=ExtResource("11_ofh2s")]
 position = Vector2(102, 55)
 fuerza_disparo = 450.0
@@ -491,3 +496,6 @@ vida = 20
 
 [node name="Avispa" parent="." instance=ExtResource("15_7tm5a")]
 position = Vector2(588, 302)
+
+[node name="CuevaMercader" parent="." instance=ExtResource("16_agavg")]
+position = Vector2(1090, 564)
