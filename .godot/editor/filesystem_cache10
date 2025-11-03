@@ -1,5 +1,5 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1762093970
+::res://::1762113152
 icon.svg::CompressedTexture2D::7908112866470741870::1759535176::1759535184::1::::<><><>0<>0<>d5aa73e9d735d544a78b720344fe4c3f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1761603585
 ::res://addons/dialogue_manager/::1761603585
@@ -60,9 +60,9 @@ editor_property_control.gd::GDScript::8171099031067179274::1761603585::0::1::::<
 editor_property_control.tscn::PackedScene::1689506734256736329::1761603585::0::1::::<><><>0<>0<><>::uid://dooe2pflnqtve::::res://addons/dialogue_manager/components/editor_property/editor_property_control.gd<>uid://b16uuqjuof3n5::::res://addons/dialogue_manager/components/editor_property/resource_button.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn
 resource_button.gd::GDScript::7184489175127453302::1761603585::0::1::::<>Button<><>0<>1<><>::
 resource_button.tscn::PackedScene::4276577239595711888::1761603585::0::1::::<><><>0<>0<><>::uid://damhqta55t67c::::res://addons/dialogue_manager/components/editor_property/resource_button.gd
-::res://addons/dialogue_manager/example_balloon/::1761603585
+::res://addons/dialogue_manager/example_balloon/::1762131683
 example_balloon.gd::GDScript::9030794338866587503::1761603585::0::1::::DialogueManagerExampleBalloon<>CanvasLayer<><>0<>0<><>::
-example_balloon.tscn::PackedScene::2304415056852043862::1761603585::0::1::::<><><>0<>0<><>::uid://d1wt4ma6055l8::::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
+example_balloon.tscn::PackedScene::2304415056852043862::1762131683::0::1::::<><><>0<>0<><>::uid://d1wt4ma6055l8::::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 small_example_balloon.tscn::PackedScene::1883859960814163368::1761603585::0::1::::<><><>0<>0<><>::uid://d1wt4ma6055l8::::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 ::res://addons/dialogue_manager/l10n/::1761603585
 en.mo::Translation::-1::1761603585::0::1::::<><><>0<>0<><>::
@@ -139,10 +139,14 @@ fotograma0009.png::CompressedTexture2D::3477835450311880452::1761346615::1761346
 fotograma0010.png::CompressedTexture2D::6371901700685229619::1761346615::1761346653::1::::<><><>0<>0<>732d84d33cb522138657056e8912752a<>res://.godot/imported/fotograma0010.png-4cc99a59cec23d481be662d9ada00888.ctex::
 fotograma0011.png::CompressedTexture2D::1285294152168386543::1761346615::1761346653::1::::<><><>0<>0<>b946c1a33836229ea335e2d02a8ef728<>res://.godot/imported/fotograma0011.png-32918c58a23d1e4faad9e04b11135fe5.ctex::
 fotograma0012.png::CompressedTexture2D::5097054527458989050::1761346615::1761346653::1::::<><><>0<>0<>5522f69e3a9014ec808862e3a6711577<>res://.godot/imported/fotograma0012.png-ec4ab26677459daa3564230c06cd244b.ctex::
-::res://Assets - WISP/CUEVAMERCADER/::1762096980
+::res://Assets - WISP/CUEVAMERCADER/::1762096981
 Mostrador Tienda Juego.png::CompressedTexture2D::8645956048691007569::1762096980::1762096981::1::::<><><>0<>0<>a77ac3e740ddd9b142e935df086e739e<>res://.godot/imported/Mostrador Tienda Juego.png-06cd2d3583b883b6c8176f9ab6b5e9cb.ctex::
 Tienda Juego.png::CompressedTexture2D::3436434648765479389::1762096277::1762096288::1::::<><><>0<>0<>971964d6faf2ebd86c9254e60e82a614<>res://.godot/imported/Tienda Juego.png-cb2952d37d2735e27db33f1d28cfa7e0.ctex::
-::res://Assets - WISP/InterfacesPNG/::1762093986
+::res://Assets - WISP/InterfacesPNG/::1762134449
+combustible apagado.png::CompressedTexture2D::2802606889638863565::1762134449::1762134449::1::::<><><>0<>0<>da2f6f644a3919ab977222a0538da7d7<>res://.godot/imported/combustible apagado.png-38a57e20641a38ea1b0c21150ba0bdb3.ctex::
+combustible lleno.png::CompressedTexture2D::5570043158616296345::1762134449::1762134449::1::::<><><>0<>0<>43a1529894b505084762d4540e4c39a7<>res://.godot/imported/combustible lleno.png-0be9844c636a1f22bdd6c01d46c3091a.ctex::
+cora lleno.png::CompressedTexture2D::6252954402039653968::1762134449::1762134449::1::::<><><>0<>0<>d2cf1b6efa391434673a261b560c5557<>res://.godot/imported/cora lleno.png-826d6238e008dca4a51239185b008df9.ctex::
+Orbe Tienda Juego.png::CompressedTexture2D::188224569763467807::1762134449::1762134449::1::::<><><>0<>0<>da816a34367c5fef40980d8edf325092<>res://.godot/imported/Orbe Tienda Juego.png-442e7bb08f1c8051fb32be6d0db349f2.ctex::
 Selector de niveles 2.png::CompressedTexture2D::3349937409456851194::1761758257::1762093986::1::::<><><>0<>0<>fa483d48a8963e6285e0751e8b5b6609<>res://.godot/imported/Selector de niveles 2.png-243a0c953ed172836866094ecab75033.ctex::
 Selector de niveles REFERENCIA.png::CompressedTexture2D::1354829493911116877::1761758257::1762093986::1::::<><><>0<>0<>7b794b8a864360cdc0fa46873e8f66fb<>res://.godot/imported/Selector de niveles REFERENCIA.png-c0f73e7a6387dcbf33d9bdca55c6450f.ctex::
 ::res://Assets - WISP/InterfacesPNG/TiendaPremium/::1762093986
@@ -179,29 +183,36 @@ tile_izquierda.png::CompressedTexture2D::8504404905791820329::1761603569::176160
 ::res://Assets - WISP/Videos/Interfaces/::1761758257
 Main-Menu-Wisp-_1_.ogv::VideoStreamTheora::1846851632426039815::1761758257::0::1::::<><><>0<>0<><>::
 Main-Menu-Wisp.ogv::VideoStreamTheora::3123518399251167466::1761758257::0::1::::<><><>0<>0<><>::
-::res://Dialogos/::1762093985
-Mercader.dialogue::Resource::862731139498429338::1761603585::1762093985::1::::<><><>0<>0<>b0446021224c0f8d8bcb0d541bc08496<>res://.godot/imported/Mercader.dialogue-6b9bf2c6c043058c0b3b84a7abca1b07.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Scena/::1762096419
+::res://Dialogos/::1762131389
+Mercader.dialogue::Resource::862731139498429338::1762131388::1762131389::1::::<><><>0<>0<>b0446021224c0f8d8bcb0d541bc08496<>res://.godot/imported/Mercader.dialogue-6b9bf2c6c043058c0b3b84a7abca1b07.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
+::res://Scena/::1762123522
 ::res://Scena/Cueva 1/::1761611229
 cueva_1.tscn::PackedScene::8202387143228544630::1761611229::0::1::::<><><>0<>0<><>::uid://dkw0p03h3igwk::::res://icon.svg<>uid://7m2l1nlycr17::::res://Script/Cueva 1/cueva_1.gd<>uid://dwhvxylru7526::::res://Scena/Player/player.tscn<>uid://gobt7cps4w31::::res://Scena/Enemigos/avispa.tscn<>uid://biyhpci4na4t4::::res://Scena/Enemigos/Hoguera/hoguera.tscn<>uid://slvsp1pafyfq::::res://Scena/NPC TIENDA/npctienda.tscn<>uid://dkyo6kdmxj6j0::::res://Scena/Enemigos/Tanque.tscn
-::res://Scena/CuevaMercader/::1762096421
-cueva_mercader.tscn::PackedScene::3425785007903688403::1762096421::0::1::::<><><>0<>0<><>::
-::res://Scena/Enemigos/::1761758257
-avispa.tscn::PackedScene::450130682005555730::1761758257::0::1::::<><><>0<>0<><>::uid://dmh0pc2maj3h2::::res://Script/Enemigo/Avispa.gd<>uid://dxsra20wohwwm::::res://Assets - WISP/animación avispa-enemigo/fotograma0001.png<>uid://cmvfc2lkkc3rw::::res://Assets - WISP/animación avispa-enemigo/fotograma0000.png
+::res://Scena/CuevaMercader/::1762134034
+cueva_mercader.gd::GDScript::5154516569670816566::1762131748::0::1::::<>Node2D<><>0<>0<><>::
+cueva_mercader.tscn::PackedScene::3425785007903688403::1762134034::0::1::::<><><>0<>0<><>::uid://cfo5et35nj68a::::res://Scena/CuevaMercader/cueva_mercader.gd<>uid://bo7vtusrx3cg0::::res://Assets - WISP/CUEVAMERCADER/Tienda Juego.png<>uid://b814ea3322b24::::res://Assets - WISP/Mercader Idle/fotograma0000.png<>uid://cg1a68gbvmq0x::::res://Assets - WISP/Mercader Idle/fotograma0001.png<>uid://cw485ntamh7k4::::res://Assets - WISP/Mercader Idle/fotograma0002.png<>uid://cihwu68yiejrf::::res://Assets - WISP/Mercader Idle/fotograma0003.png<>uid://b08n6orwntmu5::::res://Assets - WISP/Mercader Idle/fotograma0004.png<>uid://bvs2x3a3dq5t4::::res://Assets - WISP/Mercader Idle/fotograma0005.png<>uid://bmln73w8fc068::::res://Assets - WISP/Mercader Idle/fotograma0006.png<>uid://xrymi3aqqog3::::res://Assets - WISP/Mercader Idle/fotograma0007.png<>uid://celt6cdhonmy4::::res://Assets - WISP/Mercader Idle/fotograma0008.png<>uid://bser6e646b5pt::::res://Assets - WISP/Mercader Idle/fotograma0009.png<>uid://dvgfvrw00wtiv::::res://Assets - WISP/CUEVAMERCADER/Mostrador Tienda Juego.png
+::res://Scena/Enemigos/::1762125440
+avispa.tscn::PackedScene::450130682005555730::1762125440::0::1::::<><><>0<>0<><>::uid://dmh0pc2maj3h2::::res://Script/Enemigo/Avispa.gd<>uid://dxsra20wohwwm::::res://Assets - WISP/animación avispa-enemigo/fotograma0001.png<>uid://cmvfc2lkkc3rw::::res://Assets - WISP/animación avispa-enemigo/fotograma0000.png
 pincho.gd::GDScript::5133056491184435393::1761603585::0::1::::<>Enemigo<><>0<>0<><>::
 Pincho.tscn::PackedScene::730689031946212632::1761603585::0::1::::<><><>0<>0<><>::uid://cfeqxqf4ylaeb::::res://Scena/Enemigos/pincho.gd<>uid://dtqxwfsabii3c::::res://Assets - WISP/animación pincho-enemigo/fotograma0000.png<>uid://bpcmo187e4a34::::res://Assets - WISP/animación pincho-enemigo/fotograma0001.png<>uid://830egjsnnvxh::::res://Assets - WISP/animación pincho-enemigo/fotograma0002.png<>uid://roaf4batyym1::::res://Assets - WISP/animación pincho-enemigo/fotograma0003.png<>uid://l8mqsb40kao7::::res://Assets - WISP/animación pincho-enemigo/fotograma0004.png<>uid://dvp8wjma4c0bm::::res://Assets - WISP/animación pincho-enemigo/fotograma0005.png<>uid://dfdnmj17re45m::::res://Assets - WISP/animación pincho-enemigo/fotograma0006.png<>uid://b8kbs8ooij3h2::::res://Assets - WISP/animación pincho-enemigo/fotograma0007.png<>uid://b1p2yoworsjqc::::res://Assets - WISP/animación pincho-enemigo/fotograma0008.png
-Tanque.tscn::PackedScene::7911601481511109311::1761758257::0::1::::<><><>0<>0<><>::uid://b8q1jmc3cd6bg::::res://Script/Enemigo/tanque.gd<>uid://ce6r0l44yb0dj::::res://Assets - WISP/animación tanque-enemigo/fotograma0000.png<>uid://b4ob4qh67k3rl::::res://Assets - WISP/animación tanque-enemigo/fotograma0001.png<>uid://d1unv1pl7nknq::::res://Assets - WISP/animación tanque-enemigo/fotograma0002.png<>uid://da37gyw5hi1wc::::res://Assets - WISP/animación tanque-enemigo/fotograma0003.png<>uid://cawjwbm3kwot6::::res://Assets - WISP/animación tanque-enemigo/fotograma0004.png<>uid://dcyk6jsmphxsp::::res://Assets - WISP/animación tanque-enemigo/fotograma0005.png<>uid://uwpsmeyps11m::::res://Assets - WISP/animación tanque-enemigo/fotograma0006.png<>uid://uabqmkd3nh25::::res://Assets - WISP/animación tanque-enemigo/fotograma0007.png<>uid://dwn3e30f7urtm::::res://Assets - WISP/animación tanque-enemigo/fotograma0008.png<>uid://bpsxpawqph2hc::::res://Assets - WISP/animación tanque-enemigo/fotograma0009.png<>uid://cw1uj4kwxtxxb::::res://Assets - WISP/animación tanque-enemigo/fotograma0010.png<>uid://skuuvtxrkobv::::res://Assets - WISP/animación tanque-enemigo/fotograma0011.png
+Tanque.tscn::PackedScene::7911601481511109311::1762125141::0::1::::<><><>0<>0<><>::uid://b8q1jmc3cd6bg::::res://Script/Enemigo/tanque.gd<>uid://ce6r0l44yb0dj::::res://Assets - WISP/animación tanque-enemigo/fotograma0000.png<>uid://b4ob4qh67k3rl::::res://Assets - WISP/animación tanque-enemigo/fotograma0001.png<>uid://d1unv1pl7nknq::::res://Assets - WISP/animación tanque-enemigo/fotograma0002.png<>uid://da37gyw5hi1wc::::res://Assets - WISP/animación tanque-enemigo/fotograma0003.png<>uid://cawjwbm3kwot6::::res://Assets - WISP/animación tanque-enemigo/fotograma0004.png<>uid://dcyk6jsmphxsp::::res://Assets - WISP/animación tanque-enemigo/fotograma0005.png<>uid://uwpsmeyps11m::::res://Assets - WISP/animación tanque-enemigo/fotograma0006.png<>uid://uabqmkd3nh25::::res://Assets - WISP/animación tanque-enemigo/fotograma0007.png<>uid://dwn3e30f7urtm::::res://Assets - WISP/animación tanque-enemigo/fotograma0008.png<>uid://bpsxpawqph2hc::::res://Assets - WISP/animación tanque-enemigo/fotograma0009.png<>uid://cw1uj4kwxtxxb::::res://Assets - WISP/animación tanque-enemigo/fotograma0010.png<>uid://skuuvtxrkobv::::res://Assets - WISP/animación tanque-enemigo/fotograma0011.png
 ::res://Scena/Enemigos/Hoguera/::1761603554
 hoguera.tscn::PackedScene::2997928423492902919::1761603554::0::1::::<><><>0<>0<><>::uid://r7vjhpubmktd::::res://Script/Hogera/Hogera.gd<>uid://c01mlerf5t14h::::res://Assets - WISP/animación brasero/brasero apagado.png<>uid://d2wbhjugv8f6c::::res://Assets - WISP/animación brasero/fotograma0001.png<>uid://cqqqrj7qaiyhs::::res://Assets - WISP/animación brasero/fotograma0002.png<>uid://dxsx6u07tjar::::res://Assets - WISP/animación brasero/fotograma0003.png<>uid://qie5kj1sdyyb::::res://Assets - WISP/animación brasero/fotograma0004.png<>uid://c6lc5tb8dvurr::::res://Assets - WISP/animación brasero/fotograma0005.png
+::res://Scena/Joystick/::1762123740
+joyknobpng.png::CompressedTexture2D::8376413473439280826::1762123238::1762123691::1::::<><><>0<>0<>11a9fe5366e9b1cbabc2c79874677150<>res://.godot/imported/joyknobpng.png-f8a47cf53d8e4f28595f80f643901fe6.ctex::
+joyring.png::CompressedTexture2D::53403600129097967::1762123238::1762123691::1::::<><><>0<>0<>700208b5435af58410c5a945c336324f<>res://.godot/imported/joyring.png-76a9592be5848237ab6c1ff85b9f5c9c.ctex::
+joystick.gd::GDScript::7245825547973603518::1762123238::0::1::::<>Node2D<><>0<>0<><>::
+joystick.tscn::PackedScene::8066540003401689708::1762123740::0::1::::<><><>0<>0<><>::uid://dbh6xnq6j82ry::::res://Scena/Joystick/joystick.gd<>uid://04sxhhvhph4::::res://Scena/Joystick/joyring.png<>uid://drlukn35co1d3::::res://Scena/Joystick/joyknobpng.png<>uid://don1q8wu3ihr5::::res://Scena/Joystick/Knob.gd
+Knob.gd::GDScript::8170351755531640956::1762123238::0::1::::<>Sprite2D<><>0<>0<><>::
 ::res://Scena/Menú/::1762093878
 Menu.tscn::PackedScene::2949231539600443967::1762093878::0::1::::<><><>0<>0<><>::uid://cfc51on21axpy::::res://Script/Menú/menu.gd<>uid://ifdu3oypjmp7::::res://Assets - WISP/WISP LOGO.png<>uid://1kvm2khs1uol::::res://Assets - WISP/Videos/Interfaces/Main-Menu-Wisp-_1_.ogv<>uid://jlef248t8djy::::res://UI/UI basic/ButtonsText/ButtonText_Blue_OnOffBackground.png
 ::res://Scena/Moneda/::1762093878
 moneda_premium.tscn::PackedScene::3503521921232390623::1762093878::0::1::::<><><>0<>0<><>::uid://d1aw5ciykd58g::::res://Script/Moneda/moneda_premium.gd<>uid://c2n1x0gawulj5::::res://Assets - WISP/orbe.png
 ::res://Scena/NPC TIENDA/::1762093878
 npctienda.tscn::PackedScene::1287415370614547106::1762093878::0::1::::<><><>0<>0<><>::uid://bi5gbehbt1331::::res://Script/TIENDANPC/npctienda.gd<>uid://dkw0p03h3igwk::::res://icon.svg<>uid://b74flwdcvgxre::::res://Assets - WISP/mercader_wisp.png<>uid://b814ea3322b24::::res://Assets - WISP/Mercader Idle/fotograma0000.png<>uid://cg1a68gbvmq0x::::res://Assets - WISP/Mercader Idle/fotograma0001.png<>uid://cw485ntamh7k4::::res://Assets - WISP/Mercader Idle/fotograma0002.png<>uid://cihwu68yiejrf::::res://Assets - WISP/Mercader Idle/fotograma0003.png<>uid://b08n6orwntmu5::::res://Assets - WISP/Mercader Idle/fotograma0004.png<>uid://bvs2x3a3dq5t4::::res://Assets - WISP/Mercader Idle/fotograma0005.png<>uid://bmln73w8fc068::::res://Assets - WISP/Mercader Idle/fotograma0006.png<>uid://xrymi3aqqog3::::res://Assets - WISP/Mercader Idle/fotograma0007.png<>uid://celt6cdhonmy4::::res://Assets - WISP/Mercader Idle/fotograma0008.png<>uid://bser6e646b5pt::::res://Assets - WISP/Mercader Idle/fotograma0009.png
-::res://Scena/Player/::1761612143
+::res://Scena/Player/::1762125508
 camera_2d.tscn::PackedScene::3589147567189444094::1761610829::0::1::::<><><>0<>0<><>::uid://cbu2nfdeshjyq::::res://Script/Player/camera_2d.gd
-player.tscn::PackedScene::8719184663856016717::1761612143::0::1::::<><><>0<>0<><>::uid://dh6ideadnjmog::::res://Script/Player/player.gd<>uid://dlp8qemipm6lt::::res://Assets - WISP/WISP.png<>uid://cdcx300fj0oxp::::res://Assets - WISP/animación caminar wisp/wisp animat0002.png<>uid://cenq855omi8ut::::res://Assets - WISP/animación caminar wisp/wisp animat0003.png<>uid://c4mmhtsr7s4cj::::res://Assets - WISP/animación caminar wisp/wisp animat0004.png<>uid://ckjy3cwhqu4rl::::res://Assets - WISP/animación caminar wisp/wisp animat0005.png<>uid://dta12e8xmuhww::::res://Assets - WISP/animación caminar wisp/wisp animat0006.png<>uid://bqyhkpb6r7tqb::::res://Assets - WISP/animación caminar wisp/wisp animat0008.png<>uid://cy5xyx180t1ns::::res://Assets - WISP/animación caminar wisp/wisp animat0007.png
+player.tscn::PackedScene::8719184663856016717::1762125508::0::1::::<><><>0<>0<><>::uid://dh6ideadnjmog::::res://Script/Player/player.gd<>uid://dlp8qemipm6lt::::res://Assets - WISP/WISP.png<>uid://cdcx300fj0oxp::::res://Assets - WISP/animación caminar wisp/wisp animat0002.png<>uid://cenq855omi8ut::::res://Assets - WISP/animación caminar wisp/wisp animat0003.png<>uid://c4mmhtsr7s4cj::::res://Assets - WISP/animación caminar wisp/wisp animat0004.png<>uid://ckjy3cwhqu4rl::::res://Assets - WISP/animación caminar wisp/wisp animat0005.png<>uid://dta12e8xmuhww::::res://Assets - WISP/animación caminar wisp/wisp animat0006.png<>uid://bqyhkpb6r7tqb::::res://Assets - WISP/animación caminar wisp/wisp animat0008.png<>uid://cy5xyx180t1ns::::res://Assets - WISP/animación caminar wisp/wisp animat0007.png
 ::res://Scena/Player/proyectil del player/::1761758257
 proyectil.gd::GDScript::3837176464372276191::1759595410::0::1::::<>Area2D<><>0<>0<><>::
 proyectil.tscn::PackedScene::1292417733381821809::1761758257::0::1::::<><><>0<>0<><>::uid://buw00ar53g7k2::::res://Scena/Player/proyectil del player/proyectil.gd<>uid://cnb3v4icrybc3::::res://Assets - WISP/Plataformas/proyectil.png
@@ -210,27 +221,27 @@ SelectorNiveles.tscn::PackedScene::7451815393450247744::1762093878::0::1::::<><>
 selector_niveles.gd::GDScript::4864765637301749720::1761758257::0::1::::<>Control<><>0<>0<><>::
 ::res://Scena/TiendaPremium/::1762093878
 TiendaPremium.tscn::PackedScene::4398351913813359943::1762093878::0::1::::<><><>0<>0<><>::uid://g3377wu3cefc::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png<>uid://d1852b122p5dg::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Inferior Tienda.png<>uid://b814ea3322b24::::res://Assets - WISP/Mercader Idle/fotograma0000.png<>uid://cg1a68gbvmq0x::::res://Assets - WISP/Mercader Idle/fotograma0001.png<>uid://ydds68hj07sl::::res://Assets - WISP/InterfacesPNG/TiendaPremium/Cartel Tienda.png<>uid://cw485ntamh7k4::::res://Assets - WISP/Mercader Idle/fotograma0002.png<>uid://cihwu68yiejrf::::res://Assets - WISP/Mercader Idle/fotograma0003.png<>uid://b08n6orwntmu5::::res://Assets - WISP/Mercader Idle/fotograma0004.png<>uid://bvs2x3a3dq5t4::::res://Assets - WISP/Mercader Idle/fotograma0005.png<>uid://bmln73w8fc068::::res://Assets - WISP/Mercader Idle/fotograma0006.png<>uid://xrymi3aqqog3::::res://Assets - WISP/Mercader Idle/fotograma0007.png<>uid://celt6cdhonmy4::::res://Assets - WISP/Mercader Idle/fotograma0008.png<>uid://bser6e646b5pt::::res://Assets - WISP/Mercader Idle/fotograma0009.png<>uid://b74flwdcvgxre::::res://Assets - WISP/mercader_wisp.png
-::res://Scena/TilesSet/::1762095211
-TilesSet.tscn::PackedScene::5544274493956370895::1762095211::0::1::::<><><>0<>0<><>::uid://hw0ohg6l7va3::::res://Assets - WISP/Plataformas/tile_derecha.png<>uid://d2rtx5ah5d3o1::::res://Assets - WISP/Plataformas/Intentoplataforma.png<>uid://dtfukocnnrld6::::res://Assets - WISP/Plataformas/tile_izquierda.png<>uid://bpgy60ksu37vf::::res://Assets - WISP/Plataformas/plataforma.png<>uid://dje420kwr4f30::::res://Assets - WISP/Plataformas/tile_centro.png<>uid://dkx7p65bbp4lo::::res://Assets - WISP/ParallaxCueva1/Cueva1capa4fondo.png<>uid://hxarurl6sv54::::res://Assets - WISP/ParallaxCueva1/Cueva1capa3.png<>uid://bw4vf5kr3bhna::::res://Assets - WISP/Plataformas/bloquecentro.png<>uid://cxa2b5u2yjk6c::::res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png<>uid://cwog516qf6ri8::::res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png<>uid://dwhvxylru7526::::res://Scena/Player/player.tscn<>uid://breu0a4y5swo1::::res://Scena/Player/camera_2d.tscn<>uid://biyhpci4na4t4::::res://Scena/Enemigos/Hoguera/hoguera.tscn<>uid://dkyo6kdmxj6j0::::res://Scena/Enemigos/Tanque.tscn<>uid://gobt7cps4w31::::res://Scena/Enemigos/avispa.tscn
+::res://Scena/TilesSet/::1762131705
+TilesSet.tscn::PackedScene::5544274493956370895::1762131705::0::1::::<><><>0<>0<><>::uid://hw0ohg6l7va3::::res://Assets - WISP/Plataformas/tile_derecha.png<>uid://d2rtx5ah5d3o1::::res://Assets - WISP/Plataformas/Intentoplataforma.png<>uid://dtfukocnnrld6::::res://Assets - WISP/Plataformas/tile_izquierda.png<>uid://bpgy60ksu37vf::::res://Assets - WISP/Plataformas/plataforma.png<>uid://dje420kwr4f30::::res://Assets - WISP/Plataformas/tile_centro.png<>uid://dkx7p65bbp4lo::::res://Assets - WISP/ParallaxCueva1/Cueva1capa4fondo.png<>uid://hxarurl6sv54::::res://Assets - WISP/ParallaxCueva1/Cueva1capa3.png<>uid://bw4vf5kr3bhna::::res://Assets - WISP/Plataformas/bloquecentro.png<>uid://cxa2b5u2yjk6c::::res://Assets - WISP/ParallaxCueva1/Cueva1capa2.png<>uid://cwog516qf6ri8::::res://Assets - WISP/ParallaxCueva1/Cueva1capa1.png<>uid://dwhvxylru7526::::res://Scena/Player/player.tscn<>uid://breu0a4y5swo1::::res://Scena/Player/camera_2d.tscn<>uid://biyhpci4na4t4::::res://Scena/Enemigos/Hoguera/hoguera.tscn<>uid://dkyo6kdmxj6j0::::res://Scena/Enemigos/Tanque.tscn<>uid://gobt7cps4w31::::res://Scena/Enemigos/avispa.tscn<>uid://bo2qgconev4kd::::res://Scena/CuevaMercader/cueva_mercader.tscn<>uid://dm6q0abakck7u::::res://Scena/Joystick/joystick.tscn
 ::res://Script/::1761606046
 ::res://Script/ControldeEscenarios/::1761606107
 escenarios.gd::GDScript::2386335375357526907::1761606107::0::1::::<>Node<><>0<>0<><>::
 ::res://Script/Cueva 1/::1759687816
 cueva_1.gd::GDScript::2272475918224924040::1759687816::0::1::::<>Node2D<><>0<>0<><>::
-::res://Script/Enemigo/::1761603585
-Avispa.gd::GDScript::8017523678043876225::1761603585::0::1::::<>Enemigo<><>0<>0<><>::
-enemigo.gd::GDScript::5714225384306952948::1761447291::0::1::::Enemigo<>CharacterBody2D<><>0<>0<><>::
-tanque.gd::GDScript::4737277916415027164::1761603585::0::1::::<>Enemigo<><>0<>0<><>::
+::res://Script/Enemigo/::1762126352
+Avispa.gd::GDScript::8017523678043876225::1762126352::0::1::::<>Enemigo<><>0<>0<><>::
+enemigo.gd::GDScript::5714225384306952948::1762125810::0::1::::Enemigo<>CharacterBody2D<><>0<>0<><>::
+tanque.gd::GDScript::4737277916415027164::1762126034::0::1::::<>Enemigo<><>0<>0<><>::
 ::res://Script/Hogera/::1761758257
 Hogera.gd::GDScript::1260561950715749089::1761758257::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Script/Menú/::1761605993
 menu.gd::GDScript::5129783038179892530::1761605993::0::1::::<>Control<><>0<>0<><>::
 ::res://Script/Moneda/::1759588197
 moneda_premium.gd::GDScript::8985561451835257112::1759588197::0::1::::<>RigidBody2D<><>0<>0<><>::
-::res://Script/Player/::1762095207
-camera_2d.gd::GDScript::4885980607688134268::1762095207::0::1::::<>Camera2D<><>0<>0<><>::
-estadisticas_del_player.gd::GDScript::1262463109434449542::1761610400::0::1::::<>Node<><>0<>0<><>::
-player.gd::GDScript::7715070970492676618::1761612143::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Script/Player/::1762134034
+camera_2d.gd::GDScript::4885980607688134268::1762115932::0::1::::<>Camera2D<><>0<>0<><>::
+estadisticas_del_player.gd::GDScript::1262463109434449542::1762125873::0::1::::<>Node<><>0<>0<><>::
+player.gd::GDScript::7715070970492676618::1762134034::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Script/TIENDANPC/::1759687752
 npctienda.gd::GDScript::3010229074148569634::1759687752::0::1::::<>Area2D<><>0<>0<><>::
 ::res://UI/::1761603554

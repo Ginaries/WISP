@@ -1,4 +1,14 @@
-res://Scena/TilesSet/TilesSet.tscn
 res://Script/Player/camera_2d.gd
-res://Scena/CuevaMercader/cueva_mercader.tscn
+res://Scena/TilesSet/TilesSet.tscn
 res://Scena/CuevaMercader/cueva_mercader.gd
+res://Scena/Joystick/joystick.tscn
+res://Script/Player/player.gd
+res://Scena/CuevaMercader/cueva_mercader.tscn
+res://Scena/Player/player.tscn
+res://Scena/Enemigos/Tanque.tscn
+res://Scena/Enemigos/avispa.tscn
+res://Script/Enemigo/enemigo.gd
+res://Script/Player/estadisticas_del_player.gd
+res://Script/Enemigo/Avispa.gd
+res://Script/Enemigo/tanque.gd
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn

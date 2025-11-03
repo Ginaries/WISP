@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://gobt7cps4w31"]
+[gd_scene load_steps=8 format=3 uid="uid://gobt7cps4w31"]
 
 [ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_wsl4j"]
 [ext_resource type="Texture2D" uid="uid://dxsra20wohwwm" path="res://Assets - WISP/animación avispa-enemigo/fotograma0001.png" id="2_w3mkx"]
 [ext_resource type="Texture2D" uid="uid://cmvfc2lkkc3rw" path="res://Assets - WISP/animación avispa-enemigo/fotograma0000.png" id="2_wsl4j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
-radius = 28.0
+radius = 29.017237
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6pwgp"]
 animations = [{
@@ -20,6 +20,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
 size = Vector2(56, 56)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3mkx"]
+radius = 29.068884
 
 [node name="Avispa" type="CharacterBody2D" groups=["Enemigo"]]
 script = ExtResource("1_wsl4j")
@@ -47,6 +50,11 @@ autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
 shape = SubResource("RectangleShape2D_wsl4j")
+
+[node name="HACERDAÑO" type="Area2D" parent="." groups=["Enemigo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HACERDAÑO"]
+shape = SubResource("CircleShape2D_w3mkx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]

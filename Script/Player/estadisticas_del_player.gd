@@ -3,8 +3,11 @@ extends Node
 # --- Estadísticas base del jugador ---
 var fuerza_salto: float = -200
 var daño_disparo: int = 10
-var salud: int = 100
-var velocidad: float = 300.0
+var salud: int = 3
+var SaludMax:int = 3
+var CombustibleMax:int=1
+var CombustibleActual:int=1
+var velocidad: float = 100.0
 var tamaño_jugador: float = 1.0
 var Puntos: int = 0
 var monedasPremium: int = 0
@@ -18,7 +21,10 @@ func guardar_datos() -> void:
 	var data = {
 		"fuerza_salto": fuerza_salto,
 		"daño_disparo": daño_disparo,
+		"CombustibleMax": CombustibleMax,
+		"CombustibleActual": CombustibleActual,
 		"salud": salud,
+		"SaludMax":SaludMax,
 		"velocidad": velocidad,
 		"tamaño_jugador": tamaño_jugador,
 		"Puntos": Puntos,
@@ -45,7 +51,10 @@ func cargar_datos() -> void:
 		if typeof(data) == TYPE_DICTIONARY:
 			fuerza_salto = data.get("fuerza_salto", fuerza_salto)
 			daño_disparo = data.get("daño_disparo", daño_disparo)
+			CombustibleMax= data.get("CombustibleMax", CombustibleMax)
+			CombustibleActual= data.get("CombustibleActual",CombustibleActual)
 			salud = data.get("salud", salud)
+			SaludMax= data.get("SaludMax", SaludMax)
 			velocidad = data.get("velocidad", velocidad)
 			tamaño_jugador = data.get("tamaño_jugador", tamaño_jugador)
 			Puntos = data.get("Puntos", Puntos)

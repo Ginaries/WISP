@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwhvxylru7526"]
+[gd_scene load_steps=18 format=3 uid="uid://dwhvxylru7526"]
 
 [ext_resource type="Script" uid="uid://dh6ideadnjmog" path="res://Script/Player/player.gd" id="1_3hf3a"]
 [ext_resource type="Texture2D" uid="uid://dlp8qemipm6lt" path="res://Assets - WISP/WISP.png" id="2_c10fm"]
@@ -9,14 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://dta12e8xmuhww" path="res://Assets - WISP/animación caminar wisp/wisp animat0006.png" id="6_2bm2x"]
 [ext_resource type="Texture2D" uid="uid://bqyhkpb6r7tqb" path="res://Assets - WISP/animación caminar wisp/wisp animat0008.png" id="7_xvr67"]
 [ext_resource type="Texture2D" uid="uid://cy5xyx180t1ns" path="res://Assets - WISP/animación caminar wisp/wisp animat0007.png" id="8_bxgl8"]
+[ext_resource type="PackedScene" uid="uid://saw7032rcnwe" path="res://Scena/Player/vidas.tscn" id="10_2bm2x"]
+[ext_resource type="Texture2D" uid="uid://bf6ur5cfibm1b" path="res://Assets - WISP/InterfacesPNG/combustible apagado.png" id="11_xvr67"]
+[ext_resource type="Texture2D" uid="uid://clmf2dmoo60xp" path="res://Assets - WISP/InterfacesPNG/combustible lleno.png" id="12_bxgl8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_scdhq"]
 radius = 68.0
 height = 386.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c10fm"]
-radius = 44.0
-height = 376.0
+radius = 72.0968
+height = 390.69238
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0shn"]
 animations = [{
@@ -105,6 +108,32 @@ shape = SubResource("CapsuleShape2D_kkur1")
 position = Vector2(-0.83672917, 5.895512)
 shape = SubResource("RectangleShape2D_3hf3a")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 341.0
+offset_bottom = 214.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Vidas" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("10_2bm2x")]
+layout_mode = 2
+
+[node name="Combustible" type="TextureProgressBar" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+texture_under = ExtResource("11_xvr67")
+texture_progress = ExtResource("12_bxgl8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="area_entered" from="RecibirDaño" to="." method="_on_recibir_daño_area_entered"]
 [connection signal="body_entered" from="RecibirDaño" to="." method="_on_recibir_daño_body_entered"]
 [connection signal="body_entered" from="AgarrarMonedas" to="." method="_on_agarrar_monedas_body_entered"]
 [connection signal="area_entered" from="DetectarHoguera" to="." method="_on_detectar_hoguera_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

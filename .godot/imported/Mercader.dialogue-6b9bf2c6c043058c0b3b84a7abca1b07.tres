@@ -6,267 +6,837 @@
 script = ExtResource("1_43rce")
 using_states = PackedStringArray()
 titles = {
-"AlFinalizarTutorial": "14",
-"AlIngresar": "1",
-"AlRetirarse": "4",
-"DuranteElIntercambio": "27"
+"Despedida": "118",
+"Introduccion": "5",
+"Ofertas": "25",
+"TratoDano": "78",
+"TratoSalto": "60",
+"TratoSalud": "97",
+"TratoVelocidad": "43"
 }
-character_names = PackedStringArray("Mercader", "Wisp", "Jugador")
-first_title = "0"
+character_names = PackedStringArray("Mercader", "Wisp")
+first_title = "4"
 lines = {
-"0": {
-&"id": "0",
-&"next_id": "1",
-&"type": "title"
-},
-"1": {
-&"character": "Mercader",
-&"id": "1",
-&"next_id": "27",
-&"text": "¡Oh cariño, has vuelto!. ¿Ves algo que te interese?.",
-&"type": "dialogue"
-},
 "10": {
 &"character": "Mercader",
 &"id": "10",
-&"next_id": "12",
-&"text": "Hm, que mal. Deberías prestarle más atención a los detalles.",
+&"next_id": "11",
+&"text": "Bueno... ¿qué decís, intruso detrás de la pantalla? ¿Querés escuchar mi oferta?",
+&"type": "dialogue"
+},
+"100": {
+&"id": "100",
+&"next_id": "101",
+&"responses": PackedStringArray("100", "106"),
+&"text": "\"Sí, por favor.\"",
+&"type": "response"
+},
+"101": {
+&"character": "Mercader",
+&"id": "101",
+&"next_id": "103",
+&"text": "Qué modales tan raros para un mortal con barra de vida.",
+&"type": "dialogue"
+},
+"102": {
+&"id": "102",
+&"next_id": "103",
+&"type": ""
+},
+"103": {
+&"character": "Wisp",
+&"id": "103",
+&"next_id": "104",
+&"text": "¡Ah! ¡Siento cómo se recargan mis puntos vitales!",
+&"type": "dialogue"
+},
+"104": {
+&"character": "Mercader",
+&"id": "104",
+&"next_id": "105",
+&"text": "Aprovechalos, que el juego no guarda solo.",
+&"type": "dialogue"
+},
+"105": {
+&"id": "105",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"106": {
+&"id": "106",
+&"next_id": "107",
+&"text": "\"No, prefiero un reto más justo.\"",
+&"type": "response"
+},
+"107": {
+&"character": "Mercader",
+&"id": "107",
+&"next_id": "108",
+&"text": "“Justo”... qué palabra más aburrida.",
+&"type": "dialogue"
+},
+"108": {
+&"character": "Wisp",
+&"id": "108",
+&"next_id": "109",
+&"text": "Creo que le gusta molestar.",
+&"type": "dialogue"
+},
+"109": {
+&"character": "Mercader",
+&"id": "109",
+&"next_id": "110",
+&"text": "Es mi función, cariño. Literalmente.",
 &"type": "dialogue"
 },
 "11": {
 &"id": "11",
 &"next_id": "12",
+&"responses": PackedStringArray("11", "13"),
+&"text": "\"Sí, veamos qué tenés.\"",
+&"type": "response"
+},
+"110": {
+&"id": "110",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"116": {
+&"id": "116",
+&"next_id": "117",
 &"type": ""
+},
+"117": {
+&"id": "117",
+&"next_id": "118",
+&"type": "title"
+},
+"118": {
+&"character": "Mercader",
+&"id": "118",
+&"next_id": "119",
+&"text": "Bueno, creo que por hoy ya te manipulé lo suficiente.",
+&"type": "dialogue"
+},
+"119": {
+&"character": "Wisp",
+&"id": "119",
+&"next_id": "120",
+&"text": "¡Al fin alguien lo admite!",
+&"type": "dialogue"
 },
 "12": {
 &"id": "12",
-&"next_id": "14",
-&"type": "title"
+&"is_snippet": false,
+&"next_id": "25",
+&"next_id_after": "",
+&"type": "goto"
+},
+"120": {
+&"character": "Mercader",
+&"id": "120",
+&"next_id": "121",
+&"text": "Anda, foquito. El público se está impacientando.",
+&"type": "dialogue"
+},
+"121": {
+&"character": "Wisp",
+&"id": "121",
+&"next_id": "122",
+&"text": "¿Qué público?",
+&"type": "dialogue"
+},
+"122": {
+&"character": "Mercader",
+&"id": "122",
+&"next_id": "123",
+&"text": "El que te está moviendo... ahí afuera.",
+&"type": "dialogue"
+},
+"123": {
+&"character": "Wisp",
+&"id": "123",
+&"next_id": "124",
+&"text": "...",
+&"type": "dialogue"
+},
+"124": {
+&"character": "Mercader",
+&"id": "124",
+&"next_id": "126",
+&"text": "Nos vemos en la próxima iteración, cariño.",
+&"type": "dialogue"
+},
+"125": {
+&"id": "125",
+&"next_id": "126",
+&"type": ""
+},
+"126": {
+&"id": "126",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
 },
 "13": {
 &"id": "13",
 &"next_id": "14",
-&"type": ""
+&"text": "\"No, gracias. No confío en vos.\"",
+&"type": "response"
 },
 "14": {
 &"character": "Mercader",
 &"id": "14",
 &"next_id": "15",
-&"text": "¡Oh!... ¡Por aquí! ¡Qué cosas más interesantes tienes! ¡Acércate!",
+&"text": "Inteligente. Los que confían demasiado suelen terminar como *recursos reciclados*.",
 &"type": "dialogue"
 },
 "15": {
+&"character": "Wisp",
 &"id": "15",
 &"next_id": "16",
-&"text": "Wisp se acerca hacia la mercader.",
+&"text": "No sé qué significa, pero sonó siniestro.",
 &"type": "dialogue"
 },
 "16": {
 &"character": "Mercader",
 &"id": "16",
 &"next_id": "17",
-&"text": "Vaya... parece que no sabes qué hacer con eso, ¿me equivoco?",
+&"text": "Lo es, cariño.",
 &"type": "dialogue"
 },
 "17": {
-&"character": "Wisp",
 &"id": "17",
-&"next_id": "18",
-&"text": "Uhm... No realmente. ¿Quién eres?",
-&"type": "dialogue"
-},
-"18": {
-&"character": "Mercader",
-&"id": "18",
-&"next_id": "19",
-&"text": "¡Ah! Eso no es importante, pequeñín... Veo que tu gran corazón te ha traído hasta aquí.",
-&"type": "dialogue"
-},
-"19": {
-&"character": "Mercader",
-&"id": "19",
-&"next_id": "20",
-&"text": "Entre tú y yo, no creo que sepa muy bien lo que ha pasado. ¿No es cierto?",
-&"type": "dialogue"
-},
-"2": {
-&"id": "2",
-&"next_id": "3",
-&"type": ""
-},
-"20": {
-&"character": "Jugador",
-&"id": "20",
-&"next_id": "21",
-&"text": "¿Me hablas a mí?",
-&"type": "dialogue"
-},
-"21": {
-&"character": "Mercader",
-&"id": "21",
-&"next_id": "22",
-&"text": "Sí, a ti. Esto servirá más para ti que para nuestro foquito.",
-&"type": "dialogue"
-},
-"22": {
-&"character": "Wisp",
-&"id": "22",
-&"next_id": "23",
-&"text": "¿Quién ha dicho eso?... En fin, ¿qué ibas a decirme?",
-&"type": "dialogue"
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
 },
 "23": {
-&"character": "Mercader",
 &"id": "23",
 &"next_id": "24",
-&"text": "Creo que podemos hacer un trueque, si es que me entiendes...",
-&"type": "dialogue"
-},
-"24": {
-&"character": "Mercader",
-&"id": "24",
-&"next_id": "26",
-&"text": "Verás, esas cosas que te sueltan esos enemigos no te servirán de nada. ¿Por qué no me los das y a cambio te entregaré algo que te hará más fuerte?",
-&"type": "dialogue"
-},
-"25": {
-&"id": "25",
-&"next_id": "26",
 &"type": ""
 },
-"26": {
-&"id": "26",
-&"next_id": "27",
+"24": {
+&"id": "24",
+&"next_id": "25",
 &"type": "title"
 },
-"27": {
+"25": {
+&"character": "Mercader",
+&"id": "25",
+&"next_id": "26",
+&"text": "Tengo varias tentaciones hoy. Pero antes de elegir... respirá profundo. Esto podría doler.",
+&"type": "dialogue"
+},
+"26": {
 &"character": "Wisp",
+&"id": "26",
+&"next_id": "27",
+&"text": "¿Por qué TODO lo tuyo duele?",
+&"type": "dialogue"
+},
+"27": {
+&"character": "Mercader",
 &"id": "27",
 &"next_id": "28",
-&"text": "¿Y de qué sirven estas cosas?... Mhm, creo que me ha engañado.",
+&"text": "Porque el progreso, foquito, siempre cobra impuestos.",
 &"type": "dialogue"
 },
 "28": {
-&"character": "Mercader",
 &"id": "28",
 &"next_id": "29",
-&"text": "Pues verás, eso que acabas de conseguir puede darte muchas ventajas por aquí. Sólo tráemelos y yo te ayudaré a conseguir tu objetivo.",
-&"type": "dialogue"
+&"responses": PackedStringArray("28", "30", "32", "34"),
+&"text": "\"Quiero ser más rápido. Que nada me alcance.\"",
+&"type": "response"
 },
 "29": {
-&"character": "Wisp",
 &"id": "29",
-&"next_id": "30",
-&"text": "¿Okay? Pero, ¿cuál es mi objetivo?",
-&"type": "dialogue"
+&"is_snippet": false,
+&"next_id": "43",
+&"next_id_after": "",
+&"type": "goto"
 },
 "3": {
 &"id": "3",
 &"next_id": "4",
-&"type": "title"
+&"type": ""
 },
 "30": {
-&"character": "Mercader",
 &"id": "30",
 &"next_id": "31",
-&"text": "Ah no no, eso te tocará descubrirlo a ti. No podemos spoilear a quien nos está mirando, cariño. Sí, hablo de ti.",
-&"type": "dialogue"
+&"text": "\"Quiero saltar más alto, ver el mundo desde arriba.\"",
+&"type": "response"
 },
 "31": {
-&"character": "Mercader",
 &"id": "31",
-&"next_id": "36",
-&"text": "Recuerda, estas estadísticas te potenciarán por el resto de tu aventura. Te veré pronto...",
-&"type": "dialogue"
+&"is_snippet": false,
+&"next_id": "60",
+&"next_id_after": "",
+&"type": "goto"
+},
+"32": {
+&"id": "32",
+&"next_id": "33",
+&"text": "\"Quiero que mis ataques sean devastadores.\"",
+&"type": "response"
+},
+"33": {
+&"id": "33",
+&"is_snippet": false,
+&"next_id": "78",
+&"next_id_after": "",
+&"type": "goto"
+},
+"34": {
+&"id": "34",
+&"next_id": "35",
+&"text": "\"Prefiero algo que me mantenga vivo por más tiempo.\"",
+&"type": "response"
 },
 "35": {
 &"id": "35",
-&"next_id": "36",
-&"type": ""
-},
-"36": {
-&"id": "36",
 &"is_snippet": false,
-&"next_id": "end",
+&"next_id": "97",
 &"next_id_after": "",
 &"type": "goto"
 },
 "4": {
-&"character": "Mercader",
 &"id": "4",
 &"next_id": "5",
-&"text": "Me recuerdas mucho a tu madre… irónico.",
+&"type": "title"
+},
+"41": {
+&"id": "41",
+&"next_id": "42",
+&"type": ""
+},
+"42": {
+&"id": "42",
+&"next_id": "43",
+&"type": "title"
+},
+"43": {
+&"character": "Mercader",
+&"id": "43",
+&"next_id": "44",
+&"text": "Mmm... velocidad. El deseo de los impacientes.",
 &"type": "dialogue"
+},
+"44": {
+&"character": "Mercader",
+&"id": "44",
+&"next_id": "45",
+&"text": "Puedo hacerte moverte tan rápido que incluso las animaciones no te sigan el paso.",
+&"type": "dialogue"
+},
+"45": {
+&"character": "Wisp",
+&"id": "45",
+&"next_id": "46",
+&"text": "¡Eso suena... peligroso!",
+&"type": "dialogue"
+},
+"46": {
+&"character": "Mercader",
+&"id": "46",
+&"next_id": "47",
+&"text": "Lo es. Pero, ¿qué es un poco de peligro cuando podés sentir el viento digital en tu cara?",
+&"type": "dialogue"
+},
+"47": {
+&"id": "47",
+&"next_id": "48",
+&"responses": PackedStringArray("47", "53"),
+&"text": "\"Acepto el trato.\"",
+&"type": "response"
+},
+"48": {
+&"character": "Mercader",
+&"id": "48",
+&"next_id": "50",
+&"text": "Excelente. Que tus pasos desafíen el tiempo.",
+&"type": "dialogue"
+},
+"49": {
+&"id": "49",
+&"next_id": "50",
+&"type": ""
 },
 "5": {
-&"character": "Wisp",
+&"character": "Mercader",
 &"id": "5",
 &"next_id": "6",
-&"text": "¿Mi madre? Hace mucho que no la veo.",
+&"text": "¡Oh, cariño! Aparecés justo cuando empiezo a aburrirme de la existencia.",
 &"type": "dialogue"
+},
+"50": {
+&"character": "Wisp",
+&"id": "50",
+&"next_id": "51",
+&"text": "¡Agh! ¡Mis píxeles vibran!",
+&"type": "dialogue"
+},
+"51": {
+&"character": "Mercader",
+&"id": "51",
+&"next_id": "52",
+&"text": "No es dolor, cariño. Es *frame skipping*.",
+&"type": "dialogue"
+},
+"52": {
+&"id": "52",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"53": {
+&"id": "53",
+&"next_id": "54",
+&"text": "\"No, prefiero caminar tranquilo.\"",
+&"type": "response"
+},
+"54": {
+&"character": "Mercader",
+&"id": "54",
+&"next_id": "55",
+&"text": "Qué aburrido. Seguro también usás las teclas por defecto.",
+&"type": "dialogue"
+},
+"55": {
+&"character": "Wisp",
+&"id": "55",
+&"next_id": "56",
+&"text": "¡Hey! No insultes mis bindings.",
+&"type": "dialogue"
+},
+"56": {
+&"id": "56",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"58": {
+&"id": "58",
+&"next_id": "59",
+&"type": ""
+},
+"59": {
+&"id": "59",
+&"next_id": "60",
+&"type": "title"
 },
 "6": {
-&"character": "Mercader",
+&"character": "Wisp",
 &"id": "6",
 &"next_id": "7",
-&"text": "Si, ¿qué opinas tú?",
+&"text": "¿Otra vez hablándole al vacío?",
 &"type": "dialogue"
+},
+"60": {
+&"character": "Mercader",
+&"id": "60",
+&"next_id": "61",
+&"text": "Ah, el sueño de todo espíritu liviano. Saltar más alto, escapar del suelo.",
+&"type": "dialogue"
+},
+"61": {
+&"character": "Mercader",
+&"id": "61",
+&"next_id": "62",
+&"text": "Te advierto, los límites del mapa no son tan amables.",
+&"type": "dialogue"
+},
+"62": {
+&"character": "Wisp",
+&"id": "62",
+&"next_id": "63",
+&"text": "¡Eso ya lo aprendí por las malas!",
+&"type": "dialogue"
+},
+"63": {
+&"character": "Mercader",
+&"id": "63",
+&"next_id": "64",
+&"text": "Entonces, ¿te animás?",
+&"type": "dialogue"
+},
+"64": {
+&"id": "64",
+&"next_id": "65",
+&"responses": PackedStringArray("64", "70"),
+&"text": "\"Sí, dame más impulso.\"",
+&"type": "response"
+},
+"65": {
+&"character": "Mercader",
+&"id": "65",
+&"next_id": "67",
+&"text": "Que tus alas invisibles te eleven.",
+&"type": "dialogue"
+},
+"66": {
+&"id": "66",
+&"next_id": "67",
+&"type": ""
+},
+"67": {
+&"character": "Wisp",
+&"id": "67",
+&"next_id": "68",
+&"text": "¡Whoa! ¡Mirá esa parábola!",
+&"type": "dialogue"
+},
+"68": {
+&"character": "Mercader",
+&"id": "68",
+&"next_id": "69",
+&"text": "Física, magia… todo depende del punto de vista.",
+&"type": "dialogue"
+},
+"69": {
+&"id": "69",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
 },
 "7": {
+&"character": "Mercader",
 &"id": "7",
 &"next_id": "8",
-&"responses": PackedStringArray("7", "9"),
-&"text": "SI",
-&"type": "response"
-},
-"8": {
-&"character": "Mercader",
-&"id": "8",
-&"next_id": "12",
-&"text": "¿Ves? No soy la única que lo piensa.",
+&"text": "No al vacío, foquito... *a quien controla tu destino*.",
 &"type": "dialogue"
 },
+"70": {
+&"id": "70",
+&"next_id": "71",
+&"text": "\"No, no quiero volver a romper el techo invisible.\"",
+&"type": "response"
+},
+"71": {
+&"character": "Mercader",
+&"id": "71",
+&"next_id": "72",
+&"text": "Sensato, pero aburrido. Así nunca buguearás el juego a tu favor.",
+&"type": "dialogue"
+},
+"72": {
+&"character": "Wisp",
+&"id": "72",
+&"next_id": "73",
+&"text": "¿Buguear? ¿Qué es eso?",
+&"type": "dialogue"
+},
+"73": {
+&"character": "Mercader",
+&"id": "73",
+&"next_id": "74",
+&"text": "Nada, foquito. Nada que te concierna.",
+&"type": "dialogue"
+},
+"74": {
+&"id": "74",
+&"next_id": "77",
+&"text": "-> Despedida",
+&"type": "dialogue"
+},
+"76": {
+&"id": "76",
+&"next_id": "77",
+&"type": ""
+},
+"77": {
+&"id": "77",
+&"next_id": "78",
+&"type": "title"
+},
+"78": {
+&"character": "Mercader",
+&"id": "78",
+&"next_id": "79",
+&"text": "Mmm, sed de poder. Lo tuyo me gusta.",
+&"type": "dialogue"
+},
+"79": {
+&"character": "Wisp",
+&"id": "79",
+&"next_id": "80",
+&"text": "No sé si me gusta cómo lo dice.",
+&"type": "dialogue"
+},
+"8": {
+&"character": "Wisp",
+&"id": "8",
+&"next_id": "9",
+&"text": "¿El jugador? No creo que le importes tanto.",
+&"type": "dialogue"
+},
+"80": {
+&"character": "Mercader",
+&"id": "80",
+&"next_id": "81",
+&"text": "Puedo intensificar tus disparos... pero la energía debe venir de *algún lado*.",
+&"type": "dialogue"
+},
+"81": {
+&"character": "Wisp",
+&"id": "81",
+&"next_id": "82",
+&"text": "...¿De mi barra de salud, verdad?",
+&"type": "dialogue"
+},
+"82": {
+&"character": "Mercader",
+&"id": "82",
+&"next_id": "83",
+&"text": "Exacto, foquito. Ya lo entendés todo.",
+&"type": "dialogue"
+},
+"83": {
+&"id": "83",
+&"next_id": "84",
+&"responses": PackedStringArray("83", "89"),
+&"text": "\"Acepto. Vale la pena.\"",
+&"type": "response"
+},
+"84": {
+&"character": "Mercader",
+&"id": "84",
+&"next_id": "86",
+&"text": "Así se habla. Que tus enemigos sufran un *reajuste de balance*.",
+&"type": "dialogue"
+},
+"85": {
+&"id": "85",
+&"next_id": "86",
+&"type": ""
+},
+"86": {
+&"character": "Wisp",
+&"id": "86",
+&"next_id": "87",
+&"text": "¡Me arde el alma! ¡Literalmente!",
+&"type": "dialogue"
+},
+"87": {
+&"character": "Mercader",
+&"id": "87",
+&"next_id": "88",
+&"text": "Es solo la implementación sintiéndolo.",
+&"type": "dialogue"
+},
+"88": {
+&"id": "88",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"89": {
+&"id": "89",
+&"next_id": "90",
+&"text": "\"No, paso. No quiero efectos secundarios raros.\"",
+&"type": "response"
+},
 "9": {
+&"character": "Mercader",
 &"id": "9",
 &"next_id": "10",
-&"text": "No",
-&"type": "response"
+&"text": "Oh, no subestimes al jugador. Algunos incluso leen los diálogos completos.",
+&"type": "dialogue"
+},
+"90": {
+&"character": "Mercader",
+&"id": "90",
+&"next_id": "91",
+&"text": "Qué pena. Pensé que el jugador quería ver algo de acción.",
+&"type": "dialogue"
+},
+"91": {
+&"character": "Wisp",
+&"id": "91",
+&"next_id": "92",
+&"text": "...¿Nos está provocando?",
+&"type": "dialogue"
+},
+"92": {
+&"character": "Mercader",
+&"id": "92",
+&"next_id": "93",
+&"text": "Siempre.",
+&"type": "dialogue"
+},
+"93": {
+&"id": "93",
+&"is_snippet": false,
+&"next_id": "118",
+&"next_id_after": "",
+&"type": "goto"
+},
+"95": {
+&"id": "95",
+&"next_id": "96",
+&"type": ""
+},
+"96": {
+&"id": "96",
+&"next_id": "97",
+&"type": "title"
+},
+"97": {
+&"character": "Mercader",
+&"id": "97",
+&"next_id": "98",
+&"text": "¿Más salud? Qué pragmático. Eso dice mucho del tipo de jugador que sos.",
+&"type": "dialogue"
+},
+"98": {
+&"character": "Wisp",
+&"id": "98",
+&"next_id": "99",
+&"text": "No le hagas caso, no todos queremos morir por la trama.",
+&"type": "dialogue"
+},
+"99": {
+&"character": "Mercader",
+&"id": "99",
+&"next_id": "100",
+&"text": "Bien dicho, foquito. Entonces, ¿aceptás mi bendición temporal?",
+&"type": "dialogue"
 }
 }
-raw_text = "~ AlIngresar
-Mercader: ¡Oh cariño, has vuelto!. ¿Ves algo que te interese?. => DuranteElIntercambio
+raw_text = "# ======================================
+# MERCADER: LA VENDEDORA DEL META
+# ======================================
 
-~ AlRetirarse
-Mercader: Me recuerdas mucho a tu madre… irónico.
-Wisp: ¿Mi madre? Hace mucho que no la veo.
-Mercader: Si, ¿qué opinas tú?
-- SI
-	Mercader: ¿Ves? No soy la única que lo piensa.
-- No
-	Mercader: Hm, que mal. Deberías prestarle más atención a los detalles.
-
-~ AlFinalizarTutorial
-
-Mercader: ¡Oh!... ¡Por aquí! ¡Qué cosas más interesantes tienes! ¡Acércate!
-Wisp se acerca hacia la mercader.
-Mercader: Vaya... parece que no sabes qué hacer con eso, ¿me equivoco?
-Wisp: Uhm... No realmente. ¿Quién eres?
-Mercader: ¡Ah! Eso no es importante, pequeñín... Veo que tu gran corazón te ha traído hasta aquí.
-Mercader: Entre tú y yo, no creo que sepa muy bien lo que ha pasado. ¿No es cierto?
-Jugador: ¿Me hablas a mí?
-Mercader: Sí, a ti. Esto servirá más para ti que para nuestro foquito.
-Wisp: ¿Quién ha dicho eso?... En fin, ¿qué ibas a decirme?
-Mercader: Creo que podemos hacer un trueque, si es que me entiendes...
-Mercader: Verás, esas cosas que te sueltan esos enemigos no te servirán de nada. ¿Por qué no me los das y a cambio te entregaré algo que te hará más fuerte?
-
-~ DuranteElIntercambio
-Wisp: ¿Y de qué sirven estas cosas?... Mhm, creo que me ha engañado.
-Mercader: Pues verás, eso que acabas de conseguir puede darte muchas ventajas por aquí. Sólo tráemelos y yo te ayudaré a conseguir tu objetivo.
-Wisp: ¿Okay? Pero, ¿cuál es mi objetivo?
-Mercader: Ah no no, eso te tocará descubrirlo a ti. No podemos spoilear a quien nos está mirando, cariño. Sí, hablo de ti.
-Mercader: Recuerda, estas estadísticas te potenciarán por el resto de tu aventura. Te veré pronto...
+~ Introduccion
+Mercader: ¡Oh, cariño! Aparecés justo cuando empiezo a aburrirme de la existencia.
+Wisp: ¿Otra vez hablándole al vacío?
+Mercader: No al vacío, foquito... *a quien controla tu destino*.  
+Wisp: ¿El jugador? No creo que le importes tanto.
+Mercader: Oh, no subestimes al jugador. Algunos incluso leen los diálogos completos.  
+Mercader: Bueno... ¿qué decís, intruso detrás de la pantalla? ¿Querés escuchar mi oferta?
+- \"Sí, veamos qué tenés.\"
+	=> Ofertas
+- \"No, gracias. No confío en vos.\"
+	Mercader: Inteligente. Los que confían demasiado suelen terminar como *recursos reciclados*.
+	Wisp: No sé qué significa, pero sonó siniestro.
+	Mercader: Lo es, cariño.
+	=> Despedida
 
 
+# ============================
+# BLOQUE: OFERTAS
+# ============================
 
+~ Ofertas
+Mercader: Tengo varias tentaciones hoy. Pero antes de elegir... respirá profundo. Esto podría doler.
+Wisp: ¿Por qué TODO lo tuyo duele?
+Mercader: Porque el progreso, foquito, siempre cobra impuestos.
+- \"Quiero ser más rápido. Que nada me alcance.\"
+	=> TratoVelocidad
+- \"Quiero saltar más alto, ver el mundo desde arriba.\"
+	=> TratoSalto
+- \"Quiero que mis ataques sean devastadores.\"
+	=> TratoDano
+- \"Prefiero algo que me mantenga vivo por más tiempo.\"
+	=> TratoSalud
+
+
+# ============================
+# TRATOS INDIVIDUALES
+# ============================
+
+~ TratoVelocidad
+Mercader: Mmm... velocidad. El deseo de los impacientes.
+Mercader: Puedo hacerte moverte tan rápido que incluso las animaciones no te sigan el paso.
+Wisp: ¡Eso suena... peligroso!
+Mercader: Lo es. Pero, ¿qué es un poco de peligro cuando podés sentir el viento digital en tu cara?
+- \"Acepto el trato.\"
+	Mercader: Excelente. Que tus pasos desafíen el tiempo.
+	# ↑ aplicar mejora de VELOCIDAD
+	Wisp: ¡Agh! ¡Mis píxeles vibran!
+	Mercader: No es dolor, cariño. Es *frame skipping*.
+	=> Despedida
+- \"No, prefiero caminar tranquilo.\"
+	Mercader: Qué aburrido. Seguro también usás las teclas por defecto.
+	Wisp: ¡Hey! No insultes mis bindings.
+	=> Despedida
+
+
+~ TratoSalto
+Mercader: Ah, el sueño de todo espíritu liviano. Saltar más alto, escapar del suelo.
+Mercader: Te advierto, los límites del mapa no son tan amables.
+Wisp: ¡Eso ya lo aprendí por las malas!
+Mercader: Entonces, ¿te animás?
+- \"Sí, dame más impulso.\"
+	Mercader: Que tus alas invisibles te eleven.
+	# ↑ aplicar mejora de FUERZA DE SALTO
+	Wisp: ¡Whoa! ¡Mirá esa parábola!
+	Mercader: Física, magia… todo depende del punto de vista.
+	=> Despedida
+- \"No, no quiero volver a romper el techo invisible.\"
+	Mercader: Sensato, pero aburrido. Así nunca buguearás el juego a tu favor.
+	Wisp: ¿Buguear? ¿Qué es eso?
+	Mercader: Nada, foquito. Nada que te concierna.
+	-> Despedida
+
+
+~ TratoDano
+Mercader: Mmm, sed de poder. Lo tuyo me gusta.
+Wisp: No sé si me gusta cómo lo dice.
+Mercader: Puedo intensificar tus disparos... pero la energía debe venir de *algún lado*.
+Wisp: ...¿De mi barra de salud, verdad?
+Mercader: Exacto, foquito. Ya lo entendés todo.
+- \"Acepto. Vale la pena.\"
+	Mercader: Así se habla. Que tus enemigos sufran un *reajuste de balance*.
+	# ↑ aplicar aumento de DAÑO y reducción de SALUD
+	Wisp: ¡Me arde el alma! ¡Literalmente!
+	Mercader: Es solo la implementación sintiéndolo.
+	=> Despedida
+- \"No, paso. No quiero efectos secundarios raros.\"
+	Mercader: Qué pena. Pensé que el jugador quería ver algo de acción.
+	Wisp: ...¿Nos está provocando?
+	Mercader: Siempre.
+	=> Despedida
+
+
+~ TratoSalud
+Mercader: ¿Más salud? Qué pragmático. Eso dice mucho del tipo de jugador que sos.
+Wisp: No le hagas caso, no todos queremos morir por la trama.
+Mercader: Bien dicho, foquito. Entonces, ¿aceptás mi bendición temporal?
+- \"Sí, por favor.\"
+	Mercader: Qué modales tan raros para un mortal con barra de vida.
+	# ↑ aplicar aumento de SALUD
+	Wisp: ¡Ah! ¡Siento cómo se recargan mis puntos vitales!
+	Mercader: Aprovechalos, que el juego no guarda solo.
+	=> Despedida
+- \"No, prefiero un reto más justo.\"
+	Mercader: “Justo”... qué palabra más aburrida.
+	Wisp: Creo que le gusta molestar.
+	Mercader: Es mi función, cariño. Literalmente.
+	=> Despedida
+
+
+# ============================
+# SALIDA GENERAL
+# ============================
+
+~ Despedida
+Mercader: Bueno, creo que por hoy ya te manipulé lo suficiente.
+Wisp: ¡Al fin alguien lo admite!
+Mercader: Anda, foquito. El público se está impacientando.
+Wisp: ¿Qué público?
+Mercader: El que te está moviendo... ahí afuera.
+Wisp: ...
+Mercader: Nos vemos en la próxima iteración, cariño.
 "
 metadata/dialogue_manager_version = "3.7.1"

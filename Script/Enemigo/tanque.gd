@@ -54,7 +54,7 @@ func Golpe_pesado() -> void:
 		velocity.x = direccion * empuje_golpe
 		velocity.y += gravedad * delta  # mantiene gravedad
 		move_and_slide()
-		await get_tree().process_frame
+		await get_tree().create_timer(0.016, false).timeout
 		tiempo += delta
 
 	esta_golpeando = false

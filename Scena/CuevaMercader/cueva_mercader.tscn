@@ -130,3 +130,6 @@ frame_progress = 0.5208703
 [node name="Frente" type="Sprite2D" parent="."]
 position = Vector2(492, 593)
 texture = ExtResource("12_1euyu")
+
+[connection signal="body_entered" from="InteraccionInterna" to="." method="_on_interaccion_interna_body_entered"]
+[connection signal="body_exited" from="InteraccionInterna" to="." method="_on_interaccion_interna_body_exited"]

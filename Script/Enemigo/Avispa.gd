@@ -40,6 +40,8 @@ func Golpe_de_aguijon() -> void:
 	
 	var tiempo = 0.0
 	while tiempo < duracion_dash:
+		if not is_inside_tree():
+			break 
 		var delta = get_process_delta_time()
 		velocity = direccion * velocidad_dash
 		move_and_slide()

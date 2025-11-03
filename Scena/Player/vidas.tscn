@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://saw7032rcnwe"]
+
+[ext_resource type="Texture2D" uid="uid://cvc8ilyrwec6k" path="res://Assets - WISP/InterfacesPNG/cora lleno.png" id="1_k1hbl"]
+
+[node name="Vidas" type="TextureRect"]
+texture = ExtResource("1_k1hbl")

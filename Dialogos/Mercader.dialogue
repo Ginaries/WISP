@@ -1,35 +1,125 @@
-~ AlIngresar
-Mercader: ¡Oh cariño, has vuelto!. ¿Ves algo que te interese?. => DuranteElIntercambio
+# ======================================
+# MERCADER: LA VENDEDORA DEL META
+# ======================================
 
-~ AlRetirarse
-Mercader: Me recuerdas mucho a tu madre… irónico.
-Wisp: ¿Mi madre? Hace mucho que no la veo.
-Mercader: Si, ¿qué opinas tú?
-- SI
-	Mercader: ¿Ves? No soy la única que lo piensa.
-- No
-	Mercader: Hm, que mal. Deberías prestarle más atención a los detalles.
-
-~ AlFinalizarTutorial
-
-Mercader: ¡Oh!... ¡Por aquí! ¡Qué cosas más interesantes tienes! ¡Acércate!
-Wisp se acerca hacia la mercader.
-Mercader: Vaya... parece que no sabes qué hacer con eso, ¿me equivoco?
-Wisp: Uhm... No realmente. ¿Quién eres?
-Mercader: ¡Ah! Eso no es importante, pequeñín... Veo que tu gran corazón te ha traído hasta aquí.
-Mercader: Entre tú y yo, no creo que sepa muy bien lo que ha pasado. ¿No es cierto?
-Jugador: ¿Me hablas a mí?
-Mercader: Sí, a ti. Esto servirá más para ti que para nuestro foquito.
-Wisp: ¿Quién ha dicho eso?... En fin, ¿qué ibas a decirme?
-Mercader: Creo que podemos hacer un trueque, si es que me entiendes...
-Mercader: Verás, esas cosas que te sueltan esos enemigos no te servirán de nada. ¿Por qué no me los das y a cambio te entregaré algo que te hará más fuerte?
-
-~ DuranteElIntercambio
-Wisp: ¿Y de qué sirven estas cosas?... Mhm, creo que me ha engañado.
-Mercader: Pues verás, eso que acabas de conseguir puede darte muchas ventajas por aquí. Sólo tráemelos y yo te ayudaré a conseguir tu objetivo.
-Wisp: ¿Okay? Pero, ¿cuál es mi objetivo?
-Mercader: Ah no no, eso te tocará descubrirlo a ti. No podemos spoilear a quien nos está mirando, cariño. Sí, hablo de ti.
-Mercader: Recuerda, estas estadísticas te potenciarán por el resto de tu aventura. Te veré pronto...
+~ Introduccion
+Mercader: ¡Oh, cariño! Aparecés justo cuando empiezo a aburrirme de la existencia.
+Wisp: ¿Otra vez hablándole al vacío?
+Mercader: No al vacío, foquito... *a quien controla tu destino*.  
+Wisp: ¿El jugador? No creo que le importes tanto.
+Mercader: Oh, no subestimes al jugador. Algunos incluso leen los diálogos completos.  
+Mercader: Bueno... ¿qué decís, intruso detrás de la pantalla? ¿Querés escuchar mi oferta?
+- "Sí, veamos qué tenés."
+	=> Ofertas
+- "No, gracias. No confío en vos."
+	Mercader: Inteligente. Los que confían demasiado suelen terminar como *recursos reciclados*.
+	Wisp: No sé qué significa, pero sonó siniestro.
+	Mercader: Lo es, cariño.
+	=> Despedida
 
 
+# ============================
+# BLOQUE: OFERTAS
+# ============================
 
+~ Ofertas
+Mercader: Tengo varias tentaciones hoy. Pero antes de elegir... respirá profundo. Esto podría doler.
+Wisp: ¿Por qué TODO lo tuyo duele?
+Mercader: Porque el progreso, foquito, siempre cobra impuestos.
+- "Quiero ser más rápido. Que nada me alcance."
+	=> TratoVelocidad
+- "Quiero saltar más alto, ver el mundo desde arriba."
+	=> TratoSalto
+- "Quiero que mis ataques sean devastadores."
+	=> TratoDano
+- "Prefiero algo que me mantenga vivo por más tiempo."
+	=> TratoSalud
+
+
+# ============================
+# TRATOS INDIVIDUALES
+# ============================
+
+~ TratoVelocidad
+Mercader: Mmm... velocidad. El deseo de los impacientes.
+Mercader: Puedo hacerte moverte tan rápido que incluso las animaciones no te sigan el paso.
+Wisp: ¡Eso suena... peligroso!
+Mercader: Lo es. Pero, ¿qué es un poco de peligro cuando podés sentir el viento digital en tu cara?
+- "Acepto el trato."
+	Mercader: Excelente. Que tus pasos desafíen el tiempo.
+	# ↑ aplicar mejora de VELOCIDAD
+	Wisp: ¡Agh! ¡Mis píxeles vibran!
+	Mercader: No es dolor, cariño. Es *frame skipping*.
+	=> Despedida
+- "No, prefiero caminar tranquilo."
+	Mercader: Qué aburrido. Seguro también usás las teclas por defecto.
+	Wisp: ¡Hey! No insultes mis bindings.
+	=> Despedida
+
+
+~ TratoSalto
+Mercader: Ah, el sueño de todo espíritu liviano. Saltar más alto, escapar del suelo.
+Mercader: Te advierto, los límites del mapa no son tan amables.
+Wisp: ¡Eso ya lo aprendí por las malas!
+Mercader: Entonces, ¿te animás?
+- "Sí, dame más impulso."
+	Mercader: Que tus alas invisibles te eleven.
+	# ↑ aplicar mejora de FUERZA DE SALTO
+	Wisp: ¡Whoa! ¡Mirá esa parábola!
+	Mercader: Física, magia… todo depende del punto de vista.
+	=> Despedida
+- "No, no quiero volver a romper el techo invisible."
+	Mercader: Sensato, pero aburrido. Así nunca buguearás el juego a tu favor.
+	Wisp: ¿Buguear? ¿Qué es eso?
+	Mercader: Nada, foquito. Nada que te concierna.
+	-> Despedida
+
+
+~ TratoDano
+Mercader: Mmm, sed de poder. Lo tuyo me gusta.
+Wisp: No sé si me gusta cómo lo dice.
+Mercader: Puedo intensificar tus disparos... pero la energía debe venir de *algún lado*.
+Wisp: ...¿De mi barra de salud, verdad?
+Mercader: Exacto, foquito. Ya lo entendés todo.
+- "Acepto. Vale la pena."
+	Mercader: Así se habla. Que tus enemigos sufran un *reajuste de balance*.
+	# ↑ aplicar aumento de DAÑO y reducción de SALUD
+	Wisp: ¡Me arde el alma! ¡Literalmente!
+	Mercader: Es solo la implementación sintiéndolo.
+	=> Despedida
+- "No, paso. No quiero efectos secundarios raros."
+	Mercader: Qué pena. Pensé que el jugador quería ver algo de acción.
+	Wisp: ...¿Nos está provocando?
+	Mercader: Siempre.
+	=> Despedida
+
+
+~ TratoSalud
+Mercader: ¿Más salud? Qué pragmático. Eso dice mucho del tipo de jugador que sos.
+Wisp: No le hagas caso, no todos queremos morir por la trama.
+Mercader: Bien dicho, foquito. Entonces, ¿aceptás mi bendición temporal?
+- "Sí, por favor."
+	Mercader: Qué modales tan raros para un mortal con barra de vida.
+	# ↑ aplicar aumento de SALUD
+	Wisp: ¡Ah! ¡Siento cómo se recargan mis puntos vitales!
+	Mercader: Aprovechalos, que el juego no guarda solo.
+	=> Despedida
+- "No, prefiero un reto más justo."
+	Mercader: “Justo”... qué palabra más aburrida.
+	Wisp: Creo que le gusta molestar.
+	Mercader: Es mi función, cariño. Literalmente.
+	=> Despedida
+
+
+# ============================
+# SALIDA GENERAL
+# ============================
+
+~ Despedida
+Mercader: Bueno, creo que por hoy ya te manipulé lo suficiente.
+Wisp: ¡Al fin alguien lo admite!
+Mercader: Anda, foquito. El público se está impacientando.
+Wisp: ¿Qué público?
+Mercader: El que te está moviendo... ahí afuera.
+Wisp: ...
+Mercader: Nos vemos en la próxima iteración, cariño.

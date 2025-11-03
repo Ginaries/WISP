@@ -14,8 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://cw1uj4kwxtxxb" path="res://Assets - WISP/animación tanque-enemigo/fotograma0010.png" id="12_s7ram"]
 [ext_resource type="Texture2D" uid="uid://skuuvtxrkobv" path="res://Assets - WISP/animación tanque-enemigo/fotograma0011.png" id="13_26815"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qp0dg"]
-radius = 52.87395
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qp0dg"]
+radius = 20.627636
+height = 71.99756
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tofot"]
 animations = [{
@@ -80,15 +81,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
-size = Vector2(74.77518, 95.13963)
+size = Vector2(58.01523, 88.71128)
 
 [node name="Tanque" type="CharacterBody2D" groups=["Enemigo"]]
 scale = Vector2(0.7756584, 0.7778042)
 script = ExtResource("1_4lx21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5784545, -15.428047)
-shape = SubResource("CircleShape2D_qp0dg")
+position = Vector2(6.4461365, -2.5713406)
+shape = SubResource("CapsuleShape2D_qp0dg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(12.892273, 0)
@@ -102,7 +103,7 @@ autostart = true
 [node name="recibirproyectil" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
-position = Vector2(3.8676805, -12.856709)
+position = Vector2(3.8676817, -11.571035)
 shape = SubResource("RectangleShape2D_wsl4j")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
