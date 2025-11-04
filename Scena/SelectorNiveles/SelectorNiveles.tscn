@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://defyktj6uyj5a"]
+[gd_scene load_steps=7 format=3 uid="uid://defyktj6uyj5a"]
 
 [ext_resource type="Script" uid="uid://cbkr8kcho4qwe" path="res://Scena/SelectorNiveles/selector_niveles.gd" id="1_8fa41"]
 [ext_resource type="Texture2D" uid="uid://bnyy8ksg0qgek" path="res://Assets - WISP/InterfacesPNG/Selector de niveles 2.png" id="2_xsy1t"]
 [ext_resource type="Texture2D" uid="uid://tkj3xptio5jt" path="res://Assets - WISP/InterfacesPNG/Selector de niveles REFERENCIA.png" id="3_4j44d"]
 [ext_resource type="Texture2D" uid="uid://d2wbhjugv8f6c" path="res://Assets - WISP/animación brasero/fotograma0001.png" id="4_8gnld"]
 [ext_resource type="Texture2D" uid="uid://c01mlerf5t14h" path="res://Assets - WISP/animación brasero/brasero apagado.png" id="5_7je45"]
+[ext_resource type="Texture2D" uid="uid://cgyi6670lrj5m" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Tienda Interactiva Nueva.png" id="6_4j44d"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -179,4 +180,22 @@ text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TiendaPremium" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.001
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -403.0
+offset_right = -0.75006104
+offset_bottom = 97.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("6_4j44d")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="TiendaPremium" to="." method="_on_tienda_premium_pressed"]
