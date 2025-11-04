@@ -1,1 +1,5 @@
-res://Scena/TilesSet/TilesSet2.tscn
+res://Scena/TiendaPremium/TiendaPremium.tscn
+res://Script/TiendaPremium/tienda_premium.gd
+res://Script/Player/estadisticas_del_player.gd
+res://Scena/Enemigos/Tanque.tscn
+res://Script/Enemigo/enemigo.gd

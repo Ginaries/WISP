@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=20 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
 [ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="12_g7upr"]
 [ext_resource type="Texture2D" uid="uid://c82cnu5kpn3ef" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/flechawisp.png" id="15_54xjq"]
 [ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="17_40sue"]
+[ext_resource type="Texture2D" uid="uid://c2n1x0gawulj5" path="res://Assets - WISP/orbe.png" id="18_23pqi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
 animations = [{
@@ -100,6 +101,31 @@ texture_normal = ExtResource("15_54xjq")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Puntos" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 403.0
+offset_right = 66.0
+offset_bottom = 453.0
+texture = ExtResource("18_23pqi")
+
+[node name="CantidadPuntos" type="RichTextLabel" parent="Puntos"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 109.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 66.0
 offset_top = 552.0
@@ -131,7 +157,7 @@ text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="AtaqueM" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "comprar"
 
@@ -159,7 +185,7 @@ text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="VelocidadM" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "comprar"
 
@@ -187,7 +213,7 @@ text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="FSaltoM" type="Button" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 text = "comprar"
 
@@ -215,7 +241,7 @@ text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="CombustibleM" type="Button" parent="VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 text = "comprar"
 
@@ -224,6 +250,7 @@ offset_left = 224.0
 offset_top = 383.0
 offset_right = 546.0
 offset_bottom = 456.0
+focus_mode = 0
 text = "Ver anuncios"
 flat = true
 
@@ -243,5 +270,16 @@ offset_right = 683.0
 offset_bottom = 647.0
 texture = ExtResource("17_40sue")
 
+[node name="TimerAnuncio" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 10.0
+offset_right = 691.0
+offset_bottom = 50.0
+
 [connection signal="pressed" from="Flecha" to="." method="_on_flecha_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/AtaqueM" to="." method="_on_ataque_m_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VelocidadM" to="." method="_on_velocidad_m_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/FSaltoM" to="." method="_on_f_salto_m_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/CombustibleM" to="." method="_on_combustible_m_pressed"]
 [connection signal="pressed" from="VerAnuncio" to="." method="_on_ver_anuncio_pressed"]

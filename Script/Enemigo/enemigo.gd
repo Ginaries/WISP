@@ -54,7 +54,6 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func Morir():
-	EstadisticasDelPlayer.Puntos+=100
 	var chance: int = randi_range(0, 5)
 	if chance == 2 or chance == 4:
 		var cantidad_monedas = randi_range(2, 6) # elige entre 2 y 6 monedas

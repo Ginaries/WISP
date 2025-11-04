@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var panel: Panel = $Panel
+@onready var cantidad_puntos: RichTextLabel = $Puntos/CantidadPuntos
+@onready var timer: Timer = $Panel/Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,18 +11,69 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	cantidad_puntos.text=str(EstadisticasDelPlayer.Puntos)
 
 
 func _on_flecha_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
 
+@onready var timer_anuncio: RichTextLabel = $Panel/TimerAnuncio
 
 func _on_ver_anuncio_pressed() -> void:
 	panel.visible=true
 	get_tree().paused=true
-	await get_tree().create_timer(3.0).timeout
+	timer_anuncio.text=str("5")
+	await get_tree().create_timer(1.0).timeout
+	timer_anuncio.text=str("4")
+	await get_tree().create_timer(1.0).timeout
+	timer_anuncio.text=str("3")
+	await get_tree().create_timer(1.0).timeout
+	timer_anuncio.text=str("2")
+	await get_tree().create_timer(1.0).timeout
+	timer_anuncio.text=str("1")
+	await get_tree().create_timer(1.0).timeout
 	panel.visible=false
 	get_tree().paused=false
 	EstadisticasDelPlayer.Puntos+=5
 	
+
+
+# --- Botones de mejora ---
+func _on_ataque_m_pressed() -> void:
+	mejorar_estadistica("daño_disparo", 2, "coste_ataque")
+
+func _on_velocidad_m_pressed() -> void:
+	mejorar_estadistica("velocidad", 10, "coste_velocidad")
+
+func _on_f_salto_m_pressed() -> void:
+	mejorar_estadistica("fuerza_salto", -20, "coste_salto")
+
+func _on_combustible_m_pressed() -> void:
+	mejorar_estadistica("CombustibleMax", 10, "coste_combustible")
+
+func _on_salud_m_pressed() -> void:
+	mejorar_estadistica("SaludMax", 1, "coste_salud")
+
+
+# --- Función general para mejorar ---
+func mejorar_estadistica(nombre_propiedad: String, incremento, nombre_coste: String) -> void:
+	var coste_actual = EstadisticasDelPlayer.get(nombre_coste)
+	var puntos_actuales = EstadisticasDelPlayer.Puntos
+
+	if puntos_actuales >= coste_actual:
+		# restar puntos
+		EstadisticasDelPlayer.Puntos -= coste_actual
+		
+		# subir estadística
+		EstadisticasDelPlayer.set(nombre_propiedad, EstadisticasDelPlayer.get(nombre_propiedad) + incremento)
+		print("✨ Mejoraste", nombre_propiedad, "a:", EstadisticasDelPlayer.get(nombre_propiedad))
+		
+		# aumentar costo para la próxima
+		EstadisticasDelPlayer.set(nombre_coste, coste_actual + int(coste_actual * 0.5)) # sube un 50% cada vez
+		
+		
+		# guardar progreso
+		#EstadisticasDelPlayer.guardar_datos()
+	else:
+		var faltan = coste_actual - puntos_actuales
+		print("❌ Te faltan", faltan, "puntos para mejorar", nombre_propiedad)
