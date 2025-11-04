@@ -435,6 +435,12 @@ tile_set = SubResource("TileSet_k4skk")
 [node name="CuevaMercader" parent="." instance=ExtResource("7_fmhqe")]
 position = Vector2(751, -80)
 
+[node name="CollisionShape2D" parent="CuevaMercader/CambioDeCamara" index="0"]
+visible = true
+
+[node name="CollisionPolygon2D" parent="CuevaMercader/StaticBody2D" index="0"]
+visible = true
+
 [node name="Guía del fondo" type="ParallaxBackground" parent="."]
 scroll_limit_begin = Vector2(750, 1280)
 

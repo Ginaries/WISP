@@ -177,20 +177,21 @@ func EncenderFuego():
 # --- Ataque ---
 func AtaqueDisparo():
 	if Input.is_action_just_pressed("atacar") and CombustibleActual>0:
-		CombustibleActual-=1
-		var bala = PROYECTIL.instantiate()
-		bala.global_position = global_position
-		get_parent().add_child(bala)
+		if CombustibleActual>=10:
+			CombustibleActual-=10
+			var bala = PROYECTIL.instantiate()
+			bala.global_position = global_position
+			get_parent().add_child(bala)
 
-		# Si el jugador no se está moviendo, dispara hacia donde está mirando
-		var direccion_disparo = Vector2.RIGHT
-		if dir != 0:
-			direccion_disparo = Vector2(dir, 0)
-		elif animated_sprite_2d.flip_h:
-			direccion_disparo = Vector2.LEFT
+			# Si el jugador no se está moviendo, dispara hacia donde está mirando
+			var direccion_disparo = Vector2.RIGHT
+			if dir != 0:
+				direccion_disparo = Vector2(dir, 0)
+			elif animated_sprite_2d.flip_h:
+				direccion_disparo = Vector2.LEFT
 
-		if bala.has_method("disparar"):
-			bala.disparar(direccion_disparo * fuerza_disparo, daño_disparo)
+			if bala.has_method("disparar"):
+				bala.disparar(direccion_disparo * fuerza_disparo, daño_disparo)
 
 
 
@@ -264,6 +265,7 @@ func _on_recibir_daño_area_entered(area: Area2D) -> void:
 
 		
 
+@onready var timer: Timer = $Timer
 
 func _on_timer_timeout() -> void:
 	if CombustibleActual<CombustibleMax:

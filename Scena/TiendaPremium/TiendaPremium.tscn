@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=19 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
 [ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bser6e646b5pt" path="res://Assets - WISP/Mercader Idle/fotograma0009.png" id="11_xuerk"]
 [ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="12_g7upr"]
 [ext_resource type="Texture2D" uid="uid://c82cnu5kpn3ef" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/flechawisp.png" id="15_54xjq"]
+[ext_resource type="Texture2D" uid="uid://dkw0p03h3igwk" path="res://icon.svg" id="17_40sue"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
 animations = [{
@@ -99,4 +100,148 @@ texture_normal = ExtResource("15_54xjq")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 66.0
+offset_top = 552.0
+offset_right = 699.0
+offset_bottom = 653.0
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 195
+alignment = 1
+
+[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Ataque"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Coste" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Cuantas Orbes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "comprar"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 180
+alignment = 1
+
+[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Velocidad"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Coste" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Cuantas Orbes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "comprar"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 180
+alignment = 1
+
+[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Fuerza Salto"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Coste" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Cuantas Orbes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "comprar"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 180
+alignment = 1
+
+[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Combustible"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Coste" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Cuantas Orbes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "comprar"
+
+[node name="VerAnuncio" type="Button" parent="."]
+offset_left = 224.0
+offset_top = 383.0
+offset_right = 546.0
+offset_bottom = 456.0
+text = "Ver anuncios"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+process_mode = 3
+visible = false
+offset_left = 24.0
+offset_top = 166.0
+offset_right = 725.0
+offset_bottom = 1037.0
+
+[node name="Anuncio" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 215.0
+offset_right = 683.0
+offset_bottom = 647.0
+texture = ExtResource("17_40sue")
+
 [connection signal="pressed" from="Flecha" to="." method="_on_flecha_pressed"]
+[connection signal="pressed" from="VerAnuncio" to="." method="_on_ver_anuncio_pressed"]

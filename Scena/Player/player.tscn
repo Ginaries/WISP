@@ -116,6 +116,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 341.0
 offset_bottom = 214.0
+scale = Vector2(0.495, 0.495)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -130,7 +131,7 @@ texture_under = ExtResource("11_xvr67")
 texture_progress = ExtResource("12_bxgl8")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 0.2
 autostart = true
 
 [connection signal="area_entered" from="RecibirDaño" to="." method="_on_recibir_daño_area_entered"]
