@@ -1,4 +1,5 @@
 TextureButton
+Label
 Timer
 VBoxContainer
 TextureProgressBar
@@ -11,4 +12,3 @@ Sprite2D
 AnimatedSprite2D
 CollisionPolygon2D
 StaticBody2D
-Node2D

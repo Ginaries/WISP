@@ -22,3 +22,7 @@ func _on_nivel_5_pressed() -> void:
 
 func _on_tienda_premium_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scena/TiendaPremium/TiendaPremium.tscn")
+	
+
+func _on_flecha_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")

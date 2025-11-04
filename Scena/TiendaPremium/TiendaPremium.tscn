@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=18 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
+[ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
 [ext_resource type="Texture2D" uid="uid://d1852b122p5dg" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Inferior Tienda.png" id="2_burph"]
 [ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="2_ply4r"]
 [ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="3_54xjq"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://celt6cdhonmy4" path="res://Assets - WISP/Mercader Idle/fotograma0008.png" id="10_pf383"]
 [ext_resource type="Texture2D" uid="uid://bser6e646b5pt" path="res://Assets - WISP/Mercader Idle/fotograma0009.png" id="11_xuerk"]
 [ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="12_g7upr"]
+[ext_resource type="Texture2D" uid="uid://c82cnu5kpn3ef" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/flechawisp.png" id="15_54xjq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
 animations = [{
@@ -62,6 +64,7 @@ animations = [{
 }]
 
 [node name="TiendaPremium" type="Node2D"]
+script = ExtResource("1_u712o")
 
 [node name="Parte Superior Tienda" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -88,3 +91,12 @@ offset_right = 628.0
 offset_bottom = 679.0
 grow_vertical = 2
 texture = ExtResource("3_burph")
+
+[node name="Flecha" type="TextureButton" parent="."]
+offset_right = 71.0
+offset_bottom = 71.0
+texture_normal = ExtResource("15_54xjq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Flecha" to="." method="_on_flecha_pressed"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://bo2qgconev4kd"]
+[gd_scene load_steps=19 format=3 uid="uid://bo2qgconev4kd"]
 
 [ext_resource type="Script" uid="uid://cfo5et35nj68a" path="res://Scena/CuevaMercader/cueva_mercader.gd" id="1_0bknn"]
-[ext_resource type="Texture2D" uid="uid://bo7vtusrx3cg0" path="res://Assets - WISP/CUEVAMERCADER/Tienda Juego.png" id="1_lf2vp"]
 [ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="2_0bknn"]
+[ext_resource type="Texture2D" uid="uid://dqps0suytt4k1" path="res://Assets - WISP/CUEVAMERCADER/Tienda Juego Fondo Parte Trasera.png" id="2_mcjpl"]
 [ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="3_cpk2m"]
+[ext_resource type="Texture2D" uid="uid://b7l1d1ti4ld7o" path="res://Assets - WISP/CUEVAMERCADER/Cartel.png" id="3_s4jss"]
+[ext_resource type="Texture2D" uid="uid://b3kmubrgfix8" path="res://Assets - WISP/CUEVAMERCADER/Tienda Juego Parte Delantera.png" id="4_a3f75"]
 [ext_resource type="Texture2D" uid="uid://cw485ntamh7k4" path="res://Assets - WISP/Mercader Idle/fotograma0002.png" id="4_mcjpl"]
 [ext_resource type="Texture2D" uid="uid://cihwu68yiejrf" path="res://Assets - WISP/Mercader Idle/fotograma0003.png" id="5_s4jss"]
 [ext_resource type="Texture2D" uid="uid://b08n6orwntmu5" path="res://Assets - WISP/Mercader Idle/fotograma0004.png" id="6_a3f75"]
@@ -95,18 +97,42 @@ script = ExtResource("1_0bknn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(376, 641)
-texture = ExtResource("1_lf2vp")
+texture = ExtResource("2_mcjpl")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(320, 210)
+scale = Vector2(0.36799997, 0.39400002)
+texture = ExtResource("3_s4jss")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(376, 641)
+texture = ExtResource("4_a3f75")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -185.0
+offset_top = -416.0
+offset_right = 70.0
+offset_bottom = -341.0
+text = "ACA VA CANTIDAD DE 
+ORBES QUE TIENE RECOLECTADO
+ EL PLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CambioDeCamara" type="Area2D" parent="."]
 position = Vector2(-32, 406)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CambioDeCamara"]
+visible = false
 position = Vector2(406.5, -11.5)
 shape = SubResource("RectangleShape2D_7tm5a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(506, 405.00006)
 scale = Vector2(1, 0.6361555)
 polygon = PackedVector2Array(-501.99997, -397.7016, 239.99997, -399.27356, 247.99997, 374.12225, -505.99997, 369.40643, -506.00006, 706.2759, 245.99997, 729.3813, 263.99997, 729.3813, 267.99997, -576.9031, -509.00006, -569.7241)
@@ -130,6 +156,7 @@ frame_progress = 0.5208703
 [node name="Frente" type="Sprite2D" parent="."]
 position = Vector2(492, 593)
 texture = ExtResource("12_1euyu")
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="InteraccionInterna" to="." method="_on_interaccion_interna_body_entered"]
 [connection signal="body_exited" from="InteraccionInterna" to="." method="_on_interaccion_interna_body_exited"]

@@ -3,3 +3,8 @@ res://Scena/TileSetNivel2/tile_set_nivel_2.tscn
 res://Scena/TilesSet/TilesSet2.tscn
 res://Scena/SelectorNiveles/selector_niveles.gd
 res://Scena/SelectorNiveles/SelectorNiveles.tscn
+res://Scena/TiendaPremium/TiendaPremium.tscn
+res://Script/TiendaPremium/tienda_premium.gd
+res://Scena/CuevaMercader/cueva_mercader.tscn
+res://Scena/Menú/Menu.tscn
+res://Scena/Player/vidas.tscn
