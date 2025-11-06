@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwhvxylru7526"]
+[gd_scene load_steps=19 format=3 uid="uid://dwhvxylru7526"]
 
 [ext_resource type="Script" uid="uid://dh6ideadnjmog" path="res://Script/Player/player.gd" id="1_3hf3a"]
 [ext_resource type="Texture2D" uid="uid://dlp8qemipm6lt" path="res://Assets - WISP/WISP.png" id="2_c10fm"]
 [ext_resource type="Texture2D" uid="uid://cdcx300fj0oxp" path="res://Assets - WISP/animación caminar wisp/wisp animat0002.png" id="2_scdhq"]
+[ext_resource type="Texture2D" uid="uid://dve2xcq8mfdpi" path="res://Assets - WISP/wisp_caida.png" id="2_xvr67"]
 [ext_resource type="Texture2D" uid="uid://cenq855omi8ut" path="res://Assets - WISP/animación caminar wisp/wisp animat0003.png" id="3_c10fm"]
 [ext_resource type="Texture2D" uid="uid://c4mmhtsr7s4cj" path="res://Assets - WISP/animación caminar wisp/wisp animat0004.png" id="4_kkur1"]
 [ext_resource type="Texture2D" uid="uid://ckjy3cwhqu4rl" path="res://Assets - WISP/animación caminar wisp/wisp animat0005.png" id="5_n8hiv"]
@@ -25,7 +26,7 @@ height = 390.69238
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c10fm")
+"texture": ExtResource("2_xvr67")
 }],
 "loop": true,
 "name": &"fall",
@@ -96,7 +97,7 @@ shape = SubResource("CapsuleShape2D_c10fm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u0shn")
-animation = &"walk"
+animation = &"fall"
 
 [node name="AgarrarMonedas" type="Area2D" parent="."]
 

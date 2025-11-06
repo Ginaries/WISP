@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2n1x0gawulj5"
-path="res://.godot/imported/orbe.png-58866dc85456dfb9027ec97deb48620f.ctex"
+uid="uid://c12k2xo7joohp"
+path="res://.godot/imported/LogoWISPInterlineado.png-e98cd63c97925508ab8094e5ce84e058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets - WISP/orbe.png"
-dest_files=["res://.godot/imported/orbe.png-58866dc85456dfb9027ec97deb48620f.ctex"]
+source_file="res://Assets - WISP/LogoWISPInterlineado.png"
+dest_files=["res://.godot/imported/LogoWISPInterlineado.png-e98cd63c97925508ab8094e5ce84e058.ctex"]
 
 [params]
 

@@ -15,7 +15,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_flecha_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
+	get_tree().change_scene_to_file("res://Scena/SelectorNiveles/SelectorNiveles.tscn")
 
 @onready var timer_anuncio: RichTextLabel = $Panel/TimerAnuncio
 

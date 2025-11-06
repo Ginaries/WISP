@@ -1,5 +1,10 @@
 res://Scena/TiendaPremium/TiendaPremium.tscn
 res://Script/TiendaPremium/tienda_premium.gd
-res://Script/Player/estadisticas_del_player.gd
-res://Scena/Enemigos/Tanque.tscn
-res://Script/Enemigo/enemigo.gd
+res://Scena/TilesSet/TilesSet2.tscn
+res://Scena/SelectorNiveles/selector_niveles.gd
+res://Scena/SelectorNiveles/SelectorNiveles.tscn
+res://Scena/Player/player.tscn
+res://Scena/TilesSet/TilesSet.tscn
+res://Scena/CuevaMercader/cueva_mercader.gd
+res://Scena/CuevaMercader/cueva_mercader.tscn
+res://Scena/Menú/Menu.tscn

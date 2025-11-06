@@ -2,8 +2,11 @@ extends Node2D
 const MERCADER = preload("res://Dialogos/Mercader.dialogue")
 var Puedo:bool=false
 var Ocupada:bool=false
+@onready var cantidad_puntos: RichTextLabel = $Puntos/CantidadPuntos
 
 func _process(_delta: float) -> void:
+	cantidad_puntos.text=str(EstadisticasDelPlayer.Puntos)
+	
 	if Input.is_action_just_pressed("Interactuar") and Puedo and not Ocupada:
 		Ocupada=true
 		get_tree().paused=true

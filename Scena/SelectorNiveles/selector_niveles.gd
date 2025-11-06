@@ -5,7 +5,7 @@ func _on_nivel_1_pressed() -> void:
 
 
 func _on_nivel_2_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scena/TilesSet/TilesSet2.tscn")
 
 
 func _on_nivel_3_pressed() -> void:
