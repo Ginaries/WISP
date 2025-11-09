@@ -1,10 +1,8 @@
-res://Scena/TiendaPremium/TiendaPremium.tscn
-res://Script/TiendaPremium/tienda_premium.gd
-res://Scena/TilesSet/TilesSet2.tscn
-res://Scena/SelectorNiveles/selector_niveles.gd
-res://Scena/SelectorNiveles/SelectorNiveles.tscn
+res://Scena/Enemigos/Pincho.tscn
+res://Scena/Enemigos/pincho.gd
 res://Scena/Player/player.tscn
 res://Scena/TilesSet/TilesSet.tscn
-res://Scena/CuevaMercader/cueva_mercader.gd
-res://Scena/CuevaMercader/cueva_mercader.tscn
-res://Scena/Menú/Menu.tscn
+res://Scena/Enemigos/Tanque.tscn
+res://Scena/Player/proyectil del player/proyectil.tscn
+res://Scena/Player/proyectil del player/proyectil.gd
+res://Script/Player/player.gd

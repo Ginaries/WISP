@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://ck8xnj4oeoh5h"]
+[gd_scene load_steps=26 format=4 uid="uid://ck8xnj4oeoh5h"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_a7a2h"]
 [ext_resource type="Texture2D" uid="uid://d2rtx5ah5d3o1" path="res://Assets - WISP/Plataformas/Intentoplataforma.png" id="1_tcrrc"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://gobt7cps4w31" path="res://Scena/Enemigos/avispa.tscn" id="15_7tm5a"]
 [ext_resource type="PackedScene" uid="uid://bo2qgconev4kd" path="res://Scena/CuevaMercader/cueva_mercader.tscn" id="16_agavg"]
 [ext_resource type="PackedScene" uid="uid://dm6q0abakck7u" path="res://Scena/Joystick/joystick.tscn" id="17_k4skk"]
+[ext_resource type="PackedScene" uid="uid://kn7lu5j6d3d1" path="res://Scena/Enemigos/Pincho.tscn" id="18_111c6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
 texture = ExtResource("1_a7a2h")
@@ -498,7 +499,7 @@ position = Vector2(458, 1228)
 position = Vector2(20, 940)
 
 [node name="Tanque" parent="." instance=ExtResource("14_68xka")]
-position = Vector2(668, 133)
+position = Vector2(588, 582)
 vida = 20
 
 [node name="Avispa" parent="." instance=ExtResource("15_7tm5a")]
@@ -508,6 +509,9 @@ position = Vector2(588, 302)
 
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource("17_k4skk")]
 position = Vector2(113, 1119)
+
+[node name="Pincho" parent="." instance=ExtResource("18_111c6")]
+position = Vector2(414, 138)
 
 [connection signal="body_entered" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_entered"]
 [connection signal="body_exited" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_exited"]

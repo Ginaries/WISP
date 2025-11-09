@@ -3,6 +3,7 @@ extends CharacterBody2D
 # --- Proyectil del player ---
 const PROYECTIL = preload("res://Scena/Player/proyectil del player/proyectil.tscn")
 @onready var joystick: Node2D = $"../CanvasLayer/Joystick"
+var mirando_derecha: bool = true
 
 # --- Variables principales ---
 @export var velocidad: float = 100.0
@@ -99,6 +100,7 @@ func _physics_process(delta: float) -> void:
 	# --- Mirar hacia donde se mueve ---
 	if abs(dir) > 0.1:
 		animated_sprite_2d.flip_h = dir < 0
+		
 
 	# --- Actualizar animaciones ---
 	_actualizar_animacion()
@@ -176,22 +178,21 @@ func EncenderFuego():
 
 # --- Ataque ---
 func AtaqueDisparo():
-	if Input.is_action_just_pressed("atacar") and CombustibleActual>0:
-		if CombustibleActual>=10:
-			CombustibleActual-=10
+	if Input.is_action_just_pressed("atacar") and CombustibleActual > 0:
+		if CombustibleActual >= 10:
+			CombustibleActual -= 10
 			var bala = PROYECTIL.instantiate()
 			bala.global_position = global_position
 			get_parent().add_child(bala)
 
-			# Si el jugador no se está moviendo, dispara hacia donde está mirando
+			# Dirección de disparo basada únicamente en hacia dónde mira el jugador
 			var direccion_disparo = Vector2.RIGHT
-			if dir != 0:
-				direccion_disparo = Vector2(dir, 0)
-			elif animated_sprite_2d.flip_h:
+			if animated_sprite_2d.flip_h:
 				direccion_disparo = Vector2.LEFT
 
 			if bala.has_method("disparar"):
 				bala.disparar(direccion_disparo * fuerza_disparo, daño_disparo)
+
 
 
 

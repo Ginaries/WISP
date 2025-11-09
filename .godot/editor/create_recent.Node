@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Timer
 RichTextLabel
 TextureRect
@@ -11,4 +13,3 @@ TextureButton
 Label
 TextureProgressBar
 CanvasLayer
-CollisionShape2D

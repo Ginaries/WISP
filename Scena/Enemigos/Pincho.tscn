@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kn7lu5j6d3d1"]
+[gd_scene load_steps=13 format=3 uid="uid://kn7lu5j6d3d1"]
 
 [ext_resource type="Script" uid="uid://cfeqxqf4ylaeb" path="res://Scena/Enemigos/pincho.gd" id="1_uh0ek"]
 [ext_resource type="Texture2D" uid="uid://dtqxwfsabii3c" path="res://Assets - WISP/animación pincho-enemigo/fotograma0000.png" id="2_uh0ek"]
@@ -8,11 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://l8mqsb40kao7" path="res://Assets - WISP/animación pincho-enemigo/fotograma0004.png" id="6_e1xni"]
 [ext_resource type="Texture2D" uid="uid://dvp8wjma4c0bm" path="res://Assets - WISP/animación pincho-enemigo/fotograma0005.png" id="7_klipe"]
 [ext_resource type="Texture2D" uid="uid://dfdnmj17re45m" path="res://Assets - WISP/animación pincho-enemigo/fotograma0006.png" id="8_nfveq"]
-[ext_resource type="Texture2D" uid="uid://b8kbs8ooij3h2" path="res://Assets - WISP/animación pincho-enemigo/fotograma0007.png" id="9_tmx3a"]
-[ext_resource type="Texture2D" uid="uid://b1p2yoworsjqc" path="res://Assets - WISP/animación pincho-enemigo/fotograma0008.png" id="10_qrjl2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
-radius = 48.04165
+radius = 70.71068
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1r1y7"]
 animations = [{
@@ -37,14 +35,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_nfveq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_tmx3a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_qrjl2")
 }],
-"loop": true,
+"loop": false,
 "name": &"Atacar",
 "speed": 5.0
 }, {
@@ -60,10 +52,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_yukhv"]
 radius = 56.0357
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_nc3h3"]
+radius = 157.01274
+
 [node name="Pincho" type="CharacterBody2D" groups=["Enemigo"]]
+scale = Vector2(0.45588234, 0.4351145)
 script = ExtResource("1_uh0ek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -15)
 shape = SubResource("CircleShape2D_6pwgp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -71,15 +68,18 @@ position = Vector2(3, -6)
 sprite_frames = SubResource("SpriteFrames_1r1y7")
 animation = &"Atacar"
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-autostart = true
-
 [node name="recibirproyectil" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
 position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_yukhv")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Activar Pinches" type="Area2D" parent="."]
+position = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Activar Pinches"]
+shape = SubResource("CircleShape2D_nc3h3")
+
 [connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]
+[connection signal="body_entered" from="Activar Pinches" to="." method="_on_activar_pinches_body_entered"]
+[connection signal="body_exited" from="Activar Pinches" to="." method="_on_activar_pinches_body_exited"]

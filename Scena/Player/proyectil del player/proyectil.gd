@@ -1,10 +1,18 @@
 extends Area2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 var velocidad: Vector2 = Vector2.ZERO
 var DañoaEnemigo:float
-func disparar(v: Vector2,daño):
+func disparar(v: Vector2, daño):
 	velocidad = v
-	DañoaEnemigo=daño
+	DañoaEnemigo = daño
+
+	# Voltear sprite según dirección
+	if velocidad.x < 0:
+		sprite_2d.flip_h = true
+	else:
+		sprite_2d.flip_h = false
+
 
 func _ready() -> void:
 	add_to_group("Proyectiles")
