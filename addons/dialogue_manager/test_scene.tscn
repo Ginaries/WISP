@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://ugd552efvil0"]
+[gd_scene load_steps=5 format=3 uid="uid://ugd552efvil0"]
 
 [ext_resource type="Script" uid="uid://c8e16qdgu40wo" path="res://addons/dialogue_manager/test_scene.gd" id="1_yupoh"]
+[ext_resource type="PackedScene" uid="uid://8y2ekygjoqdw" path="res://Scena/Enemigos/Jefes/Jefe1.tscn" id="2_j7pgr"]
+[ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="3_7dg8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f373q"]
+size = Vector2(755, 20)
 
 [node name="TestScene" type="Node2D"]
 script = ExtResource("1_yupoh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-96, 523)
+shape = SubResource("RectangleShape2D_f373q")
+
+[node name="Jefe1" parent="." instance=ExtResource("2_j7pgr")]
+position = Vector2(535, 494)
+
+[node name="Player" parent="." instance=ExtResource("3_7dg8i")]
+position = Vector2(43, 477)

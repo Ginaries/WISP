@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://780ve3c1adq4"]
+
+[ext_resource type="Script" uid="uid://dmh0pc2maj3h2" path="res://Script/Enemigo/Avispa.gd" id="1_wsl4j"]
+[ext_resource type="Texture2D" uid="uid://dxsra20wohwwm" path="res://Assets - WISP/animación avispa-enemigo/fotograma0001.png" id="2_w3mkx"]
+[ext_resource type="Texture2D" uid="uid://dbtmjkirc1eex" path="res://Assets - WISP/JEFE 1/bichospam.png" id="3_io64j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
+radius = 29.017237
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6pwgp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w3mkx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsl4j"]
+size = Vector2(56, 56)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3mkx"]
+radius = 29.068884
+
+[node name="Avispa de MAMA" type="CharacterBody2D" groups=["Enemigo"]]
+script = ExtResource("1_wsl4j")
+velocidad_caminar = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6pwgp")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_6pwgp")
+frame_progress = 0.16257493
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_io64j")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="recibirproyectil" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="recibirproyectil"]
+shape = SubResource("RectangleShape2D_wsl4j")
+
+[node name="HACERDAÑO" type="Area2D" parent="." groups=["Enemigo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HACERDAÑO"]
+shape = SubResource("CircleShape2D_w3mkx")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]

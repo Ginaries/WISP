@@ -1,8 +1,16 @@
-res://Scena/Enemigos/Pincho.tscn
-res://Scena/Enemigos/pincho.gd
-res://Scena/Player/player.tscn
-res://Scena/TilesSet/TilesSet.tscn
-res://Scena/Enemigos/Tanque.tscn
-res://Scena/Player/proyectil del player/proyectil.tscn
-res://Scena/Player/proyectil del player/proyectil.gd
+res://Scena/Enemigos/Jefes/jefe_1.gd
+res://Scena/Enemigos/Jefes/Avispa de MAMA.tscn
+res://Scena/Enemigos/Jefes/Jefe1.tscn
+res://addons/dialogue_manager/test_scene.tscn
+res://Scena/test.tscn
+res://Scena/TiendaPremium/TiendaPremium.tscn
+res://Script/TiendaPremium/tienda_premium.gd
 res://Script/Player/player.gd
+res://Script/Player/estadisticas_del_player.gd
+res://Script/Enemigo/enemigo.gd
+res://Scena/TilesSet/TilesSet.tscn
+res://Script/Enemigo/Avispa.gd
+res://Script/Player/camera_2d.gd
+res://Scena/Flag/flag.gd
+res://Scena/Canvas/canvas_escenarios.gd
+res://Scena/CuevaMercader/cueva_mercader.gd

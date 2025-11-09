@@ -3,6 +3,10 @@ extends Node2D
 @onready var panel: Panel = $Panel
 @onready var cantidad_puntos: RichTextLabel = $Puntos/CantidadPuntos
 @onready var timer: Timer = $Panel/Timer
+@onready var coste_ata: RichTextLabel = $VBoxContainer/HBoxContainer/CosteATA
+@onready var coste_vel: RichTextLabel = $VBoxContainer/HBoxContainer2/CosteVel
+@onready var coste_salto: RichTextLabel = $VBoxContainer/HBoxContainer3/CosteSalto
+@onready var coste_combus: RichTextLabel = $VBoxContainer/HBoxContainer4/CosteCombus
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +16,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	cantidad_puntos.text=str(EstadisticasDelPlayer.Puntos)
+	coste_ata.text=str(EstadisticasDelPlayer.coste_ataque)
+	coste_combus.text=str(EstadisticasDelPlayer.coste_combustible)
+	coste_salto.text=str(EstadisticasDelPlayer.coste_salto)
+	coste_vel.text=str(EstadisticasDelPlayer.coste_velocidad)
 
 
 func _on_flecha_pressed() -> void:

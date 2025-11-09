@@ -15,7 +15,7 @@ const MONEDA_PREMIUM = preload("res://Scena/Moneda/moneda_premium.tscn")
 @export var velocidad_volar: float = 150.0
 
 # --- Configuración IA ---
-@export var rango_detec: float = 300.0  # rango para detectar al player
+@export var rango_detec: float = 1500.0  # rango para detectar al player
 @export var es_volador: bool = false    # si vuela o camina
 
 # Direccion actual (-1 = izquierda, 1 = derecha)
@@ -72,11 +72,11 @@ func Morir():
 	queue_free()
 		
 # --- Movimiento ---
-func caminar(delta: float) -> void:
+func caminar(_delta: float) -> void:
 	velocity.x = dir * velocidad_caminar
 	move_and_slide()
 
-func volar(delta: float, objetivo: Vector2) -> void:
+func volar(_delta: float, objetivo: Vector2) -> void:
 	var dir_volar = (objetivo - global_position).normalized()
 	velocity = dir_volar * velocidad_volar
 	move_and_slide()

@@ -1,0 +1,150 @@
+[gd_scene load_steps=16 format=3 uid="uid://8y2ekygjoqdw"]
+
+[ext_resource type="Script" uid="uid://celxjuf7p2qlm" path="res://Scena/Enemigos/Jefes/jefe_1.gd" id="1_mn4a2"]
+[ext_resource type="Texture2D" uid="uid://7rdiqi5mhu2v" path="res://Assets - WISP/JEFE 1/fotograma0000.png" id="2_8ot2f"]
+[ext_resource type="Texture2D" uid="uid://ocskr02v6pas" path="res://Assets - WISP/JEFE 1/fotograma0001.png" id="3_kjv6j"]
+[ext_resource type="Texture2D" uid="uid://c4j3cecv0nu2t" path="res://Assets - WISP/JEFE 1/fotograma0002.png" id="4_n175u"]
+[ext_resource type="Texture2D" uid="uid://ds6s1shx04kbw" path="res://Assets - WISP/JEFE 1/fotograma0003.png" id="5_g8lwj"]
+[ext_resource type="Texture2D" uid="uid://crf8t1wyh733r" path="res://Assets - WISP/JEFE 1/fotograma0004.png" id="6_3lu08"]
+[ext_resource type="Texture2D" uid="uid://b7tw0swi0nxnu" path="res://Assets - WISP/JEFE 1/fotograma0005.png" id="7_bohx4"]
+[ext_resource type="Texture2D" uid="uid://bksxyirvhias2" path="res://Assets - WISP/JEFE 1/fotograma0006.png" id="8_q7k8t"]
+[ext_resource type="Texture2D" uid="uid://co3ulid5kubv4" path="res://Assets - WISP/JEFE 1/fotograma0007.png" id="9_5sn24"]
+[ext_resource type="Texture2D" uid="uid://mdtbigfx1clh" path="res://Assets - WISP/JEFE 1/fotograma0008.png" id="10_54ldi"]
+[ext_resource type="Texture2D" uid="uid://b31j0g1ovqbpg" path="res://Assets - WISP/JEFE 1/fotograma0009.png" id="11_ovjef"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnixr"]
+radius = 63.0
+height = 252.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngw3t"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8ot2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kjv6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n175u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g8lwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3lu08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bohx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7k8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5sn24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_54ldi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ovjef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ovjef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_54ldi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5sn24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7k8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bohx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3lu08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g8lwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n175u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kjv6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8ot2f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8ot2f")
+}],
+"loop": true,
+"name": &"transformacion",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdahj"]
+radius = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn4a2"]
+radius = 80.0
+height = 330.0
+
+[node name="Jefe1" type="CharacterBody2D"]
+position = Vector2(390, 631)
+script = ExtResource("1_mn4a2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, -34)
+shape = SubResource("CapsuleShape2D_lnixr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ngw3t")
+animation = &"transformacion"
+autoplay = "idle"
+
+[node name="Recibir Daño" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recibir Daño"]
+position = Vector2(-85, -89)
+shape = SubResource("CircleShape2D_kdahj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 81.0
+offset_top = 1219.0
+offset_right = 666.0
+offset_bottom = 1246.0
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-79, -89)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="RecibirDaño2" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecibirDaño2"]
+position = Vector2(20, -1)
+shape = SubResource("CapsuleShape2D_mn4a2")
+
+[connection signal="area_entered" from="Recibir Daño" to="." method="_on_recibir_daño_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="area_entered" from="RecibirDaño2" to="." method="_on_recibir_daño_2_area_entered"]

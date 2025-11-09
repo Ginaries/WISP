@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://d07x1fydahc4e"]
+
+[ext_resource type="PackedScene" uid="uid://dm6q0abakck7u" path="res://Scena/Joystick/joystick.tscn" id="1_bxt7h"]
+
+[node name="CanvasEscenarios" type="CanvasLayer"]
+
+[node name="Joystick" parent="." instance=ExtResource("1_bxt7h")]
+position = Vector2(113, 1119)
+
+[node name="Panel" type="Panel" parent="."]
+process_mode = 3
+offset_left = 77.0
+offset_top = 440.0
+offset_right = 693.0
+offset_bottom = 860.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 58.0
+offset_right = 539.0
+offset_bottom = 187.0
+bbcode_enabled = true
+text = "HAZ CONSEGUIDO 
+						"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 259.0
+offset_right = 372.0
+offset_bottom = 324.0
+text = "Aceptar"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 336.0
+offset_right = 334.0
+offset_bottom = 367.0
+text = "Rechazar"

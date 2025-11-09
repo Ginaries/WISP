@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6jciutvg6ryg"]
+
+[ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="1_tcrg0"]
+[ext_resource type="PackedScene" uid="uid://8y2ekygjoqdw" path="res://Scena/Enemigos/Jefes/Jefe1.tscn" id="2_j3sjd"]
+[ext_resource type="PackedScene" uid="uid://breu0a4y5swo1" path="res://Scena/Player/camera_2d.tscn" id="3_j3sjd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elnko"]
+size = Vector2(705, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-14, 430)
+shape = SubResource("RectangleShape2D_elnko")
+
+[node name="Player" parent="." instance=ExtResource("1_tcrg0")]
+position = Vector2(46, 388)
+
+[node name="Jefe1" parent="." instance=ExtResource("2_j3sjd")]
+position = Vector2(561, 361)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_j3sjd")]
+position = Vector2(373, 641)
+player = NodePath("../Player")
