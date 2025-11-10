@@ -153,42 +153,47 @@ offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
 bbcode_enabled = true
+text = "0"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SolapaOrbes" type="Panel" parent="."]
-visible = false
 material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
 offset_bottom = 1280.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SolapaOrbes"]
+[node name="Scroll" type="ScrollContainer" parent="SolapaOrbes"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.5
-offset_top = -150.0
-offset_right = 122.5
-offset_bottom = 150.0
+offset_left = -290.0
+offset_top = -318.0
+offset_right = 334.0
+offset_bottom = 332.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
 
-[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaOrbes/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SolapaOrbes/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 114
+
+[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaOrbes/Scroll/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 50
 
-[node name="Cartel" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo"]
+[node name="Cartel" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Orbe1" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel"]
+[node name="Orbe1" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -200,7 +205,7 @@ offset_bottom = 183.5
 grow_horizontal = 2
 texture = ExtResource("17_23pqi")
 
-[node name="Cant1" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel/Orbe1"]
+[node name="Cant1" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel/Orbe1"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -216,7 +221,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "x50"
 
-[node name="Boton1" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel"]
+[node name="Boton1" type="TextureButton" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -233,7 +238,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Precio1" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel/Boton1"]
+[node name="Precio1" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel/Boton1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -251,11 +256,11 @@ text = "0.99"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cartel2" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo"]
+[node name="Cartel2" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Orbe2" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2"]
+[node name="Orbe2" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -267,7 +272,7 @@ offset_bottom = 183.5
 grow_horizontal = 2
 texture = ExtResource("17_23pqi")
 
-[node name="Cant2" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2/Orbe2"]
+[node name="Cant2" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel2/Orbe2"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -283,7 +288,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "x150"
 
-[node name="Boton2" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2"]
+[node name="Boton2" type="TextureButton" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -300,7 +305,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Precio2" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2/Boton2"]
+[node name="Precio2" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoizquierdo/Cartel2/Boton2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -318,16 +323,16 @@ text = "2.99"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Ladoderecho" type="VBoxContainer" parent="SolapaOrbes/HBoxContainer"]
+[node name="Ladoderecho" type="VBoxContainer" parent="SolapaOrbes/Scroll/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 50
 
-[node name="Cartel3" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho"]
+[node name="Cartel3" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Orbe3" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3"]
+[node name="Orbe3" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -339,7 +344,7 @@ offset_bottom = 183.5
 grow_horizontal = 2
 texture = ExtResource("17_23pqi")
 
-[node name="Cant3" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3/Orbe3"]
+[node name="Cant3" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel3/Orbe3"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -355,7 +360,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "x100"
 
-[node name="Boton3" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3"]
+[node name="Boton3" type="TextureButton" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -372,7 +377,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Precio3" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3/Boton3"]
+[node name="Precio3" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel3/Boton3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -390,11 +395,11 @@ text = "1.99"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cartel4" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho"]
+[node name="Cartel4" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Orbe4" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4"]
+[node name="Orbe4" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -406,7 +411,7 @@ offset_bottom = 183.5
 grow_horizontal = 2
 texture = ExtResource("17_23pqi")
 
-[node name="Cant4" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4/Orbe4"]
+[node name="Cant4" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel4/Orbe4"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -422,7 +427,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "x200"
 
-[node name="Boton4" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4"]
+[node name="Boton4" type="TextureButton" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -439,7 +444,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Precio4" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4/Boton4"]
+[node name="Precio4" type="Label" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho/Cartel4/Boton4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -458,15 +463,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="SolapaOrbes"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -190.0
-offset_top = 22.0
-offset_right = 190.0
-offset_bottom = 130.0
-grow_horizontal = 2
+layout_mode = 0
+offset_left = 200.0
+offset_right = 580.0
+offset_bottom = 108.0
 texture = ExtResource("24_j65uq")
 
 [node name="Label" type="Label" parent="SolapaOrbes/TextureRect"]
@@ -486,6 +486,7 @@ theme_override_font_sizes/font_size = 80
 text = "Orbes"
 
 [node name="SolapaBundles" type="Panel" parent="."]
+visible = false
 material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
@@ -759,31 +760,27 @@ offset_top = 344.0
 offset_right = 750.0
 offset_bottom = 1280.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SolapaMejoras2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.5
-offset_top = -150.0
-offset_right = 122.5
-offset_bottom = 150.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ScrollContainer" type="ScrollContainer" parent="SolapaMejoras2"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 143.0
+offset_right = 675.0
+offset_bottom = 807.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SolapaMejoras2/ScrollContainer"]
+layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaMejoras2/HBoxContainer"]
+[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaMejoras2/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 50
 
-[node name="Cartel" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo"]
+[node name="Cartel" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -805,7 +802,7 @@ text = "Ataque"
 fit_content = true
 autowrap_mode = 0
 
-[node name="AtaqueM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+[node name="AtaqueM" type="TextureButton" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -822,7 +819,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CosteATA" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+[node name="CosteATA" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -846,12 +843,14 @@ bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Cartel2" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo"]
+[node name="Cartel2" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -873,7 +872,7 @@ text = "Velocidad"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VelocidadM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+[node name="VelocidadM" type="TextureButton" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -890,7 +889,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CosteVel" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+[node name="CosteVel" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -914,17 +913,19 @@ bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Ladoderecho" type="VBoxContainer" parent="SolapaMejoras2/HBoxContainer"]
+[node name="Ladoderecho" type="VBoxContainer" parent="SolapaMejoras2/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 50
 
-[node name="Cartel3" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoderecho"]
+[node name="Cartel3" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -946,7 +947,7 @@ text = "Fuerza de Salto"
 fit_content = true
 autowrap_mode = 0
 
-[node name="FSaltoM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+[node name="FSaltoM" type="TextureButton" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -963,7 +964,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CosteSalto" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+[node name="CosteSalto" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -987,12 +988,14 @@ bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Cartel4" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoderecho"]
+[node name="Cartel4" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
 
-[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1014,7 +1017,7 @@ text = "Combustible"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CombustibleM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+[node name="CombustibleM" type="TextureButton" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1031,7 +1034,7 @@ texture_normal = ExtResource("24_j65uq")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CosteCombus" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+[node name="CosteCombus" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1055,6 +1058,8 @@ bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="SolapaMejoras2"]
 layout_mode = 1
@@ -1097,8 +1102,11 @@ flat = true
 [node name="Panel" parent="." instance=ExtResource("18_23pqi")]
 
 [connection signal="pressed" from="Flecha" to="." method="_on_flecha_pressed"]
-[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel/AtaqueM" to="." method="_on_ataque_m_pressed"]
-[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2/VelocidadM" to="." method="_on_velocidad_m_pressed"]
-[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3/FSaltoM" to="." method="_on_f_salto_m_pressed"]
-[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4/CombustibleM" to="." method="_on_combustible_m_pressed"]
+[connection signal="pressed" from="BotonOrbes" to="." method="_on_boton_orbes_pressed"]
+[connection signal="pressed" from="BotonBundles" to="." method="_on_boton_bundles_pressed"]
+[connection signal="pressed" from="BotonMejoras" to="." method="_on_boton_mejoras_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel/AtaqueM" to="." method="_on_ataque_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2/VelocidadM" to="." method="_on_velocidad_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3/FSaltoM" to="." method="_on_f_salto_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4/CombustibleM" to="." method="_on_combustible_m_pressed"]
 [connection signal="pressed" from="VerAnuncio" to="." method="_on_ver_anuncio_pressed"]

@@ -2,11 +2,14 @@ extends Node2D
 
 @onready var panel: Panel = $Panel
 @onready var cantidad_puntos: RichTextLabel = $Puntos/CantidadPuntos
-@onready var timer: Timer = $Panel/Timer
-@onready var coste_ata: RichTextLabel = $VBoxContainer/HBoxContainer/CosteATA
-@onready var coste_vel: RichTextLabel = $VBoxContainer/HBoxContainer2/CosteVel
-@onready var coste_salto: RichTextLabel = $VBoxContainer/HBoxContainer3/CosteSalto
-@onready var coste_combus: RichTextLabel = $VBoxContainer/HBoxContainer4/CosteCombus
+@onready var coste_ata: RichTextLabel = $SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel/CosteATA
+@onready var coste_vel: RichTextLabel = $SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2/CosteVel
+@onready var coste_salto: RichTextLabel = $SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3/CosteSalto
+@onready var coste_combus: RichTextLabel = $SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4/CosteCombus
+
+@onready var solapa_orbes: Panel = $SolapaOrbes
+@onready var solapa_bundles: Panel = $SolapaBundles
+@onready var solapa_mejoras_2: Panel = $SolapaMejoras2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,7 +19,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	cantidad_puntos.text=str(EstadisticasDelPlayer.Puntos)
-	coste_ata.text=str(EstadisticasDelPlayer.coste_ataque)
+	coste_ata.text= str(EstadisticasDelPlayer.coste_ataque)
 	coste_combus.text=str(EstadisticasDelPlayer.coste_combustible)
 	coste_salto.text=str(EstadisticasDelPlayer.coste_salto)
 	coste_vel.text=str(EstadisticasDelPlayer.coste_velocidad)
@@ -85,3 +88,21 @@ func mejorar_estadistica(nombre_propiedad: String, incremento, nombre_coste: Str
 	else:
 		var faltan = coste_actual - puntos_actuales
 		print("❌ Te faltan", faltan, "puntos para mejorar", nombre_propiedad)
+
+
+func _on_boton_orbes_pressed() -> void:
+	solapa_orbes.visible=true
+	solapa_bundles.visible=false
+	solapa_mejoras_2.visible=false
+
+
+func _on_boton_bundles_pressed() -> void:
+	solapa_orbes.visible=false
+	solapa_bundles.visible=true
+	solapa_mejoras_2.visible=false
+
+
+func _on_boton_mejoras_pressed() -> void:
+	solapa_orbes.visible=false
+	solapa_bundles.visible=false
+	solapa_mejoras_2.visible=true

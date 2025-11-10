@@ -1,3 +1,2 @@
-res://Scena/Menú/Menu.tscn
+res://Script/TiendaPremium/tienda_premium.gd
 res://Scena/TiendaPremium/TiendaPremium.tscn
-res://Scena/Moneda/moneda_premium.tscn
