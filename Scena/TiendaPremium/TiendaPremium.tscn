@@ -171,10 +171,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.0
-offset_top = -318.0
-offset_right = 334.0
-offset_bottom = 332.0
+offset_left = -270.0
+offset_top = -325.0
+offset_right = 270.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -182,7 +182,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 114
+theme_override_constants/separation = 50
 
 [node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaOrbes/Scroll/HBoxContainer"]
 layout_mode = 2
@@ -464,9 +464,10 @@ vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="SolapaOrbes"]
 layout_mode = 0
-offset_left = 200.0
-offset_right = 580.0
-offset_bottom = 108.0
+offset_left = 185.0
+offset_top = 22.0
+offset_right = 565.0
+offset_bottom = 130.0
 texture = ExtResource("24_j65uq")
 
 [node name="Label" type="Label" parent="SolapaOrbes/TextureRect"]
@@ -499,10 +500,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.5
-offset_top = -150.0
-offset_right = 122.5
-offset_bottom = 150.0
+offset_left = -270.0
+offset_top = -325.0
+offset_right = 270.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 50
@@ -761,11 +762,18 @@ offset_right = 750.0
 offset_bottom = 1280.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="SolapaMejoras2"]
-layout_mode = 0
-offset_left = 113.0
-offset_top = 143.0
-offset_right = 675.0
-offset_bottom = 807.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -325.0
+offset_right = 270.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SolapaMejoras2/ScrollContainer"]
 layout_mode = 2
