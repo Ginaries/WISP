@@ -1,16 +1,3 @@
-res://Scena/Enemigos/Jefes/jefe_1.gd
-res://Scena/Enemigos/Jefes/Avispa de MAMA.tscn
-res://Scena/Enemigos/Jefes/Jefe1.tscn
-res://addons/dialogue_manager/test_scene.tscn
-res://Scena/test.tscn
+res://Scena/Menú/Menu.tscn
 res://Scena/TiendaPremium/TiendaPremium.tscn
-res://Script/TiendaPremium/tienda_premium.gd
-res://Script/Player/player.gd
-res://Script/Player/estadisticas_del_player.gd
-res://Script/Enemigo/enemigo.gd
-res://Scena/TilesSet/TilesSet.tscn
-res://Script/Enemigo/Avispa.gd
-res://Script/Player/camera_2d.gd
-res://Scena/Flag/flag.gd
-res://Scena/Canvas/canvas_escenarios.gd
-res://Scena/CuevaMercader/cueva_mercader.gd
+res://Scena/Moneda/moneda_premium.tscn

@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=29 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
 [ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
 [ext_resource type="Texture2D" uid="uid://d1852b122p5dg" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Inferior Tienda.png" id="2_burph"]
 [ext_resource type="Texture2D" uid="uid://b814ea3322b24" path="res://Assets - WISP/Mercader Idle/fotograma0000.png" id="2_ply4r"]
 [ext_resource type="Texture2D" uid="uid://cg1a68gbvmq0x" path="res://Assets - WISP/Mercader Idle/fotograma0001.png" id="3_54xjq"]
-[ext_resource type="Texture2D" uid="uid://ydds68hj07sl" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Cartel Tienda.png" id="3_burph"]
 [ext_resource type="Texture2D" uid="uid://cw485ntamh7k4" path="res://Assets - WISP/Mercader Idle/fotograma0002.png" id="4_u712o"]
 [ext_resource type="Texture2D" uid="uid://cihwu68yiejrf" path="res://Assets - WISP/Mercader Idle/fotograma0003.png" id="5_40sue"]
 [ext_resource type="Texture2D" uid="uid://b08n6orwntmu5" path="res://Assets - WISP/Mercader Idle/fotograma0004.png" id="6_23pqi"]
@@ -17,7 +16,16 @@
 [ext_resource type="Texture2D" uid="uid://b74flwdcvgxre" path="res://Assets - WISP/mercader_wisp.png" id="12_g7upr"]
 [ext_resource type="Texture2D" uid="uid://c82cnu5kpn3ef" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/flechawisp.png" id="15_54xjq"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="17_23pqi"]
+[ext_resource type="Texture2D" uid="uid://mlk7r8pci4x6" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaOrbe.png" id="17_g7upr"]
 [ext_resource type="PackedScene" uid="uid://u6ugtrvl738e" path="res://Scena/TiendaPremium/ANUNCIOTIME.tscn" id="18_23pqi"]
+[ext_resource type="Texture2D" uid="uid://dnga3wwa7rpw4" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaOrbeSeleccionada.png" id="18_j65uq"]
+[ext_resource type="Texture2D" uid="uid://cpm1wjbtsicow" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaBundles.png" id="19_xw0ox"]
+[ext_resource type="Texture2D" uid="uid://dd6x62fctcvrr" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaBundlesSeleccionada.png" id="20_24qb7"]
+[ext_resource type="Texture2D" uid="uid://6j3cpstnde7s" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaMejoras.png" id="21_fqq14"]
+[ext_resource type="Texture2D" uid="uid://cpg4qwfov240s" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Solapas/SolapaMejorasSeleccionada.png" id="22_hd8gu"]
+[ext_resource type="Texture2D" uid="uid://tkoh8na1ycsm" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Boton Tienda2.png" id="23_g7upr"]
+[ext_resource type="Texture2D" uid="uid://kmn3p0b8hfs4" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/BotonTiendaComprar.png" id="24_j65uq"]
+[ext_resource type="Texture2D" uid="uid://c2n6o8202vols" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/bundle.png" id="25_xw0ox"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
 animations = [{
@@ -65,6 +73,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g7upr"]
+light_mode = 2
+
 [node name="TiendaPremium" type="Node2D"]
 script = ExtResource("1_u712o")
 
@@ -84,16 +95,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_burph")
 
-[node name="CartelTienda" type="TextureRect" parent="."]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 128.0
-offset_top = 179.0
-offset_right = 628.0
-offset_bottom = 679.0
-grow_vertical = 2
-texture = ExtResource("3_burph")
-
 [node name="Flecha" type="TextureButton" parent="."]
 offset_right = 71.0
 offset_bottom = 71.0
@@ -101,11 +102,41 @@ texture_normal = ExtResource("15_54xjq")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="BotonOrbes" type="TextureButton" parent="."]
+offset_left = -1.0
+offset_top = 212.0
+offset_right = 67.0
+offset_bottom = 280.0
+texture_normal = ExtResource("17_g7upr")
+texture_pressed = ExtResource("18_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BotonBundles" type="TextureButton" parent="."]
+offset_left = 65.0
+offset_top = 212.0
+offset_right = 133.0
+offset_bottom = 280.0
+texture_normal = ExtResource("19_xw0ox")
+texture_pressed = ExtResource("20_24qb7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BotonMejoras" type="TextureButton" parent="."]
+offset_left = 131.0
+offset_top = 212.0
+offset_right = 199.0
+offset_bottom = 280.0
+texture_normal = ExtResource("21_fqq14")
+texture_pressed = ExtResource("22_hd8gu")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Puntos" type="TextureRect" parent="."]
 offset_left = 16.0
-offset_top = 403.0
-offset_right = 66.0
-offset_bottom = 453.0
+offset_top = 375.0
+offset_right = 81.0
+offset_bottom = 440.0
 texture = ExtResource("17_23pqi")
 
 [node name="CantidadPuntos" type="RichTextLabel" parent="Puntos"]
@@ -126,126 +157,935 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 66.0
-offset_top = 552.0
-offset_right = 699.0
-offset_bottom = 653.0
+[node name="SolapaOrbes" type="Panel" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_g7upr")
+offset_top = 344.0
+offset_right = 750.0
+offset_bottom = 1280.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SolapaOrbes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.5
+offset_top = -150.0
+offset_right = 122.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-theme_override_constants/separation = 195
-alignment = 1
-
-[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaOrbes/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe1" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 40.0
+offset_right = 72.0
+offset_bottom = 183.5
+grow_horizontal = 2
+texture = ExtResource("17_23pqi")
+
+[node name="Cant1" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel/Orbe1"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -45.5
+offset_right = 0.5
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "x50"
+
+[node name="Boton1" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio1" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel/Boton1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "0.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cartel2" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe2" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 40.0
+offset_right = 72.0
+offset_bottom = 183.5
+grow_horizontal = 2
+texture = ExtResource("17_23pqi")
+
+[node name="Cant2" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2/Orbe2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -45.5
+offset_right = 0.5
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "x150"
+
+[node name="Boton2" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio2" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoizquierdo/Cartel2/Boton2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "2.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ladoderecho" type="VBoxContainer" parent="SolapaOrbes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel3" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe3" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 40.0
+offset_right = 72.0
+offset_bottom = 183.5
+grow_horizontal = 2
+texture = ExtResource("17_23pqi")
+
+[node name="Cant3" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3/Orbe3"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -45.5
+offset_right = 0.5
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "x100"
+
+[node name="Boton3" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio3" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel3/Boton3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "1.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cartel4" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe4" type="TextureRect" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 40.0
+offset_right = 72.0
+offset_bottom = 183.5
+grow_horizontal = 2
+texture = ExtResource("17_23pqi")
+
+[node name="Cant4" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4/Orbe4"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -45.5
+offset_right = 0.5
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "x200"
+
+[node name="Boton4" type="TextureButton" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio4" type="Label" parent="SolapaOrbes/HBoxContainer/Ladoderecho/Cartel4/Boton4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "3.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SolapaOrbes"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 22.0
+offset_right = 190.0
+offset_bottom = 130.0
+grow_horizontal = 2
+texture = ExtResource("24_j65uq")
+
+[node name="Label" type="Label" parent="SolapaOrbes/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -58.0
+offset_right = 80.5
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Orbes"
+
+[node name="SolapaBundles" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_g7upr")
+offset_top = 344.0
+offset_right = 750.0
+offset_bottom = 1280.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SolapaBundles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.5
+offset_top = -150.0
+offset_right = 122.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaBundles/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoizquierdo"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe1" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_top = 28.0
+offset_right = 83.5
+offset_bottom = 194.0
+grow_horizontal = 2
+texture = ExtResource("25_xw0ox")
+expand_mode = 1
+
+[node name="Boton1" type="TextureButton" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio1" type="Label" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel/Boton1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "0.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cartel2" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoizquierdo"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Boton2" type="TextureButton" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio2" type="Label" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel2/Boton2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "2.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Orbe1" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_top = 28.0
+offset_right = 83.5
+offset_bottom = 194.0
+grow_horizontal = 2
+texture = ExtResource("25_xw0ox")
+expand_mode = 1
+
+[node name="Ladoderecho" type="VBoxContainer" parent="SolapaBundles/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel3" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoderecho"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe1" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_top = 28.0
+offset_right = 83.5
+offset_bottom = 194.0
+grow_horizontal = 2
+texture = ExtResource("25_xw0ox")
+expand_mode = 1
+
+[node name="Boton3" type="TextureButton" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio3" type="Label" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel3/Boton3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "1.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cartel4" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoderecho"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Orbe1" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_top = 28.0
+offset_right = 83.5
+offset_bottom = 194.0
+grow_horizontal = 2
+texture = ExtResource("25_xw0ox")
+expand_mode = 1
+
+[node name="Boton4" type="TextureButton" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -91.0
+offset_right = 73.24359
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Precio4" type="Label" parent="SolapaBundles/HBoxContainer/Ladoderecho/Cartel4/Boton4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.871796
+offset_top = -27.0
+offset_right = 25.128204
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "3.99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SolapaBundles"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 22.0
+offset_right = 190.0
+offset_bottom = 130.0
+grow_horizontal = 2
+texture = ExtResource("24_j65uq")
+
+[node name="Label" type="Label" parent="SolapaBundles/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -58.0
+offset_right = 95.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Bundles"
+
+[node name="SolapaMejoras2" type="Panel" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_g7upr")
+offset_top = 344.0
+offset_right = 750.0
+offset_bottom = 1280.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SolapaMejoras2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.5
+offset_top = -150.0
+offset_right = 122.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaMejoras2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_top = 27.0
+offset_right = 30.5
+offset_bottom = 64.0
+grow_horizontal = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Ataque"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CosteATA" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
+[node name="AtaqueM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -90.0
+offset_right = 73.24402
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CosteATA" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.12799
+offset_top = 70.5
+offset_right = 62.87201
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="AtaqueM" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Cartel2" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
-text = "comprar"
+texture = ExtResource("23_g7upr")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 180
-alignment = 1
-
-[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.5
+offset_top = 29.0
+offset_right = 40.5
+offset_bottom = 66.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Velocidad"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CosteVel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
+[node name="VelocidadM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.49999
+offset_top = -91.0
+offset_right = 73.24402
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CosteVel" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.12799
+offset_top = 69.5
+offset_right = 62.87201
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VelocidadM" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "comprar"
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 180
-alignment = 1
-
-[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3"]
+[node name="Ladoderecho" type="VBoxContainer" parent="SolapaMejoras2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Cartel3" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoderecho"]
+layout_mode = 2
+texture = ExtResource("23_g7upr")
+
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.5
+offset_top = 27.0
+offset_right = 65.5
+offset_bottom = 64.0
+grow_horizontal = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "Fuerza Salto"
+text = "Fuerza de Salto"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CosteSalto" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3"]
-layout_mode = 2
+[node name="FSaltoM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -90.0
+offset_right = 73.24402
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CosteSalto" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.12799
+offset_top = 70.5
+offset_right = 62.87201
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="FSaltoM" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Cartel4" type="TextureRect" parent="SolapaMejoras2/HBoxContainer/Ladoderecho"]
 layout_mode = 2
-text = "comprar"
+texture = ExtResource("23_g7upr")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 180
-alignment = 1
-
-[node name="Descripcion" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
+[node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.5
+offset_top = 29.0
+offset_right = 51.5
+offset_bottom = 66.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Combustible"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CosteCombus" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
+[node name="CombustibleM" type="TextureButton" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.5
+offset_top = -92.0
+offset_right = 73.24402
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("24_j65uq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CosteCombus" type="RichTextLabel" parent="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.12799
+offset_top = 68.5
+offset_right = 62.87201
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 text = "Cuantas Orbes"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CombustibleM" type="Button" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-text = "comprar"
+[node name="TextureRect" type="TextureRect" parent="SolapaMejoras2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 22.0
+offset_right = 190.0
+offset_bottom = 130.0
+grow_horizontal = 2
+texture = ExtResource("24_j65uq")
+
+[node name="Label" type="Label" parent="SolapaMejoras2/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -58.0
+offset_right = 98.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Mejoras"
 
 [node name="VerAnuncio" type="Button" parent="."]
+visible = false
 offset_left = 224.0
 offset_top = 383.0
 offset_right = 546.0
@@ -257,8 +1097,8 @@ flat = true
 [node name="Panel" parent="." instance=ExtResource("18_23pqi")]
 
 [connection signal="pressed" from="Flecha" to="." method="_on_flecha_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/AtaqueM" to="." method="_on_ataque_m_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VelocidadM" to="." method="_on_velocidad_m_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer3/FSaltoM" to="." method="_on_f_salto_m_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer4/CombustibleM" to="." method="_on_combustible_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel/AtaqueM" to="." method="_on_ataque_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoizquierdo/Cartel2/VelocidadM" to="." method="_on_velocidad_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel3/FSaltoM" to="." method="_on_f_salto_m_pressed"]
+[connection signal="pressed" from="SolapaMejoras2/HBoxContainer/Ladoderecho/Cartel4/CombustibleM" to="." method="_on_combustible_m_pressed"]
 [connection signal="pressed" from="VerAnuncio" to="." method="_on_ver_anuncio_pressed"]
