@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dfdnmj17re45m" path="res://Assets - WISP/animación pincho-enemigo/fotograma0006.png" id="8_nfveq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pwgp"]
-radius = 70.71068
+radius = 72.27877
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1r1y7"]
 animations = [{
@@ -53,7 +53,7 @@ animations = [{
 radius = 56.0357
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nc3h3"]
-radius = 157.01274
+radius = 125.05339
 
 [node name="Pincho" type="CharacterBody2D" groups=["Enemigo"]]
 scale = Vector2(0.45588234, 0.4351145)
@@ -64,7 +64,8 @@ position = Vector2(-2, -15)
 shape = SubResource("CircleShape2D_6pwgp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, -6)
+position = Vector2(2.19355, -2.2982483)
+scale = Vector2(0.70458066, 0.70458066)
 sprite_frames = SubResource("SpriteFrames_1r1y7")
 animation = &"Atacar"
 
@@ -78,6 +79,7 @@ shape = SubResource("CircleShape2D_yukhv")
 position = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Activar Pinches"]
+position = Vector2(-2, -11.192983)
 shape = SubResource("CircleShape2D_nc3h3")
 
 [connection signal="area_entered" from="recibirproyectil" to="." method="_on_recibirproyectil_area_entered"]

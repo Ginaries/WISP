@@ -1,10 +1,10 @@
+TextureRect
+Label
+TextureButton
 ScrollContainer
 HBoxContainer
 VScrollBar
-TextureRect
-TextureButton
 Panel
-Label
 VBoxContainer
 Button
 Sprite2D

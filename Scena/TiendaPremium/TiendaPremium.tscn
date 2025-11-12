@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=33 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
 [ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
@@ -26,6 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://tkoh8na1ycsm" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Boton Tienda2.png" id="23_g7upr"]
 [ext_resource type="Texture2D" uid="uid://kmn3p0b8hfs4" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/BotonTiendaComprar.png" id="24_j65uq"]
 [ext_resource type="Texture2D" uid="uid://c2n6o8202vols" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/bundle.png" id="25_xw0ox"]
+[ext_resource type="Texture2D" uid="uid://de0oe6lrktikg" path="res://Assets - WISP/InterfacesPNG/botonADS.png" id="26_24qb7"]
+[ext_resource type="Texture2D" uid="uid://cg18kprvq4jjc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/velocidad momentánea.png" id="26_fqq14"]
+[ext_resource type="Texture2D" uid="uid://cmpnuiapsamsg" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/velocidad proyectil momentáneo.png" id="26_n2yvw"]
+[ext_resource type="Texture2D" uid="uid://beasnv81nvkte" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/combustible extra momentáneo.png" id="28_fitf0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
 animations = [{
@@ -159,6 +163,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SolapaOrbes" type="Panel" parent="."]
+visible = false
 material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
@@ -755,7 +760,6 @@ theme_override_font_sizes/font_size = 80
 text = "Bundles"
 
 [node name="SolapaMejoras2" type="Panel" parent="."]
-visible = false
 material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
@@ -787,6 +791,22 @@ theme_override_constants/separation = 50
 [node name="Cartel" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
+
+[node name="AtaqueImagen" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -110.0
+offset_right = 90.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_n2yvw")
+expand_mode = 1
 
 [node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
@@ -829,15 +849,15 @@ stretch_mode = 0
 
 [node name="CosteATA" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.79200006
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -62.12799
-offset_top = 70.5
-offset_right = 62.87201
-offset_bottom = 107.5
+anchor_bottom = 0.79200006
+offset_left = -26.5
+offset_top = -20.600021
+offset_right = 24.5
+offset_bottom = 16.399979
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -848,7 +868,7 @@ theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "Cuantas Orbes"
+text = "Orbes"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -857,6 +877,22 @@ vertical_alignment = 1
 [node name="Cartel2" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
+
+[node name="VelocidadImagen" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -110.0
+offset_right = 90.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_fqq14")
+expand_mode = 1
 
 [node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo/Cartel2"]
 layout_mode = 1
@@ -904,10 +940,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.12799
-offset_top = 69.5
-offset_right = 62.87201
-offset_bottom = 106.5
+offset_left = -26.5
+offset_top = 66.0
+offset_right = 24.5
+offset_bottom = 103.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -918,7 +954,7 @@ theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "Cuantas Orbes"
+text = "Orbes"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -932,6 +968,22 @@ theme_override_constants/separation = 50
 [node name="Cartel3" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
+
+[node name="SaltoImagen" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -110.0
+offset_right = 90.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_fitf0")
+expand_mode = 1
 
 [node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
 layout_mode = 1
@@ -979,10 +1031,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.12799
-offset_top = 70.5
-offset_right = 62.87201
-offset_bottom = 107.5
+offset_left = -26.5
+offset_top = 67.0
+offset_right = 24.5
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -993,7 +1045,7 @@ theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "Cuantas Orbes"
+text = "Orbes"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -1002,6 +1054,22 @@ vertical_alignment = 1
 [node name="Cartel4" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho"]
 layout_mode = 2
 texture = ExtResource("23_g7upr")
+
+[node name="CombustImagen" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -110.0
+offset_right = 90.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_fitf0")
+expand_mode = 1
 
 [node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel4"]
 layout_mode = 1
@@ -1033,9 +1101,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -72.5
-offset_top = -92.0
+offset_top = -91.0
 offset_right = 73.24402
-offset_bottom = -34.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("24_j65uq")
@@ -1049,10 +1117,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.12799
-offset_top = 68.5
-offset_right = 62.87201
-offset_bottom = 105.5
+offset_left = -26.5
+offset_top = 66.0
+offset_right = 24.5
+offset_bottom = 103.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -1063,7 +1131,7 @@ theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "Cuantas Orbes"
+text = "Orbes"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -1097,15 +1165,15 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 80
 text = "Mejoras"
 
-[node name="VerAnuncio" type="Button" parent="."]
-visible = false
-offset_left = 224.0
-offset_top = 383.0
-offset_right = 546.0
-offset_bottom = 456.0
+[node name="VerAnuncio" type="TextureButton" parent="."]
+offset_left = 610.8951
+offset_top = 370.0
+offset_right = 710.6087
+offset_bottom = 468.0
 focus_mode = 0
-text = "Ver anuncios"
-flat = true
+texture_normal = ExtResource("26_24qb7")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Panel" parent="." instance=ExtResource("18_23pqi")]
 

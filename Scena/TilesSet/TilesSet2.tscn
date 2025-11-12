@@ -519,6 +519,9 @@ zoom = Vector2(1.01, 1.01)
 position = Vector2(564.99994, -90)
 fuerza_disparo = 450.0
 
+[node name="Hoguera6" parent="." instance=ExtResource("14_odud3")]
+position = Vector2(633, 189)
+
 [node name="Hoguera" parent="." instance=ExtResource("14_odud3")]
 position = Vector2(115, 347)
 
