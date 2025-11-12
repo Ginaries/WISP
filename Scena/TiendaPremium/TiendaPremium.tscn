@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b3wuhix82p17x"]
+[gd_scene load_steps=34 format=3 uid="uid://b3wuhix82p17x"]
 
 [ext_resource type="Texture2D" uid="uid://g3377wu3cefc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Parte Superior Tienda.png" id="1_bwim8"]
 [ext_resource type="Script" uid="uid://dngcwc4dmp0kt" path="res://Script/TiendaPremium/tienda_premium.gd" id="1_u712o"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://de0oe6lrktikg" path="res://Assets - WISP/InterfacesPNG/botonADS.png" id="26_24qb7"]
 [ext_resource type="Texture2D" uid="uid://cg18kprvq4jjc" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/velocidad momentánea.png" id="26_fqq14"]
 [ext_resource type="Texture2D" uid="uid://cmpnuiapsamsg" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/velocidad proyectil momentáneo.png" id="26_n2yvw"]
+[ext_resource type="Texture2D" uid="uid://cc0l66h8jkb1e" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/mejora en el salto.png" id="28_5o177"]
 [ext_resource type="Texture2D" uid="uid://beasnv81nvkte" path="res://Assets - WISP/InterfacesPNG/TiendaPremium/Mejoras/combustible extra momentáneo.png" id="28_fitf0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j65uq"]
@@ -982,7 +983,7 @@ offset_right = 90.5
 offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("28_fitf0")
+texture = ExtResource("28_5o177")
 expand_mode = 1
 
 [node name="Descripcion" type="RichTextLabel" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho/Cartel3"]
