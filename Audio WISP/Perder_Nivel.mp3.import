@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lh86k3bjeu5e"
+path="res://.godot/imported/Perder_Nivel.mp3-b6b47d3be8d05f8d21ef34214b07c812.mp3str"
+
+[deps]
+
+source_file="res://Audio WISP/Perder_Nivel.mp3"
+dest_files=["res://.godot/imported/Perder_Nivel.mp3-b6b47d3be8d05f8d21ef34214b07c812.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwmcr7ke33bjb"
+path="res://.godot/imported/Dropeo_orbe.wav-5184e23dee993e6837cbc6a15580421d.sample"
+
+[deps]
+
+source_file="res://Audio WISP/Dropeo_orbe.wav"
+dest_files=["res://.godot/imported/Dropeo_orbe.wav-5184e23dee993e6837cbc6a15580421d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

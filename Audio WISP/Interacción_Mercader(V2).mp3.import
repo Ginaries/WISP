@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://disp20vpj375o"
+path="res://.godot/imported/Interacción_Mercader(V2).mp3-617e5d6bf9c4b68ed3178d3c1d57c6ed.mp3str"
+
+[deps]
+
+source_file="res://Audio WISP/Interacción_Mercader(V2).mp3"
+dest_files=["res://.godot/imported/Interacción_Mercader(V2).mp3-617e5d6bf9c4b68ed3178d3c1d57c6ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

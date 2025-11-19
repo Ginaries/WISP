@@ -125,4 +125,5 @@ func _on_recibirproyectil_area_entered(area: Area2D) -> void:
 			dano *= reduccion_danio_escudo
 			print("🛡️ El escudo reduce el daño recibido a: ", dano)
 		RecibirDaño(dano)
+		AudioController.muerte_tanque()
 		area.queue_free()

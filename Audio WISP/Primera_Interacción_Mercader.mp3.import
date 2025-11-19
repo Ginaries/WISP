@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgyow5tlexxrt"
+path="res://.godot/imported/Primera_Interacción_Mercader.mp3-8ed31b02ab4f0cce7981a2a4ab1166ef.mp3str"
+
+[deps]
+
+source_file="res://Audio WISP/Primera_Interacción_Mercader.mp3"
+dest_files=["res://.godot/imported/Primera_Interacción_Mercader.mp3-8ed31b02ab4f0cce7981a2a4ab1166ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

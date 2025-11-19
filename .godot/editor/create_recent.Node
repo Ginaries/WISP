@@ -1,3 +1,7 @@
+AudioStreamPlayer2D
+AudioStreamPlayer
+Node
+AudioListener2D
 Label
 TextureRect
 TextureButton
@@ -8,7 +12,3 @@ Panel
 VBoxContainer
 Button
 Sprite2D
-CollisionShape2D
-Area2D
-RichTextLabel
-Camera2D

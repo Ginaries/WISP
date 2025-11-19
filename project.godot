@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 EstadisticasDelPlayer="*res://Script/Player/estadisticas_del_player.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Escenarios="*res://Script/ControldeEscenarios/escenarios.gd"
+AudioController="*res://Scena/AudioController/AudioController.tscn"
 
 [display]
 

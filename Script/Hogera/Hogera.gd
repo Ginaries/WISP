@@ -20,6 +20,7 @@ func _on_body_exited(body: Node2D) -> void:
 func EncenderFuego() -> void:
 	# Cambiamos a la animación encendida
 	if encendido!=true:
+		AudioController.brasero_prender()
 		animated_sprite_2d.play("Encendido")
 		
 		# Aumentamos la escala como feedback visual

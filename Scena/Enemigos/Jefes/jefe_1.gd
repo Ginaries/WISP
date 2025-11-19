@@ -108,6 +108,7 @@ func animar_muerte_real() -> void:
 
 	progress_bar.hide()
 	await get_tree().create_timer(1).timeout
+	AudioController.muerte_mama()
 	queue_free()
 
 # --- Spawn de avispas ---

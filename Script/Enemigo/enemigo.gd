@@ -59,6 +59,7 @@ func Morir():
 		var cantidad_monedas = randi_range(2, 6) # elige entre 2 y 6 monedas
 		for i in cantidad_monedas:
 			var moneda = MONEDA_PREMIUM.instantiate()
+			AudioController.drop_orbe()
 			moneda.position = position
 			
 			# Agregar al mismo padre

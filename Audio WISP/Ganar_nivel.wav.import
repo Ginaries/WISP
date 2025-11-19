@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://jw26bkh0snb0"
+path="res://.godot/imported/Ganar_nivel.wav-8e27d3c6c872b3e381d3dadc0ef9f762.sample"
+
+[deps]
+
+source_file="res://Audio WISP/Ganar_nivel.wav"
+dest_files=["res://.godot/imported/Ganar_nivel.wav-8e27d3c6c872b3e381d3dadc0ef9f762.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -26,6 +26,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_flecha_pressed() -> void:
+	AudioController.click_boton()
 	get_tree().change_scene_to_file("res://Scena/SelectorNiveles/SelectorNiveles.tscn")
 
 @onready var timer_anuncio: RichTextLabel = $Panel/TimerAnuncio
@@ -51,18 +52,23 @@ func _on_ver_anuncio_pressed() -> void:
 
 # --- Botones de mejora ---
 func _on_ataque_m_pressed() -> void:
+	AudioController.click_boton()
 	mejorar_estadistica("daño_disparo", 2, "coste_ataque")
 
 func _on_velocidad_m_pressed() -> void:
+	AudioController.click_boton()
 	mejorar_estadistica("velocidad", 10, "coste_velocidad")
 
 func _on_f_salto_m_pressed() -> void:
+	AudioController.click_boton()
 	mejorar_estadistica("fuerza_salto", -20, "coste_salto")
 
 func _on_combustible_m_pressed() -> void:
+	AudioController.click_boton()
 	mejorar_estadistica("CombustibleMax", 10, "coste_combustible")
 
 func _on_salud_m_pressed() -> void:
+	AudioController.click_boton()
 	mejorar_estadistica("SaludMax", 1, "coste_salud")
 
 
@@ -91,18 +97,21 @@ func mejorar_estadistica(nombre_propiedad: String, incremento, nombre_coste: Str
 
 
 func _on_boton_orbes_pressed() -> void:
+	AudioController.click_boton()
 	solapa_orbes.visible=true
 	solapa_bundles.visible=false
 	solapa_mejoras_2.visible=false
 
 
 func _on_boton_bundles_pressed() -> void:
+	AudioController.click_boton()
 	solapa_orbes.visible=false
 	solapa_bundles.visible=true
 	solapa_mejoras_2.visible=false
 
 
 func _on_boton_mejoras_pressed() -> void:
+	AudioController.click_boton()
 	solapa_orbes.visible=false
 	solapa_bundles.visible=false
 	solapa_mejoras_2.visible=true

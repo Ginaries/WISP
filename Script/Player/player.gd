@@ -167,6 +167,7 @@ func _on_recibir_dano_body_entered(body: Node2D) -> void:
 		damage_cooldown = true
 
 
+
 # --- Crear Checkpoint ---
 func EncenderFuego():
 	if Input.is_action_just_pressed("Interactuar") and CrearCheckpoint:
@@ -179,6 +180,7 @@ func EncenderFuego():
 # --- Ataque ---
 func AtaqueDisparo():
 	if Input.is_action_just_pressed("atacar") and CombustibleActual > 0:
+		AudioController.lanzar_proyectil()
 		if CombustibleActual >= 10:
 			CombustibleActual -= 10
 			var bala = PROYECTIL.instantiate()
@@ -237,6 +239,7 @@ func _input(event):
 
 func _on_agarrar_monedas_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Moneda"):
+		AudioController.obtener_orbe()
 		EstadisticasDelPlayer.monedasPremium += 1
 		body.queue_free()
 
@@ -249,19 +252,23 @@ func _on_detectar_hoguera_area_entered(area: Area2D) -> void:
 func _on_recibir_daño_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemigo"):
 		print(body.name)
+		AudioController.wisp_golpeado()
 		_reset_player()
 		salud-=1
 		if salud<=0:
+			AudioController.parar_musica_nivel()
 			get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
 
 
 func _on_recibir_daño_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemigo"):
 		print(area.name)
+		AudioController.wisp_golpeado()
 		_reset_player()
 		salud-=1
 		
 		if salud<=0:
+			AudioController.parar_musica_nivel()
 			get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
 
 		

@@ -1,0 +1,82 @@
+[gd_scene load_steps=20 format=3 uid="uid://bdkf0n0eshuss"]
+
+[ext_resource type="Script" uid="uid://b32fonu1sg0rt" path="res://Script/AudioController/audio_controller.gd" id="1_1y3tw"]
+[ext_resource type="AudioStream" uid="uid://dyljui54ie6ae" path="res://Audio WISP/Música de Fondo/Música de Fondo (Main Menu).mp3" id="2_4cd05"]
+[ext_resource type="AudioStream" uid="uid://i25x120whfug" path="res://Audio WISP/Música de Fondo/Música_Fondo_Niveles.mp3" id="3_ykiiv"]
+[ext_resource type="AudioStream" uid="uid://3n7wtglmnoj3" path="res://Audio WISP/Música de Fondo/Música_Fondo_Mercader.mp3" id="4_rpmo0"]
+[ext_resource type="AudioStream" uid="uid://15nbipny1nei" path="res://Audio WISP/Agarrar_Orbe.mp3" id="5_7t1yi"]
+[ext_resource type="AudioStream" uid="uid://bwmcr7ke33bjb" path="res://Audio WISP/Dropeo_orbe.wav" id="6_ul14a"]
+[ext_resource type="AudioStream" uid="uid://bhjvbkvu3cmye" path="res://Audio WISP/Brasero_Prendido.wav" id="7_11uxl"]
+[ext_resource type="AudioStream" uid="uid://gd5m0jlfufa0" path="res://Audio WISP/Click_botones.wav" id="8_ihr6v"]
+[ext_resource type="AudioStream" uid="uid://jw26bkh0snb0" path="res://Audio WISP/Ganar_nivel.wav" id="9_78r2c"]
+[ext_resource type="AudioStream" uid="uid://lh86k3bjeu5e" path="res://Audio WISP/Perder_Nivel.mp3" id="10_nyb5b"]
+[ext_resource type="AudioStream" uid="uid://ca45oaaunu27n" path="res://Audio WISP/Proyectil.wav" id="11_lnbl4"]
+[ext_resource type="AudioStream" uid="uid://dgyow5tlexxrt" path="res://Audio WISP/Primera_Interacción_Mercader.mp3" id="12_711ry"]
+[ext_resource type="AudioStream" uid="uid://cy6gu820fwm6c" path="res://Audio WISP/Interacción_Mercader(V1).mp3" id="13_mdige"]
+[ext_resource type="AudioStream" uid="uid://x2sb43wvafg6" path="res://Audio WISP/Muerte_Avispa.mp3" id="14_tc7xf"]
+[ext_resource type="AudioStream" uid="uid://dphjrv07clo41" path="res://Audio WISP/Muerte_Mamá_Wisp.mp3" id="15_5nlys"]
+[ext_resource type="AudioStream" uid="uid://dve7no4hb0w88" path="res://Audio WISP/Muerte_Papá_Wisp.mp3" id="16_v8mpt"]
+[ext_resource type="AudioStream" uid="uid://3psj6ym5uatf" path="res://Audio WISP/Muerte_Pincho.mp3" id="17_k7o0u"]
+[ext_resource type="AudioStream" uid="uid://c1xcsmpqhxwr3" path="res://Audio WISP/Muerte_Tanque.mp3" id="18_iitwm"]
+[ext_resource type="AudioStream" uid="uid://cw1gwelu8r2ok" path="res://Audio WISP/Wisp_Golpeado.wav" id="19_4cd05"]
+
+[node name="AudioController" type="Node"]
+script = ExtResource("1_1y3tw")
+
+[node name="MusicaPrincipal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4cd05")
+autoplay = true
+parameters/looping = true
+
+[node name="MusicaNiveles" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ykiiv")
+parameters/looping = true
+
+[node name="TiendaNivel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rpmo0")
+parameters/looping = true
+
+[node name="AgarrarOrbe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7t1yi")
+
+[node name="DropeoOrbe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ul14a")
+
+[node name="PrenderBrasero" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_11uxl")
+
+[node name="BotonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ihr6v")
+
+[node name="NivelGanado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_78r2c")
+
+[node name="NivelFallido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_nyb5b")
+
+[node name="Proyectil" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_lnbl4")
+
+[node name="SaludoMercader" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_711ry")
+
+[node name="VozMercader" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_mdige")
+
+[node name="SonidoAvispa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_tc7xf")
+
+[node name="SonidoMama" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_5nlys")
+
+[node name="SonidoPapa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_v8mpt")
+
+[node name="SonidoPincho" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_k7o0u")
+
+[node name="SonidoTanque" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_iitwm")
+
+[node name="SonidoWisp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_4cd05")

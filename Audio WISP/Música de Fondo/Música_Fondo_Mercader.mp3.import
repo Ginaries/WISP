@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3n7wtglmnoj3"
+path="res://.godot/imported/Música_Fondo_Mercader.mp3-b177edfee0f730f1a1f6a103fb157dfd.mp3str"
+
+[deps]
+
+source_file="res://Audio WISP/Música de Fondo/Música_Fondo_Mercader.mp3"
+dest_files=["res://.godot/imported/Música_Fondo_Mercader.mp3-b177edfee0f730f1a1f6a103fb157dfd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

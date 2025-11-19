@@ -22,4 +22,5 @@ func _on_activar_pinches_body_exited(body: Node2D) -> void:
 func _on_recibirproyectil_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Proyectiles"):
 		RecibirDaño(EstadisticasDelPlayer.daño_disparo)
+		AudioController.muerte_pincho()
 		area.queue_free()
