@@ -1,9 +1,9 @@
+TextureRect
 AudioStreamPlayer2D
 AudioStreamPlayer
 Node
 AudioListener2D
 Label
-TextureRect
 TextureButton
 ScrollContainer
 HBoxContainer

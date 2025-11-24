@@ -25,6 +25,7 @@ func _on_nivel_4_pressed() -> void:
 	AudioController.click_boton()
 	AudioController.parar_musica()
 	AudioController.musica_nivel()
+	get_tree().change_scene_to_file("res://Scena/TilesSet/TilesSet4.tscn")
 	pass # Replace with function body.
 
 
@@ -32,6 +33,7 @@ func _on_nivel_5_pressed() -> void:
 	AudioController.click_boton()
 	AudioController.parar_musica()
 	AudioController.musica_nivel()
+	get_tree().change_scene_to_file("res://Scena/TilesSet/TilesSet5.tscn")
 	pass # Replace with function body.
 
 
