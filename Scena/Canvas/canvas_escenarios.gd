@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var panel_2: Panel = $Panel2
 @onready var timer_anuncio: RichTextLabel = $Panel2/TimerAnuncio
 @onready var panel: Panel = $Panel
+@onready var panel_lose: Panel = $PanelLose
 
 
 func activarPanel():
