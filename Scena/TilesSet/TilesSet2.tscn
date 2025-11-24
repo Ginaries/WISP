@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://c0ppsiyaomoqc"]
+[gd_scene load_steps=37 format=4 uid="uid://c0ppsiyaomoqc"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_57mly"]
 [ext_resource type="Texture2D" uid="uid://dtfukocnnrld6" path="res://Assets - WISP/Plataformas/tile_izquierda.png" id="2_d87s0"]
@@ -14,14 +14,19 @@
 [ext_resource type="PackedScene" uid="uid://breu0a4y5swo1" path="res://Scena/Player/camera_2d.tscn" id="12_bmpoi"]
 [ext_resource type="PackedScene" uid="uid://dwhvxylru7526" path="res://Scena/Player/player.tscn" id="13_78fyu"]
 [ext_resource type="PackedScene" uid="uid://biyhpci4na4t4" path="res://Scena/Enemigos/Hoguera/hoguera.tscn" id="14_odud3"]
+[ext_resource type="Script" uid="uid://c0txi41dbyv5x" path="res://Scena/Canvas/canvas_escenarios.gd" id="15_4dvaq"]
 [ext_resource type="PackedScene" uid="uid://gobt7cps4w31" path="res://Scena/Enemigos/avispa.tscn" id="16_g50ks"]
 [ext_resource type="PackedScene" uid="uid://dm6q0abakck7u" path="res://Scena/Joystick/joystick.tscn" id="17_6bldn"]
+[ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="17_8gaml"]
 [ext_resource type="PackedScene" uid="uid://dkyo6kdmxj6j0" path="res://Scena/Enemigos/Tanque.tscn" id="17_57mly"]
 [ext_resource type="PackedScene" uid="uid://kn7lu5j6d3d1" path="res://Scena/Enemigos/Pincho.tscn" id="18_d87s0"]
 [ext_resource type="Texture2D" uid="uid://c6khli1srhi7r" path="res://Assets - WISP/InterfacesPNG/cartel indicador tienda.png" id="19_6uo2q"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="20_e4ilq"]
 [ext_resource type="Script" uid="uid://bqvhqggnf6wn5" path="res://Scena/Flag/flag.gd" id="21_m051t"]
 [ext_resource type="Texture2D" uid="uid://vaia7s0r2wu5" path="res://Assets - WISP/InterfacesPNG/cartel final.png" id="22_fmhqe"]
+[ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="25_jsihj"]
+[ext_resource type="Texture2D" uid="uid://b0gtfbvgornif" path="res://UI/UI basic/ButtonsIcons/IconButton_Large_Circle.png" id="26_on8hm"]
+[ext_resource type="Script" uid="uid://cixot3ixqy3lt" path="res://Scena/TilesSet/sinpiso.gd" id="27_on8hm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
 texture = ExtResource("1_57mly")
@@ -434,6 +439,9 @@ sources/9 = SubResource("TileSetAtlasSource_ryarx")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4dvaq"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmpoi"]
+size = Vector2(123, 20)
+
 [node name="TilesSet" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -544,11 +552,6 @@ position = Vector2(717, 1693)
 [node name="Hoguera5" parent="." instance=ExtResource("14_odud3")]
 position = Vector2(119, 2477)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Joystick" parent="CanvasLayer" instance=ExtResource("17_6bldn")]
-position = Vector2(113, 1119)
-
 [node name="Avispa" parent="." instance=ExtResource("16_g50ks")]
 position = Vector2(260, 700)
 
@@ -599,8 +602,101 @@ position = Vector2(7.6293945e-06, 0)
 scale = Vector2(0.16, 0.164)
 texture = ExtResource("22_fmhqe")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(584, 2569)
+script = ExtResource("27_on8hm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(51.5, 0)
+shape = SubResource("RectangleShape2D_bmpoi")
+
+[node name="CanvasEscenarios" type="CanvasLayer" parent="."]
+script = ExtResource("15_4dvaq")
+
+[node name="Joystick" parent="CanvasEscenarios" instance=ExtResource("17_6bldn")]
+position = Vector2(187, 1092)
+
+[node name="Panel" type="Panel" parent="CanvasEscenarios"]
+process_mode = 3
+visible = false
+offset_left = 77.0
+offset_top = 440.0
+offset_right = 693.0
+offset_bottom = 860.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 55.0
+offset_right = 568.0
+offset_bottom = 184.0
+bbcode_enabled = true
+text = "HAZ CONSEGUIDO 
+						"
+
+[node name="Button" type="Button" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 276.0
+offset_right = 334.0
+offset_bottom = 307.0
+text = "Aceptar"
+
+[node name="Button2" type="Button" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 325.0
+offset_right = 340.0
+offset_bottom = 356.0
+text = "Rechazar"
+
+[node name="Panel2" type="Panel" parent="CanvasEscenarios"]
+visible = false
+offset_left = 9.0
+offset_top = 314.0
+offset_right = 744.0
+offset_bottom = 997.0
+
+[node name="Anuncio" type="TextureRect" parent="CanvasEscenarios/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.5
+offset_top = -216.0
+offset_right = 338.5
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_8gaml")
+expand_mode = 1
+
+[node name="TimerAnuncio" type="RichTextLabel" parent="CanvasEscenarios/Panel2"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 10.0
+offset_right = 691.0
+offset_bottom = 50.0
+
+[node name="Atacar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(639, 1025)
+scale = Vector2(1.4375, 1.3320247)
+texture_normal = ExtResource("25_jsihj")
+action = "atacar"
+
+[node name="Interactuar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(555, 1131.0001)
+scale = Vector2(0.24938096, 0.2478658)
+texture_normal = ExtResource("26_on8hm")
+action = "Interactuar"
+
 [connection signal="body_entered" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_entered"]
 [connection signal="body_exited" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_exited"]
 [connection signal="body_entered" from="Cartel Indicador Tienda/FLAG" to="Cartel Indicador Tienda/FLAG" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasEscenarios/Panel/Button" to="CanvasEscenarios" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasEscenarios/Panel/Button2" to="CanvasEscenarios" method="_on_button_2_pressed"]
 
 [editable path="CuevaMercader"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=4 uid="uid://5eno7xiaxhqw"]
+[gd_scene load_steps=34 format=4 uid="uid://5eno7xiaxhqw"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_mg4xw"]
+[ext_resource type="Script" uid="uid://cb6m8j7v2pw72" path="res://Scena/TilesSet/tiles_set_5.gd" id="1_q8t3l"]
 [ext_resource type="Texture2D" uid="uid://dtfukocnnrld6" path="res://Assets - WISP/Plataformas/tile_izquierda.png" id="2_8gg4i"]
 [ext_resource type="Texture2D" uid="uid://dje420kwr4f30" path="res://Assets - WISP/Plataformas/tile_centro.png" id="3_4y0o1"]
 [ext_resource type="Texture2D" uid="uid://d2rtx5ah5d3o1" path="res://Assets - WISP/Plataformas/Intentoplataforma.png" id="4_yspwo"]
@@ -20,6 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://c6khli1srhi7r" path="res://Assets - WISP/InterfacesPNG/cartel indicador tienda.png" id="18_hqia8"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="19_5lube"]
 [ext_resource type="PackedScene" uid="uid://dkyo6kdmxj6j0" path="res://Scena/Enemigos/Tanque.tscn" id="20_aq6s5"]
+[ext_resource type="Script" uid="uid://c0txi41dbyv5x" path="res://Scena/Canvas/canvas_escenarios.gd" id="20_e5aqe"]
+[ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="22_ebkgm"]
+[ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="23_e5aqe"]
+[ext_resource type="Texture2D" uid="uid://b0gtfbvgornif" path="res://UI/UI basic/ButtonsIcons/IconButton_Large_Circle.png" id="24_cnkmx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
 texture = ExtResource("1_mg4xw")
@@ -430,7 +435,11 @@ sources/7 = SubResource("TileSetAtlasSource_dx6o0")
 sources/8 = SubResource("TileSetAtlasSource_m5eqe")
 sources/9 = SubResource("TileSetAtlasSource_ryarx")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqyga"]
+size = Vector2(108, 20)
+
 [node name="TilesSet" type="Node2D"]
+script = ExtResource("1_q8t3l")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-1, 1283)
@@ -523,13 +532,8 @@ position = Vector2(1121, 302)
 zoom = Vector2(1.01, 1.01)
 
 [node name="Player" parent="." instance=ExtResource("13_6nsse")]
-position = Vector2(268, 172)
+position = Vector2(146, 4008)
 fuerza_disparo = 450.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Joystick" parent="CanvasLayer" instance=ExtResource("14_vw7sy")]
-position = Vector2(113, 1119)
 
 [node name="Hoguera" parent="." instance=ExtResource("15_d0rgu")]
 position = Vector2(279, 1118)
@@ -602,24 +606,102 @@ position = Vector2(673, 110)
 [node name="Hoguera6" parent="." instance=ExtResource("15_d0rgu")]
 position = Vector2(20, 4447)
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 459.0
-offset_top = 4317.0
-offset_right = 638.0
-offset_bottom = 4367.0
-grow_horizontal = 0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 40
-text = "Espacio Jefe"
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(80, 4221)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_rqyga")
+
+[node name="Marker2D" type="Marker2D" parent="Area2D"]
+position = Vector2(452, 247)
+
+[node name="CanvasEscenarios" type="CanvasLayer" parent="."]
+script = ExtResource("20_e5aqe")
+
+[node name="Joystick" parent="CanvasEscenarios" instance=ExtResource("14_vw7sy")]
+position = Vector2(187, 1092)
+
+[node name="Panel" type="Panel" parent="CanvasEscenarios"]
+process_mode = 3
+visible = false
+offset_left = 77.0
+offset_top = 440.0
+offset_right = 693.0
+offset_bottom = 860.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 55.0
+offset_right = 568.0
+offset_bottom = 184.0
+bbcode_enabled = true
+text = "HAZ CONSEGUIDO 100 PUNTOS
+						"
+
+[node name="Button" type="Button" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 276.0
+offset_right = 334.0
+offset_bottom = 307.0
+text = "Aceptar"
+
+[node name="Button2" type="Button" parent="CanvasEscenarios/Panel"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 325.0
+offset_right = 340.0
+offset_bottom = 356.0
+text = "Rechazar"
+
+[node name="Panel2" type="Panel" parent="CanvasEscenarios"]
+visible = false
+offset_left = 9.0
+offset_top = 314.0
+offset_right = 744.0
+offset_bottom = 997.0
+
+[node name="Anuncio" type="TextureRect" parent="CanvasEscenarios/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.5
+offset_top = -216.0
+offset_right = 338.5
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_ebkgm")
+expand_mode = 1
+
+[node name="TimerAnuncio" type="RichTextLabel" parent="CanvasEscenarios/Panel2"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 10.0
+offset_right = 691.0
+offset_bottom = 50.0
+
+[node name="Atacar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(639, 1025)
+scale = Vector2(1.4375, 1.3320247)
+texture_normal = ExtResource("23_e5aqe")
+action = "atacar"
+
+[node name="Interactuar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(555, 1131.0001)
+scale = Vector2(0.24938096, 0.2478658)
+texture_normal = ExtResource("24_cnkmx")
+action = "Interactuar"
 
 [connection signal="body_entered" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_entered"]
 [connection signal="body_exited" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_exited"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasEscenarios/Panel/Button" to="CanvasEscenarios" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasEscenarios/Panel/Button2" to="CanvasEscenarios" method="_on_button_2_pressed"]
 
 [editable path="CuevaMercader"]

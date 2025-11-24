@@ -1,0 +1,33 @@
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::b29850a4f232b8394ba44d2cfd37cb0d::1762131683::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::505cc067befdb1daaca453fd87d0a6a2::1761603585::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/dialogue_label.tscn::5087c11b45dfaf8effc779674dfe11e8::1761603585::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::980386d71581df5a5212316de798e3d3::1762712173::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://Assets - WISP/ParallaxCueva1/cueva_1.tscn::d579b9603bcb43bc9fc56ed7ac5cab38::1761603554::res://.godot/exported/133200997/export-b6930c181e0f3ad19f9153b76d5adf4c-cueva_1.scn
+res://Scena/AudioController/AudioController.tscn::c1fbebc72598fa1267c080b232787a96::1763592939::res://.godot/exported/133200997/export-faf5636703d30672b2fe93c4782e78b6-AudioController.scn
+res://Scena/Canvas/canvas_escenarios.tscn::93097c64b83152782ddf8ec1238a190a::1762719542::res://.godot/exported/133200997/export-4f89cf2c635d3a1bf91889448e70f5ef-canvas_escenarios.scn
+res://Scena/Cueva 1/cueva_1.tscn::a39b55f737615841e9eefff7e971ded4::1761611229::res://.godot/exported/133200997/export-e3a98592690625eeec692ecbf25fcab7-cueva_1.scn
+res://Scena/CuevaMercader/cueva_mercader.tscn::5a18cc2a9a6856f5aac83f1edc1770ed::1762670809::res://.godot/exported/133200997/export-359b02a028c3ce7c0c6d0a8b0028597d-cueva_mercader.scn
+res://Scena/Enemigos/Hoguera/hoguera.tscn::4f0e3f7ac237b035b3d26c8a6ff0a9b8::1761603554::res://.godot/exported/133200997/export-3c3f482215fe99080591200df5e14c1c-hoguera.scn
+res://Scena/Enemigos/Jefes/Avispa de MAMA.tscn::9955d320212a6f1046ed3922274f1a19::1762711738::res://.godot/exported/133200997/export-b9ad3bcfd7a5b16ca1951d236162157f-Avispa de MAMA.scn
+res://Scena/Enemigos/Jefes/Jefe1.tscn::81ade67157ca95467877fbe4ada91690::1762715964::res://.godot/exported/133200997/export-0d3e2da30ec4993b53f80924f4b6fcc2-Jefe1.scn
+res://Scena/Enemigos/avispa.tscn::b83200d5f41e4e609a18c00c8558ba0b::1762125440::res://.godot/exported/133200997/export-1ae3fd624d78cad1f949e05ba767436a-avispa.scn
+res://Scena/Enemigos/Pincho.tscn::2f792859f7da8fd78fe0db3645cf2ed6::1763592939::res://.godot/exported/133200997/export-09c0a856c7dbee1308846bfec1a6231b-Pincho.scn
+res://Scena/Enemigos/Tanque.tscn::98fa80b2c377acfac770e9ea0c0cd6b7::1764017812::res://.godot/exported/133200997/export-16bcec7d1bc43a5af2ffda3c67ff7ac0-Tanque.scn
+res://Scena/Joystick/joystick.tscn::6dd0f6084bcef5128ae0daa69a84bdfb::1764021446::res://.godot/exported/133200997/export-be218925f6fd0d5679d012ef2c17805b-joystick.scn
+res://Scena/Menú/Menu.tscn::e90aace33507e044cbf6913b50c81ab0::1762738876::res://.godot/exported/133200997/export-077dac4a01daf7a73a56eb0438c87bdb-Menu.scn
+res://Scena/Moneda/moneda_premium.tscn::d45a337882b7a75dca039da9e6cf420c::1762738876::res://.godot/exported/133200997/export-fbdc8dcd9340f3e83fda5470eac451b2-moneda_premium.scn
+res://Scena/NPC TIENDA/npctienda.tscn::2ae057bcda06152f9cf9dcfefd1cb553::1762093878::res://.godot/exported/133200997/export-e6332a47c9f2079d7e0f9c0e210ced26-npctienda.scn
+res://Scena/Player/proyectil del player/proyectil.tscn::08ded4cf0a5dd9bc2ad23ab2083b2eae::1764019634::res://.godot/exported/133200997/export-43a093915608b681e76c859fe0f6a8f0-proyectil.scn
+res://Scena/Player/camera_2d.tscn::5f2a4d7054857f4faa071bba396c227d::1761610829::res://.godot/exported/133200997/export-aa53a0cb92d58563f3814718031d6bf6-camera_2d.scn
+res://Scena/Player/player.tscn::0861c0af6c6987a080e8039a02583333::1764020822::res://.godot/exported/133200997/export-ff3ea41196c868160a419c534c9e5247-player.scn
+res://Scena/Player/vidas.tscn::48b6dae828772ae7ab377a1c83e6c37d::1762233362::res://.godot/exported/133200997/export-7d06371c722af3ea6dd73a66f72d4338-vidas.scn
+res://Scena/SelectorNiveles/SelectorNiveles.tscn::ab9129107734a1785bf5776c82cbb331::1764013217::res://.godot/exported/133200997/export-856b1eb20f9c72807ae9ae98966335ce-SelectorNiveles.scn
+res://Scena/TiendaPremium/ANUNCIOTIME.tscn::83d775795de05f4c972805295e51f488::1762716304::res://.godot/exported/133200997/export-fa2460c70bc742338f25aff72321f825-ANUNCIOTIME.scn
+res://Scena/TiendaPremium/TiendaPremium.tscn::a0cf4f3ff20247ce83d4c3a41273c825::1763592939::res://.godot/exported/133200997/export-700e0e1c0dd995f6dfd9f8a4b1374e04-TiendaPremium.scn
+res://Scena/TilesSet/TilesSet2.tscn::2353e13238024cedc0d926c79a998611::1764021628::res://.godot/exported/133200997/export-a406d2c7590875d59148d29ece44fd07-TilesSet2.scn
+res://Scena/TilesSet/TilesSet3.tscn::4f47fad6bd47403c33d436364dad52a4::1764021628::res://.godot/exported/133200997/export-b3a0892f03e68068967439d872e2ec9c-TilesSet3.scn
+res://Scena/TilesSet/TilesSet4.tscn::cee59f7b95e1b46c7714d7243d0cab1c::1764021628::res://.godot/exported/133200997/export-adb5de6f7ecf129ff88a83a7a714410c-TilesSet4.scn
+res://Scena/TilesSet/TilesSet5.tscn::2e48a017afa4fed4d8e8ba873b4a6a31::1764021628::res://.godot/exported/133200997/export-6ea1f09211e9b281135065ff3ad9924a-TilesSet5.scn
+res://Scena/TilesSet/TilesSet.tscn::9980de57aafbf93bf86ab1274ddedf45::1764021640::res://.godot/exported/133200997/export-c476b736668cdde736b2502d696f486e-TilesSet.scn
+res://Scena/test.tscn::87ccda681bd126f3724df4ca622caa9a::1762716171::res://.godot/exported/133200997/export-a66136f79412f3b1f4da2a95ccdbca3e-test.scn
+res://default_bus_layout.tres::fff397861df4e789d80d0d0cc520d086::1764013233::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

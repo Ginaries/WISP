@@ -11,7 +11,7 @@ const MONEDA_PREMIUM = preload("res://Scena/Moneda/moneda_premium.tscn")
 @export var Player: CharacterBody2D
 
 # --- Velocidades ---
-@export var velocidad_caminar: float = 100.0
+@export var velocidad_caminar: float = 75.0
 @export var velocidad_volar: float = 150.0
 
 # --- Configuración IA ---

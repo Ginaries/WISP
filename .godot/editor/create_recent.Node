@@ -1,3 +1,9 @@
+CollisionShape2D
+Area2D
+Marker2D
+VisibleOnScreenNotifier2D
+TouchScreenButton
+Button
 TextureRect
 AudioStreamPlayer2D
 AudioStreamPlayer
@@ -6,9 +12,3 @@ AudioListener2D
 Label
 TextureButton
 ScrollContainer
-HBoxContainer
-VScrollBar
-Panel
-VBoxContainer
-Button
-Sprite2D

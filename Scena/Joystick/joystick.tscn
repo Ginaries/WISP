@@ -7,6 +7,7 @@
 
 [node name="Joystick" type="Node2D"]
 modulate = Color(1, 1, 1, 0.188235)
+scale = Vector2(3.518868, 3.3465347)
 script = ExtResource("1_ii2vn")
 
 [node name="Ring" type="Sprite2D" parent="."]

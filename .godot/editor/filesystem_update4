@@ -1,9 +1,16 @@
-res://Scena/TilesSet/TilesSet4.tscn
 res://Scena/TilesSet/TilesSet.tscn
+res://Script/Player/player.gd
 res://Scena/TilesSet/TilesSet2.tscn
 res://Scena/TilesSet/TilesSet3.tscn
+res://Scena/TilesSet/TilesSet4.tscn
 res://Scena/TilesSet/TilesSet5.tscn
-res://Scena/SelectorNiveles/SelectorNiveles.tscn
-res://Scena/SelectorNiveles/selector_niveles.gd
-res://default_bus_layout.tres
-res://Scena/AudioController/AudioController.tscn
+res://Scena/Player/player.tscn
+res://Scena/Enemigos/Tanque.tscn
+res://Script/Enemigo/enemigo.gd
+res://Scena/TilesSet/tiles_set_5.gd
+res://Scena/Player/proyectil del player/proyectil.tscn
+res://Scena/Player/proyectil del player/proyectil.gd
+res://Scena/TilesSet/tiles_set_3.gd
+res://Scena/TilesSet/sinpiso.gd
+res://Script/Player/estadisticas_del_player.gd
+res://Scena/Joystick/joystick.tscn

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # --- Proyectil del player ---
 const PROYECTIL = preload("res://Scena/Player/proyectil del player/proyectil.tscn")
-@onready var joystick: Node2D = $"../CanvasLayer/Joystick"
+@onready var joystick: Node2D = $"../CanvasEscenarios/Joystick"
 var mirando_derecha: bool = true
 
 # --- Variables principales ---
@@ -44,6 +44,7 @@ var HogueraActual: Area2D
 
 
 func _ready() -> void:
+	respawn_position = global_position
 	# Cargar estadísticas del jugador desde la global
 	fuerza_salto = EstadisticasDelPlayer.fuerza_salto
 	daño_disparo = EstadisticasDelPlayer.daño_disparo
@@ -180,12 +181,13 @@ func EncenderFuego():
 # --- Ataque ---
 func AtaqueDisparo():
 	if Input.is_action_just_pressed("atacar") and CombustibleActual > 0:
-		AudioController.lanzar_proyectil()
 		if CombustibleActual >= 10:
+			AudioController.lanzar_proyectil()
 			CombustibleActual -= 10
 			var bala = PROYECTIL.instantiate()
 			bala.global_position = global_position
-			get_parent().add_child(bala)
+			get_tree().current_scene.add_child(bala)
+
 
 			# Dirección de disparo basada únicamente en hacia dónde mira el jugador
 			var direccion_disparo = Vector2.RIGHT

@@ -20,10 +20,6 @@ func _ready() -> void:
 func _physics_process(delta):
 	position += velocidad * delta
 
-	# Opcional: eliminar si sale muy lejos de cámara
-	if position.length() > 2000:
-		queue_free()
-
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

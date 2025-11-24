@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://ck8xnj4oeoh5h"]
+[gd_scene load_steps=35 format=4 uid="uid://ck8xnj4oeoh5h"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_a7a2h"]
 [ext_resource type="Texture2D" uid="uid://d2rtx5ah5d3o1" path="res://Assets - WISP/Plataformas/Intentoplataforma.png" id="1_tcrrc"]
@@ -21,7 +21,9 @@
 [ext_resource type="Script" uid="uid://c0txi41dbyv5x" path="res://Scena/Canvas/canvas_escenarios.gd" id="18_mve8u"]
 [ext_resource type="Script" uid="uid://bqvhqggnf6wn5" path="res://Scena/Flag/flag.gd" id="19_dx6o0"]
 [ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="19_ryarx"]
+[ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="21_h8f2n"]
 [ext_resource type="Texture2D" uid="uid://vaia7s0r2wu5" path="res://Assets - WISP/InterfacesPNG/cartel final.png" id="22_1xr7v"]
+[ext_resource type="Texture2D" uid="uid://b0gtfbvgornif" path="res://UI/UI basic/ButtonsIcons/IconButton_Large_Circle.png" id="22_j6fxl"]
 [ext_resource type="Texture2D" uid="uid://c6khli1srhi7r" path="res://Assets - WISP/InterfacesPNG/cartel indicador tienda.png" id="23_1xr7v"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="24_up2m0"]
 
@@ -526,7 +528,7 @@ position = Vector2(705, 937)
 script = ExtResource("18_mve8u")
 
 [node name="Joystick" parent="CanvasEscenarios" instance=ExtResource("17_k4skk")]
-position = Vector2(113, 1119)
+position = Vector2(187, 1092)
 
 [node name="Panel" type="Panel" parent="CanvasEscenarios"]
 process_mode = 3
@@ -556,10 +558,10 @@ text = "Aceptar"
 
 [node name="Button2" type="Button" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 336.0
-offset_right = 334.0
-offset_bottom = 367.0
+offset_left = 261.0
+offset_top = 325.0
+offset_right = 340.0
+offset_bottom = 356.0
 text = "Rechazar"
 
 [node name="Panel2" type="Panel" parent="CanvasEscenarios"]
@@ -591,6 +593,18 @@ offset_left = 651.0
 offset_top = 10.0
 offset_right = 691.0
 offset_bottom = 50.0
+
+[node name="Atacar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(639, 1025)
+scale = Vector2(1.4375, 1.3320247)
+texture_normal = ExtResource("21_h8f2n")
+action = "atacar"
+
+[node name="Interactuar" type="TouchScreenButton" parent="CanvasEscenarios"]
+position = Vector2(555, 1131.0001)
+scale = Vector2(0.24938096, 0.2478658)
+texture_normal = ExtResource("22_j6fxl")
+action = "Interactuar"
 
 [node name="FLAG" type="Area2D" parent="."]
 position = Vector2(690, 1231)
