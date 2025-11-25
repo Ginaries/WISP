@@ -544,7 +544,7 @@ region = Rect2(0, 5120, 750, 1280)
 atlas = ExtResource("23_cnkmx")
 region = Rect2(750, 5120, 750, 1280)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w30mj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnkmx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -819,14 +819,15 @@ process_mode = 3
 visible = false
 offset_left = 77.0
 offset_top = 440.0
-offset_right = 693.0
-offset_bottom = 860.0
+offset_right = 81.0
+offset_bottom = 440.0
 mouse_filter = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasEscenarios/Panel"]
 position = Vector2(315.00003, 201)
 scale = Vector2(0.50133336, 0.425)
-sprite_frames = SubResource("SpriteFrames_w30mj")
+sprite_frames = SubResource("SpriteFrames_cnkmx")
+autoplay = "default"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
@@ -900,7 +901,7 @@ script = ExtResource("25_rqyga")
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasEscenarios/PanelLose"]
 position = Vector2(667, 836)
 scale = Vector2(0.50133336, 0.425)
-sprite_frames = SubResource("SpriteFrames_w30mj")
+sprite_frames = SubResource("SpriteFrames_cnkmx")
 autoplay = "default"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/PanelLose"]

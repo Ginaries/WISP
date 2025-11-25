@@ -729,14 +729,15 @@ process_mode = 3
 visible = false
 offset_left = 77.0
 offset_top = 440.0
-offset_right = 693.0
-offset_bottom = 860.0
+offset_right = 81.0
+offset_bottom = 440.0
 mouse_filter = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasEscenarios/Panel"]
 position = Vector2(315.00003, 201)
 scale = Vector2(0.50133336, 0.425)
 sprite_frames = SubResource("SpriteFrames_borx3")
+autoplay = "default"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
@@ -812,7 +813,7 @@ position = Vector2(667, 836)
 scale = Vector2(0.50133336, 0.425)
 sprite_frames = SubResource("SpriteFrames_borx3")
 autoplay = "default"
-frame_progress = 0.9118099
+frame_progress = 0.5401859
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/PanelLose"]
 layout_mode = 0

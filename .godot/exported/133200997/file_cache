@@ -12,7 +12,7 @@ res://Scena/Enemigos/Jefes/Avispa de MAMA.tscn::9955d320212a6f1046ed3922274f1a19
 res://Scena/Enemigos/Jefes/Jefe1.tscn::81ade67157ca95467877fbe4ada91690::1762715964::res://.godot/exported/133200997/export-0d3e2da30ec4993b53f80924f4b6fcc2-Jefe1.scn
 res://Scena/Enemigos/avispa.tscn::b83200d5f41e4e609a18c00c8558ba0b::1762125440::res://.godot/exported/133200997/export-1ae3fd624d78cad1f949e05ba767436a-avispa.scn
 res://Scena/Enemigos/Pincho.tscn::2f792859f7da8fd78fe0db3645cf2ed6::1763592939::res://.godot/exported/133200997/export-09c0a856c7dbee1308846bfec1a6231b-Pincho.scn
-res://Scena/Enemigos/Tanque.tscn::98fa80b2c377acfac770e9ea0c0cd6b7::1764017812::res://.godot/exported/133200997/export-16bcec7d1bc43a5af2ffda3c67ff7ac0-Tanque.scn
+res://Scena/Enemigos/Tanque.tscn::98fa80b2c377acfac770e9ea0c0cd6b7::1764030238::res://.godot/exported/133200997/export-16bcec7d1bc43a5af2ffda3c67ff7ac0-Tanque.scn
 res://Scena/Joystick/joystick.tscn::6dd0f6084bcef5128ae0daa69a84bdfb::1764021446::res://.godot/exported/133200997/export-be218925f6fd0d5679d012ef2c17805b-joystick.scn
 res://Scena/Menú/Menu.tscn::3c472d3571d1d2f999da6ac5f0a474f5::1764027490::res://.godot/exported/133200997/export-077dac4a01daf7a73a56eb0438c87bdb-Menu.scn
 res://Scena/Moneda/moneda_premium.tscn::8f2cbbe77025096708b9ceb43b981c6b::1764026889::res://.godot/exported/133200997/export-fbdc8dcd9340f3e83fda5470eac451b2-moneda_premium.scn
@@ -24,10 +24,10 @@ res://Scena/Player/vidas.tscn::48b6dae828772ae7ab377a1c83e6c37d::1762233362::res
 res://Scena/SelectorNiveles/SelectorNiveles.tscn::ab9129107734a1785bf5776c82cbb331::1764013217::res://.godot/exported/133200997/export-856b1eb20f9c72807ae9ae98966335ce-SelectorNiveles.scn
 res://Scena/TiendaPremium/ANUNCIOTIME.tscn::83d775795de05f4c972805295e51f488::1762716304::res://.godot/exported/133200997/export-fa2460c70bc742338f25aff72321f825-ANUNCIOTIME.scn
 res://Scena/TiendaPremium/TiendaPremium.tscn::47c8ef7c754f8e1a2be97572148dbac0::1764028810::res://.godot/exported/133200997/export-700e0e1c0dd995f6dfd9f8a4b1374e04-TiendaPremium.scn
-res://Scena/TilesSet/TilesSet2.tscn::80694cae55c103b51a2374398f6796f5::1764028586::res://.godot/exported/133200997/export-a406d2c7590875d59148d29ece44fd07-TilesSet2.scn
-res://Scena/TilesSet/TilesSet3.tscn::0b3f5ab632f8b3d26486e8d71be55b50::1764028586::res://.godot/exported/133200997/export-b3a0892f03e68068967439d872e2ec9c-TilesSet3.scn
-res://Scena/TilesSet/TilesSet4.tscn::32c5dbe31368af8fd75f88ba9fad0ee4::1764028586::res://.godot/exported/133200997/export-adb5de6f7ecf129ff88a83a7a714410c-TilesSet4.scn
-res://Scena/TilesSet/TilesSet5.tscn::b1361076da1c3f3d023139becb5955e9::1764028586::res://.godot/exported/133200997/export-6ea1f09211e9b281135065ff3ad9924a-TilesSet5.scn
-res://Scena/TilesSet/TilesSet.tscn::9167c2c88cbad57c99906aa4fce73202::1764028608::res://.godot/exported/133200997/export-c476b736668cdde736b2502d696f486e-TilesSet.scn
+res://Scena/TilesSet/TilesSet2.tscn::3f63e8305fe267d701b112623c5ee8a7::1764030100::res://.godot/exported/133200997/export-a406d2c7590875d59148d29ece44fd07-TilesSet2.scn
+res://Scena/TilesSet/TilesSet3.tscn::d53c253b8e5d4bd100c2d2dd44d93200::1764030099::res://.godot/exported/133200997/export-b3a0892f03e68068967439d872e2ec9c-TilesSet3.scn
+res://Scena/TilesSet/TilesSet4.tscn::886da2cbbcecb33cdf8158a651ad5f44::1764030098::res://.godot/exported/133200997/export-adb5de6f7ecf129ff88a83a7a714410c-TilesSet4.scn
+res://Scena/TilesSet/TilesSet5.tscn::70725f33ce23107a85631ef9d11e2217::1764030096::res://.godot/exported/133200997/export-6ea1f09211e9b281135065ff3ad9924a-TilesSet5.scn
+res://Scena/TilesSet/TilesSet.tscn::fbc3dd1975237dcdaf8200937f227c18::1764030101::res://.godot/exported/133200997/export-c476b736668cdde736b2502d696f486e-TilesSet.scn
 res://Scena/test.tscn::87ccda681bd126f3724df4ca622caa9a::1762716171::res://.godot/exported/133200997/export-a66136f79412f3b1f4da2a95ccdbca3e-test.scn
 res://default_bus_layout.tres::e0a21cc691540e4ad6f9f0233b3ca484::1764025028::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

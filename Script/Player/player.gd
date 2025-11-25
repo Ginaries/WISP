@@ -260,7 +260,8 @@ func _on_recibir_daño_body_entered(body: Node2D) -> void:
 		salud-=1
 		if salud<=0:
 			AudioController.parar_musica_nivel()
-			get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
+			queue_free()
+			panel_lose.visible=true
 
 
 func _on_recibir_daño_area_entered(area: Area2D) -> void:

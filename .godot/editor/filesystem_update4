@@ -18,3 +18,4 @@ res://Script/Menú/menu.gd
 res://Scena/AudioController/AudioController.tscn
 res://Scena/TiendaPremium/TiendaPremium.tscn
 res://Script/TiendaPremium/tienda_premium.gd
+res://Scena/Enemigos/Tanque.tscn
