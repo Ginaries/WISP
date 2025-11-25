@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	AudioController.musica_interfaz()
+	EstadisticasDelPlayer.cargar_datos()
 
 
 func _on_jugar_pressed() -> void:

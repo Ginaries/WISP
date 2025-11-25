@@ -169,6 +169,7 @@ material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
 offset_bottom = 1280.0
+mouse_filter = 2
 
 [node name="Scroll" type="ScrollContainer" parent="SolapaOrbes"]
 layout_mode = 1
@@ -183,11 +184,13 @@ offset_right = 270.0
 offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SolapaOrbes/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaOrbes/Scroll/HBoxContainer"]
@@ -332,6 +335,7 @@ vertical_alignment = 1
 [node name="Ladoderecho" type="VBoxContainer" parent="SolapaOrbes/Scroll/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Cartel3" type="TextureRect" parent="SolapaOrbes/Scroll/HBoxContainer/Ladoderecho"]
@@ -512,11 +516,13 @@ offset_right = 270.0
 offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaBundles/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Cartel" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoizquierdo"]
@@ -626,6 +632,7 @@ expand_mode = 1
 [node name="Ladoderecho" type="VBoxContainer" parent="SolapaBundles/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Cartel3" type="TextureRect" parent="SolapaBundles/HBoxContainer/Ladoderecho"]
@@ -765,6 +772,7 @@ material = SubResource("CanvasItemMaterial_g7upr")
 offset_top = 344.0
 offset_right = 750.0
 offset_bottom = 1280.0
+mouse_filter = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="SolapaMejoras2"]
 layout_mode = 1
@@ -779,14 +787,17 @@ offset_right = 270.0
 offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SolapaMejoras2/ScrollContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Ladoizquierdo" type="VBoxContainer" parent="SolapaMejoras2/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Cartel" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoizquierdo"]
@@ -964,6 +975,7 @@ vertical_alignment = 1
 [node name="Ladoderecho" type="VBoxContainer" parent="SolapaMejoras2/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 50
 
 [node name="Cartel3" type="TextureRect" parent="SolapaMejoras2/ScrollContainer/HBoxContainer/Ladoderecho"]

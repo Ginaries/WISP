@@ -4,6 +4,7 @@ extends CharacterBody2D
 const PROYECTIL = preload("res://Scena/Player/proyectil del player/proyectil.tscn")
 @onready var joystick: Node2D = $"../CanvasEscenarios/Joystick"
 var mirando_derecha: bool = true
+@onready var panel_lose: Panel = $"../CanvasEscenarios/PanelLose"
 
 # --- Variables principales ---
 @export var velocidad: float = 100.0
@@ -242,7 +243,7 @@ func _input(event):
 func _on_agarrar_monedas_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Moneda"):
 		AudioController.obtener_orbe()
-		EstadisticasDelPlayer.monedasPremium += 1
+		EstadisticasDelPlayer.Puntos += 1
 		body.queue_free()
 
 
@@ -271,7 +272,8 @@ func _on_recibir_daño_area_entered(area: Area2D) -> void:
 		
 		if salud<=0:
 			AudioController.parar_musica_nivel()
-			get_tree().change_scene_to_file("res://Scena/Menú/Menu.tscn")
+			queue_free()
+			panel_lose.visible=true
 
 		
 

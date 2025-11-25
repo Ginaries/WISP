@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=4 uid="uid://chjj84hk1glbp"]
+[gd_scene load_steps=67 format=4 uid="uid://chjj84hk1glbp"]
 
 [ext_resource type="Texture2D" uid="uid://hw0ohg6l7va3" path="res://Assets - WISP/Plataformas/tile_derecha.png" id="1_sggc7"]
+[ext_resource type="Script" uid="uid://cvve0nyqcv35o" path="res://Scena/TilesSet/tiles_set_4.gd" id="1_uqfha"]
 [ext_resource type="Texture2D" uid="uid://dtfukocnnrld6" path="res://Assets - WISP/Plataformas/tile_izquierda.png" id="2_lagsp"]
 [ext_resource type="Texture2D" uid="uid://dje420kwr4f30" path="res://Assets - WISP/Plataformas/tile_centro.png" id="3_d2wgg"]
 [ext_resource type="Texture2D" uid="uid://d2rtx5ah5d3o1" path="res://Assets - WISP/Plataformas/Intentoplataforma.png" id="4_kre37"]
@@ -24,8 +25,10 @@
 [ext_resource type="Script" uid="uid://c0txi41dbyv5x" path="res://Scena/Canvas/canvas_escenarios.gd" id="22_ffta8"]
 [ext_resource type="Texture2D" uid="uid://vaia7s0r2wu5" path="res://Assets - WISP/InterfacesPNG/cartel final.png" id="22_gomf3"]
 [ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="24_a2yxp"]
+[ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="25_cox68"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="25_ffta8"]
-[ext_resource type="Script" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
+[ext_resource type="Script" uid="uid://cixot3ixqy3lt" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
+[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="27_uqfha"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="27_w8gum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
@@ -442,7 +445,198 @@ sources/9 = SubResource("TileSetAtlasSource_ryarx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8gum"]
 size = Vector2(123, 20)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw3rn"]
+atlas = ExtResource("25_cox68")
+region = Rect2(0, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcmvy"]
+atlas = ExtResource("25_cox68")
+region = Rect2(750, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhx0v"]
+atlas = ExtResource("25_cox68")
+region = Rect2(1500, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0ncs"]
+atlas = ExtResource("25_cox68")
+region = Rect2(2250, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfvyg"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3000, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkopo"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3750, 0, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65xu8"]
+atlas = ExtResource("25_cox68")
+region = Rect2(0, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axvn4"]
+atlas = ExtResource("25_cox68")
+region = Rect2(750, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a51a"]
+atlas = ExtResource("25_cox68")
+region = Rect2(1500, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnvvy"]
+atlas = ExtResource("25_cox68")
+region = Rect2(2250, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8mcf"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3000, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2rqr"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3750, 1280, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3107"]
+atlas = ExtResource("25_cox68")
+region = Rect2(0, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p54pt"]
+atlas = ExtResource("25_cox68")
+region = Rect2(750, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgroa"]
+atlas = ExtResource("25_cox68")
+region = Rect2(1500, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tebph"]
+atlas = ExtResource("25_cox68")
+region = Rect2(2250, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc8x8"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3000, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0asle"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3750, 2560, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uqx3"]
+atlas = ExtResource("25_cox68")
+region = Rect2(0, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsh2y"]
+atlas = ExtResource("25_cox68")
+region = Rect2(750, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkw1s"]
+atlas = ExtResource("25_cox68")
+region = Rect2(1500, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i270i"]
+atlas = ExtResource("25_cox68")
+region = Rect2(2250, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13uiq"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3000, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds20t"]
+atlas = ExtResource("25_cox68")
+region = Rect2(3750, 3840, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caaoq"]
+atlas = ExtResource("25_cox68")
+region = Rect2(0, 5120, 750, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_driel"]
+atlas = ExtResource("25_cox68")
+region = Rect2(750, 5120, 750, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0xj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw3rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcmvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhx0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0ncs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfvyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkopo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65xu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axvn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a51a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnvvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8mcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2rqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3107")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p54pt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgroa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tebph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc8x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0asle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uqx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsh2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkw1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i270i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13uiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds20t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caaoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_driel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 50.0
+}]
+
 [node name="TilesSet" type="Node2D"]
+script = ExtResource("1_uqfha")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
@@ -630,32 +824,43 @@ offset_left = 77.0
 offset_top = 440.0
 offset_right = 693.0
 offset_bottom = 860.0
+mouse_filter = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasEscenarios/Panel"]
+position = Vector2(315.00003, 201)
+scale = Vector2(0.50133336, 0.425)
+sprite_frames = SubResource("SpriteFrames_s0xj4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 55.0
-offset_right = 568.0
-offset_bottom = 184.0
+offset_left = 239.0
+offset_top = 69.0
+offset_right = 411.0
+offset_bottom = 132.0
 bbcode_enabled = true
-text = "HAZ CONSEGUIDO 
+text = "HAZ CONSEGUIDO 100 PUNTOS ¿DESEAS MULTIPLICARLOS?
 						"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 265.0
-offset_top = 276.0
-offset_right = 334.0
-offset_bottom = 307.0
-text = "Aceptar"
+offset_left = 289.0
+offset_top = 174.0
+offset_right = 358.0
+offset_bottom = 205.0
+text = "Ver Anuncio"
+flat = true
 
 [node name="Button2" type="Button" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 261.0
-offset_top = 325.0
-offset_right = 340.0
-offset_bottom = 356.0
+offset_left = 280.0
+offset_top = 234.0
+offset_right = 359.0
+offset_bottom = 265.0
 text = "Rechazar"
+flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasEscenarios"]
 visible = false
@@ -687,6 +892,51 @@ offset_top = 10.0
 offset_right = 691.0
 offset_bottom = 50.0
 
+[node name="PanelLose" type="Panel" parent="CanvasEscenarios"]
+visible = false
+offset_left = -275.0
+offset_top = -195.0
+offset_right = -235.0
+offset_bottom = -155.0
+script = ExtResource("27_uqfha")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasEscenarios/PanelLose"]
+position = Vector2(667, 836)
+scale = Vector2(0.50133336, 0.425)
+sprite_frames = SubResource("SpriteFrames_s0xj4")
+autoplay = "default"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/PanelLose"]
+layout_mode = 0
+offset_left = 586.0
+offset_top = 712.0
+offset_right = 758.0
+offset_bottom = 775.0
+bbcode_enabled = true
+text = "HAZ PERDIDO
+						"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="REINTENTAR" type="Button" parent="CanvasEscenarios/PanelLose"]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 807.0
+offset_right = 711.0
+offset_bottom = 836.0
+text = "REINTENTAR"
+flat = true
+
+[node name="sALIR" type="Button" parent="CanvasEscenarios/PanelLose"]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 871.0
+offset_right = 694.0
+offset_bottom = 900.0
+text = "SALIR"
+flat = true
+
 [node name="Atacar" type="TouchScreenButton" parent="CanvasEscenarios"]
 position = Vector2(639, 1025)
 scale = Vector2(1.35, 1.35)
@@ -705,5 +955,7 @@ action = "Interactuar"
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="CanvasEscenarios/Panel/Button" to="CanvasEscenarios" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasEscenarios/Panel/Button2" to="CanvasEscenarios" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasEscenarios/PanelLose/REINTENTAR" to="CanvasEscenarios/PanelLose" method="_on_reintentar_pressed"]
+[connection signal="pressed" from="CanvasEscenarios/PanelLose/sALIR" to="CanvasEscenarios/PanelLose" method="_on_s_alir_pressed"]
 
 [editable path="CuevaMercader"]
