@@ -77,5 +77,4 @@ func _on_timer_timeout() -> void:
 func _on_recibirproyectil_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Proyectiles"):
 		RecibirDaño(area.DañoaEnemigo)
-		AudioController.muerte_avispa()
 		area.queue_free()

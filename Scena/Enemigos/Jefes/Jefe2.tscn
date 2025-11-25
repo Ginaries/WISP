@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkcgq65ocie35"]
+
+[ext_resource type="Script" uid="uid://huynvjl1s7xp" path="res://Scena/Enemigos/Jefes/jefe_2.gd" id="1_6pema"]
+[ext_resource type="Texture2D" uid="uid://dy7uxfnxmtj5h" path="res://Assets - WISP/papa wisp.png" id="2_6pema"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnixr"]
+radius = 63.0
+height = 252.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngw3t"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6pema")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6pema")
+}],
+"loop": true,
+"name": &"transformacion",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qm8vh"]
+radius = 64.0
+height = 222.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn4a2"]
+radius = 80.0
+height = 330.0
+
+[node name="Jefe2" type="CharacterBody2D"]
+position = Vector2(390, 631)
+script = ExtResource("1_6pema")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, -34)
+shape = SubResource("CapsuleShape2D_lnixr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(20.999996, 3.0000196)
+scale = Vector2(0.28148147, 0.28223667)
+sprite_frames = SubResource("SpriteFrames_ngw3t")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Recibir Daño" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recibir Daño"]
+position = Vector2(19, -11)
+shape = SubResource("CapsuleShape2D_qm8vh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 81.0
+offset_top = 1219.0
+offset_right = 666.0
+offset_bottom = 1246.0
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-79, -89)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="RecibirDaño2" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecibirDaño2"]
+position = Vector2(20, -1)
+shape = SubResource("CapsuleShape2D_mn4a2")
+
+[connection signal="area_entered" from="Recibir Daño" to="." method="_on_recibir_daño_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="area_entered" from="RecibirDaño2" to="." method="_on_recibir_daño_2_area_entered"]

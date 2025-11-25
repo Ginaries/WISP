@@ -8,6 +8,8 @@ var jefe_spawned := false   # ← evita que el jefe se cree múltiples veces
 
 
 func _ready() -> void:
+	AudioController.parar_musica()
+	AudioController.musica_nivel()
 	EstadisticasDelPlayer.cargar_datos()
 
 func _exit_tree() -> void:

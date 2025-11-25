@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="24_a2yxp"]
 [ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="25_cox68"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="25_ffta8"]
-[ext_resource type="Script" uid="uid://cixot3ixqy3lt" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
-[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="27_uqfha"]
+[ext_resource type="Script" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
+[ext_resource type="Script" path="res://Scena/TilesSet/panel_lose.gd" id="27_uqfha"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="27_w8gum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
@@ -635,7 +635,7 @@ animations = [{
 "speed": 50.0
 }]
 
-[node name="TilesSet" type="Node2D"]
+[node name="TilesSet2" type="Node2D"]
 script = ExtResource("1_uqfha")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -729,7 +729,7 @@ position = Vector2(1122, 460)
 zoom = Vector2(1.01, 1.01)
 
 [node name="Player" parent="." instance=ExtResource("13_uqfha")]
-position = Vector2(64, 2937)
+position = Vector2(36, 81)
 fuerza_disparo = 450.0
 
 [node name="Hoguera" parent="." instance=ExtResource("15_0o4ov")]
@@ -834,12 +834,17 @@ autoplay = "default"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 239.0
+offset_left = 237.0
 offset_top = 69.0
 offset_right = 411.0
-offset_bottom = 132.0
+offset_bottom = 153.0
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+theme_override_font_sizes/bold_italics_font_size = 22
+theme_override_font_sizes/italics_font_size = 22
+theme_override_font_sizes/mono_font_size = 22
 bbcode_enabled = true
-text = "HAZ CONSEGUIDO 100 PUNTOS ¿DESEAS MULTIPLICARLOS?
+text = "Has conseguido 100 ORBES ¿Deseas multiplicarlos?
 						"
 fit_content = true
 horizontal_alignment = 1
@@ -847,19 +852,21 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 289.0
-offset_top = 174.0
-offset_right = 358.0
-offset_bottom = 205.0
+offset_left = 278.0
+offset_top = 168.0
+offset_right = 371.0
+offset_bottom = 208.0
+theme_override_font_sizes/font_size = 25
 text = "Ver Anuncio"
 flat = true
 
 [node name="Button2" type="Button" parent="CanvasEscenarios/Panel"]
 layout_mode = 0
-offset_left = 280.0
-offset_top = 234.0
-offset_right = 359.0
-offset_bottom = 265.0
+offset_left = 279.0
+offset_top = 232.0
+offset_right = 358.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 25
 text = "Rechazar"
 flat = true
 
@@ -910,32 +917,40 @@ autoplay = "default"
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasEscenarios/PanelLose"]
 layout_mode = 0
 offset_left = 586.0
-offset_top = 712.0
+offset_top = 703.0
 offset_right = 758.0
-offset_bottom = 775.0
+offset_bottom = 766.0
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
 bbcode_enabled = true
-text = "HAZ PERDIDO
-						"
+text = "Has Perdido"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="REINTENTAR" type="Button" parent="CanvasEscenarios/PanelLose"]
 layout_mode = 0
-offset_left = 644.0
-offset_top = 807.0
-offset_right = 711.0
-offset_bottom = 836.0
-text = "REINTENTAR"
+offset_left = 634.0
+offset_top = 802.0
+offset_right = 719.0
+offset_bottom = 842.0
+theme_override_font_sizes/font_size = 25
+text = "Reintentar
+"
 flat = true
 
 [node name="sALIR" type="Button" parent="CanvasEscenarios/PanelLose"]
 layout_mode = 0
-offset_left = 657.0
-offset_top = 871.0
-offset_right = 694.0
-offset_bottom = 900.0
-text = "SALIR"
+offset_left = 655.0
+offset_top = 868.0
+offset_right = 697.0
+offset_bottom = 908.0
+theme_override_font_sizes/font_size = 25
+text = "Salir
+"
 flat = true
 
 [node name="Atacar" type="TouchScreenButton" parent="CanvasEscenarios"]

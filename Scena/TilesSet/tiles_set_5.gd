@@ -1,6 +1,6 @@
 extends Node2D
 
-const JEFE_1 = preload("res://Scena/Enemigos/Jefes/Jefe1.tscn")
+const JEFE_1 = preload("res://Scena/Enemigos/Jefes/Jefe2.tscn")
 
 @onready var marker_2d: Marker2D = $Area2D/Marker2D
 var jefe_spawned := false   # ← evita que el jefe se cree múltiples veces
@@ -8,6 +8,8 @@ var jefe_spawned := false   # ← evita que el jefe se cree múltiples veces
 
 
 func _ready() -> void:
+	AudioController.parar_musica()
+	AudioController.musica_nivel()
 	EstadisticasDelPlayer.cargar_datos()
 
 func _exit_tree() -> void:
