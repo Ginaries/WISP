@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://c12k2xo7joohp" path="res://Assets - WISP/LogoWISPInterlineado.png" id="24_a2yxp"]
 [ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="25_cox68"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="25_ffta8"]
-[ext_resource type="Script" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
-[ext_resource type="Script" path="res://Scena/TilesSet/panel_lose.gd" id="27_uqfha"]
+[ext_resource type="Script" uid="uid://cixot3ixqy3lt" path="res://Scena/TilesSet/sinpiso.gd" id="27_a2yxp"]
+[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="27_uqfha"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="27_w8gum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
@@ -729,7 +729,7 @@ position = Vector2(1122, 460)
 zoom = Vector2(1.01, 1.01)
 
 [node name="Player" parent="." instance=ExtResource("13_uqfha")]
-position = Vector2(36, 81)
+position = Vector2(37, 67)
 fuerza_disparo = 450.0
 
 [node name="Hoguera" parent="." instance=ExtResource("15_0o4ov")]

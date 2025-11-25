@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="23_cnkmx"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="23_e5aqe"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="25_ebkgm"]
-[ext_resource type="Script" path="res://Scena/TilesSet/panel_lose.gd" id="25_rqyga"]
+[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="25_rqyga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
 texture = ExtResource("1_mg4xw")

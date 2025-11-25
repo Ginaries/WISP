@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var timer: Timer = $Timer
 @onready var jefe_1: CharacterBody2D = $"."
 @onready var recibir_daño_2: Area2D = $RecibirDaño2
-
+@onready var canvas_escenarios: CanvasLayer = $"../../CanvasEscenarios"
 #----- Estadísticas -----
 var Salud: int = 1500
 var SaludMax: int = 1500
@@ -110,6 +110,8 @@ func animar_muerte_real() -> void:
 	await get_tree().create_timer(1).timeout
 	AudioController.muerte_mama()
 	queue_free()
+	canvas_escenarios.activarPanel()
+	
 
 # --- Spawn de avispas ---
 func _on_spawn_timer_timeout() -> void:

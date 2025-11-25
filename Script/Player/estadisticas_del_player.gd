@@ -21,7 +21,15 @@ var coste_combustible: int = 5
 # --- Archivo de guardado ---
 const SAVE_PATH := "user://savegame.json"
 
-
+#temporales
+var tempvelocidad:bool=false
+var tempdano:bool=false
+var tempsalto:bool=false
+var tempvida:bool=false
+var valuevel:int=100
+var valuedano:int=100
+var valuesalto:int=-200
+var valuevida:int=5
 # --- Guardar datos ---
 func guardar_datos() -> void:
 	var data = {

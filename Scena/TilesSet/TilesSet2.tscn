@@ -23,13 +23,13 @@
 [ext_resource type="PackedScene" uid="uid://kn7lu5j6d3d1" path="res://Scena/Enemigos/Pincho.tscn" id="18_d87s0"]
 [ext_resource type="Texture2D" uid="uid://c6khli1srhi7r" path="res://Assets - WISP/InterfacesPNG/cartel indicador tienda.png" id="19_6uo2q"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="20_e4ilq"]
-[ext_resource type="Script" uid="uid://bqvhqggnf6wn5" path="res://Scena/Flag/flag.gd" id="21_m051t"]
+[ext_resource type="Script" uid="uid://cmembuxeqh1p6" path="res://Scena/TilesSet/flag2.gd" id="21_odud3"]
 [ext_resource type="Texture2D" uid="uid://vaia7s0r2wu5" path="res://Assets - WISP/InterfacesPNG/cartel final.png" id="22_fmhqe"]
 [ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="25_78fyu"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="25_jsihj"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="27_bmpoi"]
-[ext_resource type="Script" path="res://Scena/TilesSet/panel_lose.gd" id="27_odud3"]
-[ext_resource type="Script" path="res://Scena/TilesSet/sinpiso.gd" id="27_on8hm"]
+[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="27_odud3"]
+[ext_resource type="Script" uid="uid://cixot3ixqy3lt" path="res://Scena/TilesSet/sinpiso.gd" id="27_on8hm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4skk"]
 texture = ExtResource("1_57mly")
@@ -786,7 +786,7 @@ expand_mode = 1
 
 [node name="FLAG" type="Area2D" parent="Cartel Indicador Tienda"]
 position = Vector2(201, 1668)
-script = ExtResource("21_m051t")
+script = ExtResource("21_odud3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cartel Indicador Tienda/FLAG"]
 shape = SubResource("CircleShape2D_4dvaq")
@@ -956,6 +956,10 @@ position = Vector2(555, 1131.0001)
 scale = Vector2(1.35, 1.35)
 texture_normal = ExtResource("27_bmpoi")
 action = "Interactuar"
+
+[node name="Pincho4" parent="." instance=ExtResource("18_d87s0")]
+position = Vector2(172, 2107)
+vida = 100000000000000000
 
 [connection signal="body_entered" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_entered"]
 [connection signal="body_exited" from="CuevaMercader/CambioDeCamara" to="Camera2D" method="_on_cambio_de_camara_body_exited"]

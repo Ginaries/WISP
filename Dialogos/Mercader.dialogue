@@ -47,7 +47,7 @@ Wisp: ¡Eso suena... peligroso!
 Mercader: Lo es. Pero, ¿qué es un poco de peligro cuando podés sentir el viento digital en tu cara?
 - "Acepto el trato."
 	Mercader: Excelente. Que tus pasos desafíen el tiempo.
-	# ↑ aplicar mejora de VELOCIDAD
+	set EstadisticasDelPlayer.tempvelocidad=true
 	Wisp: ¡Agh! ¡Mis píxeles vibran!
 	Mercader: No es dolor, cariño. Es *frame skipping*.
 	=> Despedida
@@ -64,7 +64,7 @@ Wisp: ¡Eso ya lo aprendí por las malas!
 Mercader: Entonces, ¿te animás?
 - "Sí, dame más impulso."
 	Mercader: Que tus alas invisibles te eleven.
-	# ↑ aplicar mejora de FUERZA DE SALTO
+	set EstadisticasDelPlayer.tempsalto=true
 	Wisp: ¡Whoa! ¡Mirá esa parábola!
 	Mercader: Física, magia… todo depende del punto de vista.
 	=> Despedida
@@ -83,7 +83,7 @@ Wisp: ...¿De mi barra de salud, verdad?
 Mercader: Exacto, foquito. Ya lo entendés todo.
 - "Acepto. Vale la pena."
 	Mercader: Así se habla. Que tus enemigos sufran un *reajuste de balance*.
-	# ↑ aplicar aumento de DAÑO y reducción de SALUD
+	set EstadisticasDelPlayer.tempdano=true
 	Wisp: ¡Me arde el alma! ¡Literalmente!
 	Mercader: Es solo la implementación sintiéndolo.
 	=> Despedida
@@ -100,7 +100,7 @@ Wisp: No le hagas caso, no todos queremos morir por la trama.
 Mercader: Bien dicho, foquito. Entonces, ¿aceptás mi bendición temporal?
 - "Sí, por favor."
 	Mercader: Qué modales tan raros para un mortal con barra de vida.
-	# ↑ aplicar aumento de SALUD
+	set EstadisticasDelPlayer.tempvida=true
 	Wisp: ¡Ah! ¡Siento cómo se recargan mis puntos vitales!
 	Mercader: Aprovechalos, que el juego no guarda solo.
 	=> Despedida

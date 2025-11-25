@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tqnqmjvohid" path="res://Assets - WISP/Videos/output-onlinegiftools.png" id="20_j6fxl"]
 [ext_resource type="Texture2D" uid="uid://bhtycebs5wccy" path="res://UI/UI basic/ButtonsIcons/botondisparar.png" id="21_h8f2n"]
 [ext_resource type="Texture2D" uid="uid://vaia7s0r2wu5" path="res://Assets - WISP/InterfacesPNG/cartel final.png" id="22_1xr7v"]
-[ext_resource type="Script" path="res://Scena/TilesSet/panel_lose.gd" id="22_bw3rn"]
+[ext_resource type="Script" uid="uid://de836c85ls4pl" path="res://Scena/TilesSet/panel_lose.gd" id="22_bw3rn"]
 [ext_resource type="Texture2D" uid="uid://dfi10bhoi85q4" path="res://Assets - WISP/InterfacesPNG/botonapretar.png" id="22_h8f2n"]
 [ext_resource type="Texture2D" uid="uid://c6khli1srhi7r" path="res://Assets - WISP/InterfacesPNG/cartel indicador tienda.png" id="23_1xr7v"]
 [ext_resource type="Texture2D" uid="uid://bsqxx6vm3hqod" path="res://Assets - WISP/orbe premium.png" id="24_up2m0"]

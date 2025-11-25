@@ -39,12 +39,16 @@ var dir: float = 0
 var ultima_posicion_segura: Vector2
 @export var distancia_max_caida: float = 100
 var respawn_position: Vector2 = Vector2(0, 0)
-
+var SubioMiTemporal=false
 # --- Guardar Hoguera ---
 var HogueraActual: Area2D
 
 
 func _ready() -> void:
+	EstadisticasDelPlayer.tempdano=false
+	EstadisticasDelPlayer.tempsalto=false
+	EstadisticasDelPlayer.tempvelocidad=false
+	EstadisticasDelPlayer.tempvida=false
 	respawn_position = global_position
 	# Cargar estadísticas del jugador desde la global
 	fuerza_salto = EstadisticasDelPlayer.fuerza_salto
@@ -59,6 +63,20 @@ func _ready() -> void:
 	if not animated_sprite_2d.is_playing():
 		animated_sprite_2d.play("idle")
 
+func _process(_delta: float) -> void:
+	if EstadisticasDelPlayer.tempvelocidad and !SubioMiTemporal:
+		velocidad=EstadisticasDelPlayer.velocidad+EstadisticasDelPlayer.valuevel
+		SubioMiTemporal=true
+	if EstadisticasDelPlayer.tempdano and !SubioMiTemporal:
+		daño_disparo=EstadisticasDelPlayer.daño_disparo+EstadisticasDelPlayer.valuedano
+		SubioMiTemporal=true
+	if EstadisticasDelPlayer.tempsalto and !SubioMiTemporal:
+		SubioMiTemporal=true
+		fuerza_salto=EstadisticasDelPlayer.fuerza_salto+EstadisticasDelPlayer.valuesalto
+	if EstadisticasDelPlayer.tempvida and !SubioMiTemporal:
+		SubioMiTemporal=true
+		SaludMax=EstadisticasDelPlayer.SaludMax+EstadisticasDelPlayer.valuevida
+		salud=SaludMax
 
 func _physics_process(delta: float) -> void:
 	actualizar_corazones()

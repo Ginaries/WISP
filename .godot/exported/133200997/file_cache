@@ -9,7 +9,7 @@ res://Scena/Cueva 1/cueva_1.tscn::a39b55f737615841e9eefff7e971ded4::1761611229::
 res://Scena/CuevaMercader/cueva_mercader.tscn::5a18cc2a9a6856f5aac83f1edc1770ed::1762670809::res://.godot/exported/133200997/export-359b02a028c3ce7c0c6d0a8b0028597d-cueva_mercader.scn
 res://Scena/Enemigos/Hoguera/hoguera.tscn::4f0e3f7ac237b035b3d26c8a6ff0a9b8::1761603554::res://.godot/exported/133200997/export-3c3f482215fe99080591200df5e14c1c-hoguera.scn
 res://Scena/Enemigos/Jefes/Avispa de MAMA.tscn::9955d320212a6f1046ed3922274f1a19::1762711738::res://.godot/exported/133200997/export-b9ad3bcfd7a5b16ca1951d236162157f-Avispa de MAMA.scn
-res://Scena/Enemigos/Jefes/Jefe1.tscn::81ade67157ca95467877fbe4ada91690::1762715964::res://.godot/exported/133200997/export-0d3e2da30ec4993b53f80924f4b6fcc2-Jefe1.scn
+res://Scena/Enemigos/Jefes/Jefe1.tscn::81ade67157ca95467877fbe4ada91690::1764039197::res://.godot/exported/133200997/export-0d3e2da30ec4993b53f80924f4b6fcc2-Jefe1.scn
 res://Scena/Enemigos/avispa.tscn::b83200d5f41e4e609a18c00c8558ba0b::1762125440::res://.godot/exported/133200997/export-1ae3fd624d78cad1f949e05ba767436a-avispa.scn
 res://Scena/Enemigos/Pincho.tscn::2f792859f7da8fd78fe0db3645cf2ed6::1763592939::res://.godot/exported/133200997/export-09c0a856c7dbee1308846bfec1a6231b-Pincho.scn
 res://Scena/Enemigos/Tanque.tscn::98fa80b2c377acfac770e9ea0c0cd6b7::1764030238::res://.godot/exported/133200997/export-16bcec7d1bc43a5af2ffda3c67ff7ac0-Tanque.scn
@@ -24,10 +24,12 @@ res://Scena/Player/vidas.tscn::48b6dae828772ae7ab377a1c83e6c37d::1762233362::res
 res://Scena/SelectorNiveles/SelectorNiveles.tscn::ab9129107734a1785bf5776c82cbb331::1764013217::res://.godot/exported/133200997/export-856b1eb20f9c72807ae9ae98966335ce-SelectorNiveles.scn
 res://Scena/TiendaPremium/ANUNCIOTIME.tscn::83d775795de05f4c972805295e51f488::1762716304::res://.godot/exported/133200997/export-fa2460c70bc742338f25aff72321f825-ANUNCIOTIME.scn
 res://Scena/TiendaPremium/TiendaPremium.tscn::47c8ef7c754f8e1a2be97572148dbac0::1764028810::res://.godot/exported/133200997/export-700e0e1c0dd995f6dfd9f8a4b1374e04-TiendaPremium.scn
-res://Scena/TilesSet/TilesSet2.tscn::3f63e8305fe267d701b112623c5ee8a7::1764030100::res://.godot/exported/133200997/export-a406d2c7590875d59148d29ece44fd07-TilesSet2.scn
-res://Scena/TilesSet/TilesSet3.tscn::d53c253b8e5d4bd100c2d2dd44d93200::1764030099::res://.godot/exported/133200997/export-b3a0892f03e68068967439d872e2ec9c-TilesSet3.scn
-res://Scena/TilesSet/TilesSet4.tscn::886da2cbbcecb33cdf8158a651ad5f44::1764030098::res://.godot/exported/133200997/export-adb5de6f7ecf129ff88a83a7a714410c-TilesSet4.scn
-res://Scena/TilesSet/TilesSet5.tscn::70725f33ce23107a85631ef9d11e2217::1764030096::res://.godot/exported/133200997/export-6ea1f09211e9b281135065ff3ad9924a-TilesSet5.scn
-res://Scena/TilesSet/TilesSet.tscn::fbc3dd1975237dcdaf8200937f227c18::1764030101::res://.godot/exported/133200997/export-c476b736668cdde736b2502d696f486e-TilesSet.scn
+res://Scena/TilesSet/TilesSet2.tscn::a9390121a102a584a79d85ebc6ebad9c::1764038560::res://.godot/exported/133200997/export-a406d2c7590875d59148d29ece44fd07-TilesSet2.scn
+res://Scena/TilesSet/TilesSet3.tscn::ecd52978aee3411849548ff17448734e::1764036127::res://.godot/exported/133200997/export-b3a0892f03e68068967439d872e2ec9c-TilesSet3.scn
+res://Scena/TilesSet/TilesSet4.tscn::40572d42d785a8ad0d71aa6f774a6f59::1764039271::res://.godot/exported/133200997/export-adb5de6f7ecf129ff88a83a7a714410c-TilesSet4.scn
+res://Scena/TilesSet/TilesSet5.tscn::71f0ad8e68048ddef5d64cea6c2b42c6::1764039361::res://.godot/exported/133200997/export-6ea1f09211e9b281135065ff3ad9924a-TilesSet5.scn
+res://Scena/TilesSet/TilesSet.tscn::b66eef6ef49cb7b499589bbc11988b25::1764037744::res://.godot/exported/133200997/export-c476b736668cdde736b2502d696f486e-TilesSet.scn
 res://Scena/test.tscn::87ccda681bd126f3724df4ca622caa9a::1762716171::res://.godot/exported/133200997/export-a66136f79412f3b1f4da2a95ccdbca3e-test.scn
 res://default_bus_layout.tres::e0a21cc691540e4ad6f9f0233b3ca484::1764025028::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://Scena/Enemigos/Jefes/Jefe2.tscn::d99d40cf6fe91ebf9c0e76a80fa318ea::1764039317::res://.godot/exported/133200997/export-98c345236e1c215a0e163ee98b1b6972-Jefe2.scn
+res://Scena/Enemigos/Jefes/Orbe de PAPA.tscn::6a5f8578cdee60e89fb65fbc03a6a133::1764036127::res://.godot/exported/133200997/export-ffdfa212f13dc5ce48f393f8c7eda876-Orbe de PAPA.scn

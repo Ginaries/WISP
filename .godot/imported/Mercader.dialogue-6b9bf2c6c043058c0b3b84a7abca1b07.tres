@@ -34,14 +34,37 @@ lines = {
 "101": {
 &"character": "Mercader",
 &"id": "101",
-&"next_id": "103",
+&"next_id": "102",
 &"text": "Qué modales tan raros para un mortal con barra de vida.",
 &"type": "dialogue"
 },
 "102": {
 &"id": "102",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "EstadisticasDelPlayer"
+}, {
+&"i": 25,
+&"type": &"dot"
+}, {
+&"i": 26,
+&"type": &"variable",
+&"value": "tempvida"
+}, {
+&"i": 34,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 35,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
 &"next_id": "103",
-&"type": ""
+&"type": "mutation"
 },
 "103": {
 &"character": "Wisp",
@@ -359,14 +382,37 @@ lines = {
 "48": {
 &"character": "Mercader",
 &"id": "48",
-&"next_id": "50",
+&"next_id": "49",
 &"text": "Excelente. Que tus pasos desafíen el tiempo.",
 &"type": "dialogue"
 },
 "49": {
 &"id": "49",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "EstadisticasDelPlayer"
+}, {
+&"i": 25,
+&"type": &"dot"
+}, {
+&"i": 26,
+&"type": &"variable",
+&"value": "tempvelocidad"
+}, {
+&"i": 39,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 40,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
 &"next_id": "50",
-&"type": ""
+&"type": "mutation"
 },
 "5": {
 &"character": "Mercader",
@@ -478,14 +524,37 @@ lines = {
 "65": {
 &"character": "Mercader",
 &"id": "65",
-&"next_id": "67",
+&"next_id": "66",
 &"text": "Que tus alas invisibles te eleven.",
 &"type": "dialogue"
 },
 "66": {
 &"id": "66",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "EstadisticasDelPlayer"
+}, {
+&"i": 25,
+&"type": &"dot"
+}, {
+&"i": 26,
+&"type": &"variable",
+&"value": "tempsalto"
+}, {
+&"i": 35,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 36,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
 &"next_id": "67",
-&"type": ""
+&"type": "mutation"
 },
 "67": {
 &"character": "Wisp",
@@ -610,14 +679,37 @@ lines = {
 "84": {
 &"character": "Mercader",
 &"id": "84",
-&"next_id": "86",
+&"next_id": "85",
 &"text": "Así se habla. Que tus enemigos sufran un *reajuste de balance*.",
 &"type": "dialogue"
 },
 "85": {
 &"id": "85",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "EstadisticasDelPlayer"
+}, {
+&"i": 25,
+&"type": &"dot"
+}, {
+&"i": 26,
+&"type": &"variable",
+&"value": "tempdano"
+}, {
+&"i": 34,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 35,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
 &"next_id": "86",
-&"type": ""
+&"type": "mutation"
 },
 "86": {
 &"character": "Wisp",
@@ -762,7 +854,7 @@ Wisp: ¡Eso suena... peligroso!
 Mercader: Lo es. Pero, ¿qué es un poco de peligro cuando podés sentir el viento digital en tu cara?
 - \"Acepto el trato.\"
 	Mercader: Excelente. Que tus pasos desafíen el tiempo.
-	# ↑ aplicar mejora de VELOCIDAD
+	set EstadisticasDelPlayer.tempvelocidad=true
 	Wisp: ¡Agh! ¡Mis píxeles vibran!
 	Mercader: No es dolor, cariño. Es *frame skipping*.
 	=> Despedida
@@ -779,7 +871,7 @@ Wisp: ¡Eso ya lo aprendí por las malas!
 Mercader: Entonces, ¿te animás?
 - \"Sí, dame más impulso.\"
 	Mercader: Que tus alas invisibles te eleven.
-	# ↑ aplicar mejora de FUERZA DE SALTO
+	set EstadisticasDelPlayer.tempsalto=true
 	Wisp: ¡Whoa! ¡Mirá esa parábola!
 	Mercader: Física, magia… todo depende del punto de vista.
 	=> Despedida
@@ -798,7 +890,7 @@ Wisp: ...¿De mi barra de salud, verdad?
 Mercader: Exacto, foquito. Ya lo entendés todo.
 - \"Acepto. Vale la pena.\"
 	Mercader: Así se habla. Que tus enemigos sufran un *reajuste de balance*.
-	# ↑ aplicar aumento de DAÑO y reducción de SALUD
+	set EstadisticasDelPlayer.tempdano=true
 	Wisp: ¡Me arde el alma! ¡Literalmente!
 	Mercader: Es solo la implementación sintiéndolo.
 	=> Despedida
@@ -815,7 +907,7 @@ Wisp: No le hagas caso, no todos queremos morir por la trama.
 Mercader: Bien dicho, foquito. Entonces, ¿aceptás mi bendición temporal?
 - \"Sí, por favor.\"
 	Mercader: Qué modales tan raros para un mortal con barra de vida.
-	# ↑ aplicar aumento de SALUD
+	set EstadisticasDelPlayer.tempvida=true
 	Wisp: ¡Ah! ¡Siento cómo se recargan mis puntos vitales!
 	Mercader: Aprovechalos, que el juego no guarda solo.
 	=> Despedida
